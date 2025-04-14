@@ -1,0 +1,442 @@
+/* Variables CSS pour centraliser les couleurs */
+:root {
+    --bg-color: #000000; /* Couleur du fond */
+    --secondary-color: #DAA500; /* Couleur secondaire */
+    --title-color: #D6974C; /* Couleur des titres */
+    --text-color: #E4E4E4; /* Couleur des textes */
+    --label-color: #FFFFFF; /* Couleur des labels */
+    --bar-color: #DAA500; /* Couleur des barres de niveau */
+    --name-color: #222222; /* Couleur du Nom */
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: var(--title-color);
+    transform: scale(1.05);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--bg-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.header-left,
+.header-right {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Theme Switcher Button */
+.theme-switcher {
+    margin-left: 15px;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--title-color);
+}
+
+#theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Flag Icons */
+.flag-icon {
+    width: 1.5em;
+    height: 1em;
+    border-radius: 2px;
+    margin: 0 0px;
+    vertical-align: middle;
+}
+
+.language-switcher button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.language-switcher button:hover {
+    transform: scale(1.1);
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--bg-color), var(--secondary-color));
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(45deg);
+    animation: float 3s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: rotate(45deg) translateX(-50%);
+    }
+    100% {
+        transform: rotate(45deg) translateX(50%);
+    }
+}
+
+.hero-text {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.name-highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #455768;
+    margin: 2rem auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-projects {
+    background: var(--secondary-color);
+    color: var(--label-color);
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-projects:hover {
+    background: var(--title-color);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.bg-dark {
+    background: var(--name-color);
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 0.25rem;
+    background: var(--title-color);
+    border-radius: 0.125rem;
+}
+
+/* Cards and Content */
+.card {
+    background: var(--bg-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.skill-bar {
+    height: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--secondary-color);
+    width: 70%; /* Exemple de progression */
+    border-radius: 0.25rem;
+    transition: width 0.5s ease;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 0.25rem;
+    background: var(--secondary-color);
+    border-radius: 0.125rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -5rem;
+    top: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.contact-list i {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.form-control {
+    background: var(--name-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--title-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(218, 165, 0, 0.2);
+}
+
+.footer-text {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/* Contact Info Section */
+.contact-info {
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    background: var(--bg-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.contact-title {
+    font-size: 1.75rem;
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.contact-label {
+    color: var(--label-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.contact-value {
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--title-color);
+    transform: scale(1.2);
+}
+
