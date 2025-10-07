@@ -1,0 +1,256 @@
+:root {
+    --bg-color: #000000;
+    --secondary-color: #DAA500;
+    --title-color: #D6974C;
+    --text-color: #E4E4E4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4,h6 {
+    font-weight: 700;
+    color: var(--title-color);
+    margin-bottom: 16px;
+}
+h5{
+    color: #DAA500;
+    font-weight: 100;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    margin-top: 40px;
+    color: var(--title-color);
+    position: relative;
+}
+
+p, li {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: '  ';
+    padding-left: 10px;
+}
+
+.tuto-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.tuto-content {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(218,165,0,0.2);
+}
+
+.sommaire {
+    background:transparent;
+    padding: 20px;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    border-left: 1px solid var(--title-color);
+}
+.sommaire li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+.sommaire a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+pre {
+    background-color: #0a0a0a;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 18px;
+    border-radius: 0px;
+    margin: 20px 0;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border: none;
+    box-shadow: inset 0 0 0 0.2px #004400;
+}
+.capture {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    padding: 18px;
+    border-radius: 0px;
+    margin: 20px 0;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border: none;
+    box-shadow: inset 0 0 0 0.2px #004400;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+    background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1000;
+    height: 60px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 20px;
+    transition: transform 0.3s;
+    text-decoration: none; /* <- ajoute ça */
+}
+
+
+.header-right a:hover {
+    transform: translateY(-2px);
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher .flag-icon {
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d
+}
+
+.language-switcher button:hover .flag-icon {
+    transform: rotateY(340deg);
+}
+
+
+.flag-icon { width: 24px; height: 16px; border-radius: 2px; }
+
+.theme-switcher button {
+    font-size: 19px;
+    color: var(--secondary-color);
+}
+
+#theme-toggle i { transition: transform 1s ease; }
+#theme-toggle:hover i { transform: rotate(240deg); }
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+#particles-js {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+html { scroll-behavior: smooth; }
+        .sommaire a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .sommaire a:hover {
+            text-decoration:none;
+            color: var(--secondary-color);
+        }
+
+
+
+
+
+
+
+
+        /* Style spécial pour le lien "documentation officielle" */
+a.doc-officielle {
+  display: inline-block;
+  padding: 8px 14px;
+  color:var(--secondary-color);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+a.doc-officielle:hover {
+  color:var(--text-color); /* couleur au survol (bleu) */
+}
+
+
+body[dir="rtl"] {
+    direction: rtl;
+}
+body[dir="rtl"] * {
+    text-align: right; /* si nécessaire pour les titres / paragraphes */
+}
+/* Header et language-switcher restent en LTR */
+
+

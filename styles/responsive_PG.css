@@ -1,0 +1,112 @@
+@media (max-width: 576px) {
+    .navbar-links a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .btn-projects {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header-left,
+    .header-right,
+    .language-switcher {
+        width: 100%;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .language-switcher {
+        order: -1; /* Met les langues en premier */
+        margin-bottom: 1rem;
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+    }
+
+    .project-image img {
+        height: 12rem;
+    }
+
+    .timeline-date {
+        position: relative;
+        left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form {
+        margin-top: 2rem;
+    }
+
+    .section {
+        padding: 2rem 0;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero .row {
+        flex-direction: column-reverse;
+    }
+
+    .profile-img {
+        width: 12rem;
+        height: 12rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+
+
+/* Ajout d'une media query pour petits écrans */
+@media (max-width: 768px) {
+    /* Déplace le bouton "changer le thème" au-dessus de l'image et des icônes de contact */
+    .theme-switcher {
+        position: absolute;
+        top: 200%; /* Espace du haut de la page */
+        left: 50%;
+        transform: translateX(-50%); /* Centre horizontalement */
+        z-index: 10; /* S'assure que le bouton soit au-dessus des autres éléments */
+    }
+}
+
+
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body:not(.rtl) {
+    direction: ltr;
+    text-align: left;
+}
+
