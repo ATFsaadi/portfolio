@@ -1,382 +1,491 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <!-- Définition de l'encodage et affichage responsive -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Atef Saadi - Portfolio BTS SIO</title>
+        <!-- Titre de la page -->
+        <title data-i18n="Atef Saadi - Portfolio BTS SIO">Atef Saadi - Portfolio BTS SIO</title>
+        <!-- Importation des polices Google Fonts -->
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
             rel="stylesheet">
+        <!-- Importation des icônes Font Awesome -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- Importation de Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
             rel="stylesheet">
+        <!-- Importation des drapeaux pour le changement de langue -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.0/css/flag-icons.min.css">
-            <link id="theme-style" rel="stylesheet" href="styles/style.css">
-
+        <!-- Feuilles de style personnalisées -->
+        <link id="theme-style" rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/responsive.css">
-        
     </head>
     <body>
+        <!-- Fond animé avec Particles.js -->
+        <div id="particles-js"></div>
+        <!-- En-tête du site -->
         <header class="header">
+            <!-- Icônes de contact à droite -->
             <div class="header-right">
-                <a href="https://www.linkedin.com/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="tel:+33638368448">
+                 <a
+                                            href="https://www.linkedin.com/in/atef-saadi/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a 
+                                            href="https://github.com/ATFsaadi/" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                <a href="tel:+33638368448" aria-label="Téléphone">
                     <i class="fas fa-phone"></i>
                 </a>
-                <a href="mailto:atef_saadi@outlook.fr">
+                <a href="mailto:atef_saadi@outlook.fr" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
+            <!-- Menu de navigation -->
             <nav class="header-left">
-                <ul class="navbar-links">
+                <!-- Bouton hamburger pour petits écrans -->
+                <button class="burger-menu" id="burger-button" aria-label="Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-links" id="navbar">
                     <li>
-                        <a href="#about" data-translate="À Propos de Moi">À Propos de Moi</a>
+                        <a href="#about" data-i18n="À Propos de Moi">À Propos de Moi</a>
                     </li>
                     <li>
-                        <a href="#skills" data-translate="Mes Compétences">Mes Compétences</a>
+                        <a href="#skills" data-i18n="Mes Compétences">Mes Compétences</a>
                     </li>
                     <li>
-                        <a href="#projects" data-translate="Mes Projets">Mes Projets</a>
+                        <a href="#projects" data-i18n="Mes Projets">Mes Projets</a>
                     </li>
                     <li>
-                        <a href="#contact" data-translate="Contact">Contact</a>
+                        <a href="#contact" data-i18n="Contact">Contact</a>
                     </li>
                 </ul>
             </nav>
+            <!-- Sélecteur de langue et de thème -->
             <div class="language-switcher">
-                <button onclick="setLanguage('fr')">
+                <button onclick="setLanguage('fr')" aria-label="Français">
                     <i class="flag-icon flag-icon-fr"></i>
                 </button>
-                <button onclick="setLanguage('en')">
+                <button onclick="setLanguage('en')" aria-label="English">
                     <i class="flag-icon flag-icon-gb"></i>
                 </button>
-                <button onclick="setLanguage('ar')">
+                <button onclick="setLanguage('ar')" aria-label="العربية">
                     <i class="flag-icon flag-icon-dz"></i>
                 </button>
+                
+                <!-- Bouton pour changer le thème -->
                 <div class="theme-switcher">
-                    <button id="theme-toggle" onclick="toggleTheme()">
+                    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
                         <i class="fas fa-sun"></i>
-                        <!-- Icône pour le mode clair -->
                     </button>
                 </div>
-            </header>
-            <section id="hero" class="hero">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <h1 class="hero-text" data-translate="Bonjour, je suis">Bonjour, je suis
-                                <span class="name-highlight"><br>Atef Saadi</span></h1>
-                            <h2 class="h4 mb-4" data-translate="Étudiant en BTS SIO option SLAM">Étudiant en BTS SIO option SLAM</h2>
-                            <p
-                                class="lead mb-4"
-                                data-translate="Développeur passionné spécialisé en création d'applications web et solutions métiers.">Développeur
-                                passionné spécialisé en création d'applications web et solutions métiers.</p>
-                            <div class="d-flex gap-3">
-                                <a href="#contact" class="btn btn-projects" data-translate="Me contacter">Me contacter</a>
-                                <a href="#projects" class="btn btn-projects" data-translate="Voir mes projets">Voir mes projets</a>
-                            </div>
+            </div>
+        </header>
+        <!-- Section principale (hero) -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Texte d'introduction -->
+                    <div class="col-lg-6">
+                        <h1 class="hero-text" data-i18n="Bienvenue sur mon Portfolio">Bienvenue sur mon Portfolio</h1>
+                            <h1>
+  <span class="name-highlight" data-i18n="Atef Saadi">Atef Saadi</span>
+</h1>
+                        <h2 class="h4 mb-4" data-i18n="Étudiant en BTS SIO option SLAM">Étudiant en <a href="Bts_Sio.html">BTS SIO</a> option SLAM</h2>
+                        <p
+                            class="lead mb-4"
+                            data-i18n="Développeur passionné spécialisé en création d'applications web et solutions métiers.">Développeur
+                            passionné spécialisé en création d'applications web et solutions métiers.</p>
+                        <div class="d-flex gap-3">
+                            <a href="#contact" class="btn btn-projects" data-i18n="Me contacter">Me contacter</a>
+                            <a href="#projects" class="btn btn-projects" data-i18n="Voir mes projets">Voir mes projets</a>
                         </div>
-                        <div class="col-lg-6 text-center">
-                            <div class="profile-container mt-5 mt-lg-0">
-                                <img src="ATEF.jpg" alt="Atef Saadi" class="profile-img">
-                            </div>
+                    </div>
+                    <!-- Image de profil -->
+                    <div class="col-lg-6 text-center">
+                        <div class="profile-container mt-5 mt-lg-0">
+                            <img src="ATEF.jpg" alt="Atef Saadi" class="profile-img">
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="about" class="section">
-                <div class="container">
-                    <h2 class="title" data-translate="À Propos de Moi">À Propos de Moi</h2>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="about-content">
-                                <p>Après une première année en BTS SIO (Services Informatiques aux
-                                    Organisations), je poursuis ma deuxième année en spécialisation SLAM (Solutions
-                                    Logicielles et Applications Métier).</p>
-                                <p>Passionné par le développement web, je souhaite approfondir mes compétences
-                                    et acquérir une première expérience en entreprise.</p>
-                                <div class="personal-info mt-4">
-                                    <div class="info-item">
-                                        <span class="info-label" data-translate="Nom :">Nom :</span><span class="info-value">Atef Saadi</span></div>
-                                    <div class="info-item">
-                                        <span class="info-label" data-translate="Email :">Email :</span><span class="info-value">atef_saadi@outlook.fr</span></div>
-                                    <div class="info-item">
-                                        <span class="info-label" data-translate="Téléphone :">Téléphone :</span><span class="info-value">06 38 36 84 48</span></div>
-                                    <div class="info-item">
-                                        <span class="info-label" data-translate="Localisation :">Localisation :</span><span class="info-value">Saint-Denis (93200)</span></div>
+            </div>
+        </section>
+        <!-- Section À propos -->
+        <section id="about" class="section custom-border">
+            <div class="container">
+                <div class="row">
+                    <!-- Informations personnelles -->
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h2 data-i18n="À Propos de Moi">À Propos de Moi</h2>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <p data-i18n="Après une première année en BTS SIO (Services Informatiques aux Organisations), je poursuis ma deuxième année en spécialisation SLAM (Solutions Logicielles et Applications Métier).">
+                                        Après une première année en BTS SIO (Services Informatiques aux Organisations), je poursuis ma deuxième année en spécialisation SLAM (Solutions Logicielles et Applications Métier).
+                                    </p>
+                                    <p data-i18n="Passionné par le développement web, je souhaite approfondir mes compétences et acquérir une première expérience en entreprise.">
+                                        Passionné par le développement web, je souhaite approfondir mes compétences et acquérir une première expérience en entreprise.
+                                    </p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="education-card">
-                                <h3 class="mb-4" data-translate="Formation">Formation</h3>
-                                <div class="timeline">
-                                    <div class="timeline-item">
-                                        <div class="timeline-date">2024</div>
-                                        <div class="timeline-content">
-                                            <h4 data-translate="BTS SIO option SLAM">BTS SIO option SLAM</h4>
-                                            <p data-translate="IRIS Ecole supérieure d'informatique, Paris">IRIS Ecole supérieure d'informatique, Paris</p>
+                                <!-- Infos personnelles -->
+                                <div class="timeline-item">
+                                    <div class="personal-info mt-4">
+                                        <div class="info-item">
+                                            <span class="info-label" data-i18n="Nom :">Nom :</span>
+                                            <span class="info-value" data-i18n="Atef Saadi">Atef Saadi</span>
                                         </div>
-                                    </div>
-                                    <div class="timeline-item">
-                                        <div class="timeline-date">2008</div>
-                                        <div class="timeline-content">
-                                            <h4 data-translate="Baccalauréat Génie des Procédés">Baccalauréat Génie des Procédés</h4>
-                                            <p data-translate="Lycée Chrif Lerguet, Algérie (Mention bien)">Lycée Chrif Lerguet, Algérie (Mention bien)</p>
+                                        <div class="info-item">
+                                            <span class="info-label" data-i18n="Email :">Email :</span>
+                                            <span class="info-value" data-i18n="atef_saadi@outlook.fr">atef_saadi@outlook.fr</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label" data-i18n="Téléphone :">Téléphone :</span>
+                                            <span class="info-value" data-i18n="06 38 36 84 48">06 38 36 84 48</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label" data-i18n="Localisation :">Localisation :</span>
+                                            <span class="info-value" data-i18n="Saint-Denis (93200)">Saint-Denis (93200)</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="skills" class="section bg-dark">
-                <div class="container">
-                    <h2 class="title" data-translate="Mes Compétences">Mes Compétences</h2>
-                    <div class="row">
-                        <div class="col-md-4 mb-4">
-                            <div class="project-card h-100">
-                                <div class="skill-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <h3 data-translate="Développement Web">Développement Web</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <span data-translate="HTML/CSS">HTML/CSS</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 90%;"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span data-translate="PHP">PHP</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 85%;"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span data-translate="JavaScript">JavaScript</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 80%;"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="project-card h-100">
-                                <div class="skill-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
-                                <h3 data-translate="Base de Données">Base de Données</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <span data-translate="MySQL">MySQL</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 80%;"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span data-translate="SQL">SQL</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 75%;"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="project-card h-100">
-                                <div class="skill-icon">
-                                    <i class="fas fa-network-wired"></i>
-                                </div>
-                                <h3 data-translate="Réseaux & Sécurité">Réseaux & Sécurité</h3>
-                                <ul class="skill-list">
-                                    <li>
-                                        <span data-translate="Cisco">Cisco</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 85%;"></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <span data-translate="VLAN">VLAN</span>
-                                        <div class="skill-bar">
-                                            <div class="skill-progress" style="width: 80%;"></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="projects" class="section">
-                <div class="container">
-                    <h2 class="title" data-translate="Mes Projets">Mes Projets</h2>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img
-                                        src="https://via.placeholder.com/600x400?text=Réseau+Social"
-                                        alt="Réseau Social">
-                                    <div class="project-overlay">
-                                        <a href="#" class="btn btn-outline-light btn-sm" data-translate="Voir détails">Voir détails</a>
+                    <!-- Section formation -->
+                    <div class="col-lg-6">
+                        <div class="education-card">
+                            <h3 class="mb-4" data-i18n="Formation">Formation</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date" data-i18n="2024">2024</div>
+                                    <div class="timeline-content">
+                                        <h4 data-i18n="BTS SIO option SLAM">BTS SIO option SLAM</h4>
+                                       <p>
+  <a href="https://ecoleiris.fr/" target="_blank" rel="noopener noreferrer">
+    IRIS Ecole supérieure d'informatique, Paris
+  </a>
+</p>
+
                                     </div>
                                 </div>
-                                <div class="project-content">
-                                    <h3 data-translate="Réseau Social">Réseau Social</h3>
-                                    <p class="project-date" data-translate="IRIS Ecole, Paris - 04/2025">IRIS Ecole, Paris - 04/2025</p>
-                                    <p data-translate="Création d'un réseau social avec PHP et MySQL">Création d'un réseau social avec PHP et MySQL</p>
-                                    <div class="project-tech">
-                                        <span data-translate="PHP">PHP</span><span data-translate="MySQL">MySQL</span><span data-translate="JavaScript">JavaScript</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img
-                                        src="https://via.placeholder.com/600x400?text=Agence+Immobilière"
-                                        alt="Agence Immobilière">
-                                    <div class="project-overlay">
-                                        <a href="#" class="btn btn-outline-light btn-sm" data-translate="Voir détails">Voir détails</a>
+                                <br>
+                                <div class="timeline-item">
+                                    <div class="timeline-date" data-i18n="2008">2008</div>
+                                    <div class="timeline-content">
+                                        <h4 data-i18n="Baccalauréat Génie des Procédés">Baccalauréat Génie des Procédés</h4>
+                                        <p data-i18n="Lycée Chrif Lerguet, Algérie (Mention bien)">Lycée Chrif Lerguet, Algérie (Mention bien)</p>
                                     </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 data-translate="Agence Immobilière">Agence Immobilière</h3>
-                                    <p class="project-date" data-translate="IRIS Ecole, Paris - 02/2025">IRIS Ecole, Paris - 02/2025</p>
-                                    <p data-translate="Site web complet pour une agence immobilière">Site web complet pour une agence immobilière</p>
-                                    <div class="project-tech">
-                                        <span data-translate="HTML/CSS">HTML/CSS</span><span data-translate="PHP">PHP</span><span data-translate="Bootstrap">Bootstrap</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img
-                                        src="https://via.placeholder.com/600x400?text=Réseau"
-                                        alt="Maintenance Réseau">
-                                    <div class="project-overlay">
-                                        <a href="#" class="btn btn-outline-light btn-sm" data-translate="Voir détails">Voir détails</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3 data-translate="Maintenance Réseau">Maintenance Réseau</h3>
-                                    <p class="project-date" data-translate="IRIS Ecole, Paris - 10/2024">IRIS Ecole, Paris - 10/2024</p>
-                                    <p data-translate="Maintenance des équipements réseau">Maintenance des équipements réseau</p>
-                                    <div class="project-tech">
-                                        <span data-translate="Cisco">Cisco</span><span data-translate="VLAN">VLAN</span><span data-translate="VPN">VPN</span></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="contact" class="section bg-dark">
-                <div class="container">
-                    <h2 class="title" data-translate="Contact">Contact</h2>
-                    <div class="row">
-                        <!-- Contact Information -->
-                        <div class="col-lg-5 mb-4">
-                            <div class="contact-info">
-                                <h3 class="contact-title" data-translate="Coordonnées">Coordonnées</h3>
+            </div>
+        </section>
+        <!-- Section compétences -->
+        <section id="skills" class="section bg-dark custom-border">
+            <div class="container">
+                <h2 class="title" data-i18n="Mes Compétences">Mes Compétences</h2>
+                <div class="row">
+                    <!-- Développement Web -->
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card h-100">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 data-i18n="Développement Web">Développement Web</h3>
+                            <ul class="skill-list">
+                                <li>
+                                    <span data-i18n="HTML/CSS">HTML/CSS</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 90%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span data-i18n="PHP">PHP</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span data-i18n="JavaScript">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Base de Données -->
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card h-100">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 data-i18n="Base de Données">Base de Données</h3>
+                            <ul class="skill-list">
+                                <li>
+                                    <span data-i18n="MySQL">MySQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span data-i18n="SQL">SQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 75%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Réseaux & Sécurité -->
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card h-100">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h3 data-i18n="Réseaux & Sécurité">Réseaux & Sécurité</h3>
+                            <ul class="skill-list">
+                                <li>
+                                    <span data-i18n="Cisco">Cisco</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%;"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span data-i18n="VLAN">VLAN</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 80%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section projets -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="title" data-i18n="Mes Projets">Mes Projets</h2>
+                <div class="row">
+                    <!-- Projet 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="https://via.placeholder.com/600x400?text=Réseau+Social"
+                                    alt="Réseau Social"
+                                    loading="lazy">
+                                <div class="project-overlay">
+                                    <a href="#" class="btn btn-outline-light btn-sm" data-i18n="Voir détails">Voir détails</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="Réseau Social">Réseau Social</h3>
+                                <p class="project-date" data-i18n="IRIS Ecole, Paris - 04/2025">IRIS Ecole, Paris - 04/2025</p>
+                                <p data-i18n="Création d'un réseau social avec PHP et MySQL">Création d'un réseau social avec PHP et MySQL</p>
+                                <div class="project-tech">
+                                    <span data-i18n="PHP">PHP</span>
+                                    <span data-i18n="MySQL">MySQL</span>
+                                    <span data-i18n="JavaScript">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projet 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="https://via.placeholder.com/600x400?text=Agence+Immobilière"
+                                    alt="Agence Immobilière"
+                                    loading="lazy">
+                                <div class="project-overlay">
+                                    <a href="#" class="btn btn-outline-light btn-sm" data-i18n="Voir détails">Voir détails</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="Agence Immobilière">Agence Immobilière</h3>
+                                <p class="project-date" data-i18n="IRIS Ecole, Paris - 02/2025">IRIS Ecole, Paris - 02/2025</p>
+                                <p data-i18n="Site web complet pour une agence immobilière">Site web complet pour une agence immobilière</p>
+                                <div class="project-tech">
+                                    <span data-i18n="HTML/CSS">HTML/CSS</span>
+                                    <span data-i18n="PHP">PHP</span>
+                                    <span data-i18n="Bootstrap">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Projet 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="https://via.placeholder.com/600x400?text=Réseau"
+                                    alt="Maintenance Réseau"
+                                    loading="lazy">
+                                <div class="project-overlay">
+                                    <a href="glpi.html" class="btn btn-outline-light btn-sm" data-i18n="Voir détails">Voir détails</a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="Maintenance Réseau">Maintenance Réseau</h3>
+                                <p class="project-date" data-i18n="IRIS Ecole, Paris - 10/2024">IRIS Ecole, Paris - 10/2024</p>
+                                <p data-i18n="Maintenance des équipements réseau">Maintenance des équipements réseau</p>
+                                <div class="project-tech">
+                                    <span data-i18n="Cisco">Cisco</span>
+                                    <span data-i18n="VLAN">VLAN</span>
+                                    <span data-i18n="VPN">VPN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section contact -->
+        <section id="contact" class="section bg-dark custom-border">
+            <div class="container">
+                <h2 class="title" data-i18n="Contact">Contact</h2>
+                <div class="row">
+                    <!-- Coordonnées -->
+                    <div class="col-lg-5 mb-4">
+                        <div class="contact-info">
+                            <h3 class="contact-title" data-i18n="Coordonnées">Coordonnées</h3>
+                            <div class="timeline">
                                 <ul class="contact-list">
                                     <li class="contact-item">
-                                        <i class="fas fa-phone contact-icon"></i>
-                                        <span class="contact-label" data-translate="Téléphone :">Téléphone :</span>
-                                        <span class="contact-value">06 38 36 84 48</span>
+                                        <i class="fas fa-phone contact-icon "  style="margin-right: 12px;"></i>
+                                        <span>
+                                            <strong data-i18n="Téléphone :">Téléphone :</strong>
+                                            <span data-i18n="06 38 36 84 48">06 38 36 84 48</span>
+                                        </span>
                                     </li>
                                     <li class="contact-item">
-                                        <i class="fas fa-envelope contact-icon"></i>
-                                        <span class="contact-label" data-translate="Email :">Email :</span>
-                                        <span class="contact-value">atef_saadi@outlook.fr</span>
+                                        <i class="fas fa-envelope contact-icon"  style="margin-right: 12px;"></i>
+                                        <span>
+                                            <strong data-i18n="Email :">Email :</strong>
+                                            <span data-i18n="atef_saadi@outlook.fr">atef_saadi@outlook.fr</span>
+                                        </span>
                                     </li>
                                     <li class="contact-item">
-                                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                                        <span class="contact-label" data-translate="Localisation :">Localisation :</span>
-                                        <span class="contact-value">Saint-Denis (93200)</span>
+                                        <i class="fas fa-map-marker-alt contact-icon"  style="margin-right: 12px;"></i>
+                                        <span>
+                                            <strong data-i18n="Localisation :">Localisation :</strong>
+                                            <span data-i18n="Saint-Denis (93200)">Saint-Denis (93200)</span>
+                                        </span>
                                     </li>
                                     <li class="contact-social">
-                                        <a href="https://www.linkedin.com/" target="_blank" class="social-link">
-                                            <i class="fab fa-linkedin contact-social-icon"></i>
+                                        <a
+                                            href="https://www.linkedin.com/in/atef-saadi/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
                                         </a>
-                                        <a href="https://github.com/" target="_blank" class="social-link">
-                                            <i class="fab fa-github contact-social-icon"></i>
+                                        <a 
+                                            href="https://github.com/ATFsaadi/" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
                                         </a>
-                                        <a href="tel:+33638368448" class="social-link">
-                                            <i class="fas fa-phone contact-social-icon"></i>
+                                        <a href="tel:+33638368448" aria-label="Appeler">
+                                            <i class="fas fa-phone"></i>
                                         </a>
-                                        <a href="mailto:atef_saadi@outlook.fr" class="social-link">
-                                            <i class="fas fa-envelope contact-social-icon"></i>
+                                        <a href="mailto:atef_saadi@outlook.fr" aria-label="Envoyer un email">
+                                            <i class="fas fa-envelope"></i>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
-                        <!-- Contact Form -->
-                        <div class="col-lg-7">
-                            <form class="contact-form">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="Votre nom"
-                                            data-translate-placeholder="Votre nom"
-                                            required="required">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input
-                                            type="email"
-                                            class="form-control"
-                                            placeholder="Votre email"
-                                            data-translate-placeholder="Votre email"
-                                            required="required">
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="Sujet"
-                                        data-translate-placeholder="Sujet"
-                                        required="required">
-                                </div>
-                                <div class="mb-3">
-                                    <textarea
-                                        class="form-control"
-                                        rows="5"
-                                        placeholder="Votre message"
-                                        data-translate-placeholder="Votre message"
-                                        required="required"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-projects" data-translate-value="Envoyer">Envoyer</button>
-                            </form>
-                        </div>
                     </div>
-                </div>
-            </section>
-            <footer class="text-center py-4">
-                <p
-                    class="footer-text"
-                    data-translate="© 2024 Atef Saadi - Tous droits réservés">© 2024 Atef Saadi - Tous droits réservés</p>
-            </footer>
-            <script
-                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="javascript/theme.js"></script>
-            <script src="javascript/langue.js"></script>
-        </body>
-    </html>
+                    <!-- Formulaire de contact -->
+<div class="col-lg-7">
+    <form class="contact-form" id="contactForm" method="POST" action="contact.php">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    name="nom"
+                    placeholder="Votre nom"
+                    required
+                    aria-label="Votre nom"
+                    data-i18n="[placeholder]Votre nom; [aria-label]Votre nom">
+                    
+            </div>
+            <div class="col-md-6 mb-3">
+    <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Votre email"
+        aria-label="Votre email"
+        required
+        data-i18n="[placeholder]Votre email; [aria-label]Votre email">
+</div>
+
+        </div>
+        <div class="mb-3">
+            <input 
+                type="text" 
+                class="form-control" 
+                name="sujet"
+                placeholder="Sujet" 
+                required
+                aria-label="Sujet"
+                data-i18n="[placeholder]Sujet; [aria-label]Sujet">
+        </div>
+        <div class="mb-3">
+           <div class="mb-3">
+  <textarea
+  class="form-control"
+  name="message"
+  placeholder="Votre message"
+  aria-label="Votre message"
+  required
+  data-i18n="[placeholder]Votre message; [aria-label]Votre message">
+</textarea>
+
+</div>
+
+        </div>
+        <button type="submit" class="btn btn-envoi" data-i18n="Envoyer">Envoyer</button>
+    </form>
+</div>
+
+        <!-- footer de page -->
+        
+        <!-- Scripts JS externes -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <!-- Scripts personnalisés -->
+        <script src="javascript/theme.js"></script>
+        <script src="javascript/langue.js"></script>
+        <script src="javascript/script.js"></script>
+    </body>
+        <footer class="text-center py-4">
+            <p class="footer-text" data-i18n="© 2024 Atef Saadi - Tous droits réservés">© 2024 Atef Saadi - Tous droits réservés</p>
+        </footer>
+</html>

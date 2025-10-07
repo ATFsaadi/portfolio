@@ -1,35 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeLink = document.getElementById('theme-style');  // Lien vers le fichier CSS
-    const themeToggle = document.getElementById('theme-toggle');  // Le bouton de changement de thème
-    const themeIcon = themeToggle.querySelector('i');  // L'icône de changement de thème (soleil/lune)
+    const themeLink = document.getElementById('theme-style'); // Lien CSS thème
+    const themeToggle = document.getElementById('theme-toggle'); // Bouton toggle
+    const themeIcon = themeToggle.querySelector('i'); // Icône soleil/lune
 
-    // Vérifie si un thème est déjà sauvegardé dans localStorage
-    let savedTheme = localStorage.getItem('theme');
-    
-    // Si aucun thème n'est trouvé dans localStorage, applique le thème sombre par défaut
-    if (!savedTheme) {
-        savedTheme = 'dark';  // Par défaut, c'est le thème sombre
-        localStorage.setItem('theme', savedTheme);  // Sauvegarde ce choix dans localStorage
-    }
+    // Thème par défaut : 'light'
+    const defaultTheme = 'light';
+    let savedTheme = localStorage.getItem('theme') || defaultTheme;
+    localStorage.setItem('theme', savedTheme); // Sauvegarde thème
+    applyTheme(savedTheme); // Applique thème au chargement
 
-    // Applique le thème au chargement de la page
-    applyTheme(savedTheme);
-
-    // Gère le clic sur le bouton pour changer de thème
+    // Toggle thème au clic
     themeToggle.addEventListener('click', () => {
-        const newTheme = (themeLink.getAttribute('href') === 'styles/style.css') ? 'light' : 'dark';  // Basculer entre les thèmes
-        localStorage.setItem('theme', newTheme);  // Sauvegarde le nouveau thème
-        applyTheme(newTheme);  // Applique le nouveau thème
+        const newTheme = themeLink.getAttribute('href') === 'styles/style.css' ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
     });
 
-    // Fonction pour appliquer un thème en fonction du choix
+    // Application du thème
     function applyTheme(theme) {
         if (theme === 'light') {
-            themeLink.href = 'styles/light.css';  // Lien vers le fichier CSS pour le thème clair
-            themeIcon.classList.replace('fa-moon', 'fa-sun');  // Change l'icône du bouton
+            themeLink.href = 'styles/light.css'; // CSS thème clair
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
         } else {
-            themeLink.href = 'styles/style.css';  // Lien vers le fichier CSS pour le thème sombre
-            themeIcon.classList.replace('fa-sun', 'fa-moon');  // Change l'icône du bouton
+            themeLink.href = 'styles/style.css'; // CSS thème sombre
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
         }
     }
 });

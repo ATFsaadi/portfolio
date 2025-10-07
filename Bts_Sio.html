@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Définition de l'encodage et affichage responsive -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Titre de la page -->
+        <title data-i18n="Atef Saadi - Portfolio BTS SIO">Atef Saadi - Portfolio BTS SIO</title>
+        <!-- Importation des polices Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+            rel="stylesheet">
+        <!-- Importation des icônes Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- Importation de Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Importation des drapeaux pour le changement de langue -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.0/css/flag-icons.min.css">
+        <!-- Feuilles de style personnalisées -->
+        <link id="theme-style" rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+    </head>
+    <body>
+        <!-- Fond animé avec Particles.js -->
+        <div id="particles-js"></div>
+        <!-- En-tête du site -->
+        <header class="header">
+            <!-- Icônes de contact à droite -->
+            <div class="header-right">
+                 <a
+                                            href="https://www.linkedin.com/in/atef-saadi/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a 
+                                            href="https://github.com/ATFsaadi/" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                <a href="tel:+33638368448" aria-label="Téléphone">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="mailto:atef_saadi@outlook.fr" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <!-- Menu de navigation -->
+            <nav class="header-left">
+                <!-- Bouton hamburger pour petits écrans -->
+                <button class="burger-menu" id="burger-button" aria-label="Menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="navbar-links" id="navbar">
+                    <li>
+                        <a href="#about" data-i18n="À Propos de Moi">À Propos de Moi</a>
+                    </li>
+                    <li>
+                        <a href="#skills" data-i18n="Mes Compétences">Mes Compétences</a>
+                    </li>
+                    <li>
+                        <a href="#projects" data-i18n="Mes Projets">Mes Projets</a>
+                    </li>
+                    <li>
+                        <a href="#contact" data-i18n="Contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Sélecteur de langue et de thème -->
+            <div class="language-switcher">
+                <button onclick="setLanguage('fr')" aria-label="Français">
+                    <i class="flag-icon flag-icon-fr"></i>
+                </button>
+                <button onclick="setLanguage('en')" aria-label="English">
+                    <i class="flag-icon flag-icon-gb"></i>
+                </button>
+                <button onclick="setLanguage('ar')" aria-label="العربية">
+                    <i class="flag-icon flag-icon-dz"></i>
+                </button>
+                
+                <!-- Bouton pour changer le thème -->
+                <div class="theme-switcher">
+                    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        
+  <center>   
+<main>
+        <!-- Présentation -->
+        <section id="about">
+            <h2>Présentation</h2>
+            <p>Le BTS SIO (Services Informatiques aux Organisations) est une formation de deux ans qui permet de se spécialiser dans le développement web et la gestion des réseaux informatiques.</p>
+        </section>
+
+        <!-- Options SLAM / SISR -->
+        <section id="options">
+            <h2>Les options</h2>
+            <div class="options d-flex flex-wrap gap-4">
+                <div class="card p-3">
+                    <h3>SLAM</h3>
+                    <p>Solutions Logicielles et Applications Métiers</p>
+                    <ul>
+                        <li>Développement de logiciels et applications</li>
+                        <li>Conception de sites web</li>
+                        <li>Métiers visés : Développeur, Analyste programmeur</li>
+                    </ul>
+                </div>
+                <div class="card p-3">
+                    <h3>SISR</h3>
+                    <p>Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                    <ul>
+                        <li>Mise en place et gestion des réseaux informatiques</li>
+                        <li>Maintenance des infrastructures</li>
+                        <li>Métiers visés : Administrateur réseaux, Technicien systèmes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examens -->
+        <section id="exams">
+            <h2>Examens</h2>
+            <ul>
+                <li>E1 - Culture générale et expression</li>
+                <li>E2 - Expression et communication en anglais</li>
+                <li>E3 - Mathématiques pour l’informatique</li>
+                <li>E4 - Culture économique, juridique et managériale</li>
+                <li>E5 - Support et mise à disposition de services informatiques</li>
+                <li>E6 - Administration des systèmes et réseaux (SISR)</li>
+                <li>E6 - Conception et développement d’applications (SLAM)</li>
+                <li>E7 - Cybersécurité des services informatiques</li>
+            </ul>
+        </section>
+
+        <!-- Débouchés -->
+        <section id="career">
+            <h2>Les débouchés</h2>
+            <p>Après le BTS SIO, plusieurs métiers sont accessibles selon l’option choisie :</p>
+            <div class="debouches d-flex flex-wrap gap-4">
+                <div class="card p-3">
+                    <h3>SISR</h3>
+                    <ul>
+                        <li>Pilote d’exploitation</li>
+                        <li>Administrateur systèmes et réseaux</li>
+                        <li>Gestionnaire du parc informatique</li>
+                        <li>Analyste d’exploitation informatique</li>
+                        <li>Technicien des réseaux de télécommunications</li>
+                        <li>Technicien d’infrastructure</li>
+                        <li>Technicien systèmes et réseaux</li>
+                    </ul>
+                </div>
+                <div class="card p-3">
+                    <h3>SLAM</h3>
+                    <ul>
+                        <li>Développeur informatique</li>
+                        <li>Programmeur</li>
+                        <li>Analyste programmeur</li>
+                        <li>Technicien informatique</li>
+                        <li>Responsable des services applicatifs</li>
+                        <li>Informaticien d’études</li>
+                        <li>Développeur d’applications informatiques</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</center>
+
+
+    
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <!-- Scripts personnalisés -->
+        <script src="javascript/theme.js"></script>
+        <script src="javascript/langue.js"></script>
+        <script src="javascript/script.js"></script>
+</body>
+        <footer class="text-center py-4">
+            <p class="footer-text" data-i18n="© 2024 Atef Saadi - Tous droits réservés">© 2024 Atef Saadi - Tous droits réservés</p>
+        </footer>
+</html>
