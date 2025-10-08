@@ -1,67 +1,87 @@
-particlesJS("particles-js", {
-    particles: {
-      number: { value: 100, density: { enable: true, value_area: 800 } },
-      color: { value: "#D6974C" },
-      shape: { type: "triangle" },
-      opacity: { value: 0.5, random: true },
-      size: { value: 3, random: true },
-      line_linked: {
-        enable: true,
-        distance: 100,
-        color: "#D6974C",
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false
-      }
-    },
-    interactivity: {
-      detect_on: "window", // important pour capter la souris partout
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse" // effet de "fuite"
+// Configuration des particules avec Particles.js
+function initParticles(color) {
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: color },
+            shape: { type: "triangle", stroke: { width: 0, color: "#000000" } },
+            opacity: { value: 0.6, random: true, anim: { enable: false } },
+            size: { value: 4, random: true, anim: { enable: false } },
+            line_linked: {
+                enable: true,
+                distance: 120,
+                color: color,
+                opacity: 0.5,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 3,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false
+            }
         },
-        onclick: {
-          enable: true,
-          mode: "remove" // ou "push", à toi de voir
+        interactivity: {
+            detect_on: "window",
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+            },
+            modes: {
+                repulse: { distance: 150, duration: 0.8 },
+                push: { particles_nb: 4 }
+            }
         },
-        resize: true
-      },
-      modes: {
-        repulse: {
-          distance: 200, // plus la distance est grande, plus ça fuit tôt
-          duration: 1 // durée du mouvement de fuite
-        }
-      }
-    },
-    retina_detect: true
-  });
-  
+        retina_detect: true
+    });
+}
 
+// Gestion du menu burger et des particules
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialisation des particules avec la couleur par défaut
+    const initialTheme = localStorage.getItem('theme') || 'light';
+    const initialColor = initialTheme === 'light' ? '#4CA8D6' : '#D6974C';
+    initParticles(initialColor);
 
+    // Écouteur pour le changement de thème
+    document.addEventListener('themeChange', (event) => {
+        initParticles(event.detail.color);
+    });
 
-
-  document.addEventListener("DOMContentLoaded", function () {
+    // Gestion du menu burger
     const burgerButton = document.getElementById("burger-button");
     const navbar = document.getElementById("navbar");
 
-    // Lorsque l'utilisateur clique sur le bouton hamburger
-    burgerButton.addEventListener("click", function () {
-        navbar.classList.toggle("show");
+    // Vérification de l'existence des éléments
+    if (!burgerButton || !navbar) {
+        console.error("Erreur : Éléments burger-button ou navbar introuvables.");
+        return;
+    }
+
+    // Gestion du clic sur le bouton burger
+    burgerButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const isExpanded = navbar.classList.toggle("show");
+        burgerButton.setAttribute("aria-expanded", isExpanded);
     });
 
-    // Ferme le menu si l'utilisateur clique en dehors
+    // Fermeture du menu en cliquant à l'extérieur
     document.addEventListener("click", function (event) {
         if (!navbar.contains(event.target) && !burgerButton.contains(event.target)) {
             navbar.classList.remove("show");
+            burgerButton.setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // Gestion de la touche "Échap" pour fermer le menu
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && navbar.classList.contains("show")) {
+            navbar.classList.remove("show");
+            burgerButton.setAttribute("aria-expanded", "false");
         }
     });
 });

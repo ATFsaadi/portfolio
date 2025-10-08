@@ -1,0 +1,280 @@
+@import 'common.css';
+
+:root {
+    --bg-color: #000000;
+    --primary-color: #DAA500;
+    --secondary-color: #DAA500;
+    --accent-color: #D6974C;
+    --text-color: #E4E4E4;
+    --text-light: #A0AEC0;
+    --hover-color: #F6E05E;
+    --border-color: #2D3748;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --card-bg: #1A202C;
+    --name-color: #222222;
+    --title-color: #D6974C;
+    --label-color: #FFFFFF;
+    --font-family: 'Playfair Display', serif;
+}
+
+/* Corps du site */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--title-color);
+}
+
+p, li {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* En-tête */
+.header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-right a {
+    color: var(--secondary-color);
+}
+
+.navbar-links a {
+    color: var(--secondary-color);
+}
+
+.navbar-links a::after {
+    background: var(--secondary-color);
+}
+
+.burger-menu {
+    color: var(--secondary-color);
+}
+
+/* Section Hero */
+.hero {
+    background: linear-gradient(135deg, var(--bg-color), var(--accent-color));
+}
+
+.hero::before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.name-highlight {
+    color: var(--primary-color);
+}
+
+.profile-img {
+    border: 3px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.btn-projects {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-projects:hover {
+    background: rgba(218, 165, 0, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Projets et compétences */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill-bar {
+    background: var(--border-color);
+}
+
+.skill-progress {
+    background: var(--secondary-color);
+}
+
+/* Section Contact */
+.contact-icon {
+    color: var(--secondary-color);
+}
+
+.contact-label {
+    color: var(--label-color);
+}
+
+.contact-value {
+    color: var(--text-color);
+}
+
+.contact-info {
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.social-link {
+    color: var(--secondary-color);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+.form-control {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--secondary-color);
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--text-light);
+}
+
+/* Encadré personnalisé */
+.custom-border {
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+/* Timeline */
+.timeline::before {
+    background-color: var(--secondary-color);
+}
+
+.timeline-title {
+    color: var(--primary-color);
+}
+
+/* Pied de page */
+footer, .footer-text {
+    color: var(--secondary-color);
+}
+
+/* Tutoriel GLPI */
+body.tuto-glpi {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.tuto-glpi h1 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+body.tuto-glpi h2 {
+    color: var(--title-color);
+    border-left: 4px solid var(--secondary-color);
+}
+
+body.tuto-glpi h3 {
+    color: var(--accent-color);
+}
+
+body.tuto-glpi p {
+    color: var(--text-color);
+}
+
+body.tuto-glpi ul li {
+    color: var(--secondary-color);
+}
+
+body.tuto-glpi pre {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--accent-color);
+}
+
+body.tuto-glpi .screenshot {
+    border: 2px dashed var(--secondary-color);
+    color: var(--text-light);
+}
+
+body.tuto-glpi .screenshot img {
+    border: 2px solid var(--secondary-color);
+}
+
+body.tuto-glpi .conclusion {
+    background: var(--card-bg);
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: var(--shadow);
+}
+
+/* Tutoriel (général) */
+.sommaire {
+    border-left: 1px solid var(--title-color);
+}
+
+.sommaire a {
+    color: var(--text-color);
+}
+
+.sommaire a:hover {
+    color: var(--secondary-color);
+}
+
+a.doc-officielle {
+    color: var(--secondary-color);
+}
+
+a.doc-officielle:hover {
+    color: var(--text-color);
+}
+
+/* Styles spécifiques */
+.options, .debouches {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.options .card, .debouches .card {
+    flex: 1;
+    width: 50%;
+    min-width: 200px;
+}
+
+#news-feed p {
+    color: var(--text-color);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* style.css */
+.theme-switcher button {
+    color: var(--secondary-color); /* #DAA500 pour le thème sombre */
+}
+
+#theme-toggle i {
+    color: var(--secondary-color); /* Assure que l’icône utilise la couleur correcte */
+}

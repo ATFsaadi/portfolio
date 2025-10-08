@@ -1,29 +1,4 @@
-/* Arrière-plan animé */
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-/* Couleurs principales du thème */
-:root {
-    --bg-color: #F5F7FA;
-    --primary-color: #455768;
-    --secondary-color: #6D8BA6;
-    --accent-color: #A4B8C4;
-    --text-color: #2D3748;
-    --text-light: #4A5568;
-    --hover-color: #7F9DB6;
-    --border-color: #E2E8F0;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    --card-bg: #FFFFFF;
-    --name-color: #222222;
-    --title-color: #455768;
-    --label-color: #2D3748;
-}
+/* common.css - Styles partagés entre les thèmes clair et sombre */
 
 /* Réinitialisation */
 * {
@@ -35,8 +10,6 @@
 /* Corps du site */
 body {
     font-family: 'Playfair Display', serif;
-    background: var(--bg-color);
-    color: var(--text-color);
     line-height: 1.6;
     font-size: 16px;
     overflow-x: hidden;
@@ -44,75 +17,27 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-    color: var(--title-color);
-    margin-bottom: 16px;
+/* Arrière-plan animé */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    margin-bottom: 32px;
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    letter-spacing: 0.5px;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.7rem;
-    margin-top: 40px;
-    color: var(--title-color);
-    position: relative;
-}
-
-p, li {
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
-
-ul, ol {
-    margin-left: 24px;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-    padding-left: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: var(--primary-color);
-    transform: scale(1.05);
-}
-
-/* ========================= */
-/* 🔝 EN-TÊTE ET NAVIGATION */
-/* ========================= */
-
-/* Conteneur du header */
+/* En-tête et navigation */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 32px;
-    background: transparent;
-    border-bottom: 1px solid var(--border-color);
     position: relative;
     z-index: 1000;
     height: 60px;
 }
 
-/* Icônes du header (droite) */
 .header-right {
     display: flex;
     align-items: center;
@@ -123,7 +48,6 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--secondary-color);
     font-size: 20.8px;
     transition: transform 0.3s ease;
     text-decoration: none;
@@ -133,7 +57,6 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Liens de navigation */
 .navbar-links {
     display: flex;
     align-items: center;
@@ -145,13 +68,11 @@ a:hover {
 
 .navbar-links a {
     font-size: 16px;
-    color: var(--secondary-color);
     position: relative;
     padding: 8px 0;
     transition: color 0.3s ease;
 }
 
-/* Soulignement animé */
 .navbar-links a::after {
     content: '';
     position: absolute;
@@ -159,7 +80,6 @@ a:hover {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
@@ -167,7 +87,6 @@ a:hover {
     width: 100%;
 }
 
-/* Sélecteur de langue */
 .language-switcher {
     display: flex;
     align-items: center;
@@ -183,7 +102,6 @@ a:hover {
     align-items: center;
 }
 
-/* Bouton de thème */
 .theme-switcher {
     display: flex;
     align-items: center;
@@ -191,22 +109,20 @@ a:hover {
 
 .theme-switcher button {
     font-size: 19.2px;
-    color: var(--secondary-color);
     background: none;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-/* Icône thème animé */
 #theme-toggle i {
-    transition: transform 3s ease;
+    transition: transform 0.5s ease, color 0.3s ease;
 }
 
 #theme-toggle:hover i {
     transform: rotate(360deg);
 }
 
-/* Icônes de drapeaux */
 .flag-icon {
     width: 24px;
     height: 16px;
@@ -225,20 +141,11 @@ a:hover {
     100% { transform: rotateY(0); }
 }
 
-/* Masquer le menu burger en grand écran */
 .burger-menu {
     display: none;
     background: none;
     border: none;
     font-size: 20px;
-    color: var(--secondary-color);
-}
-
-/* Cacher les liens de navigation par défaut */
-.navbar-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
 }
 
 #burger-button {
@@ -251,42 +158,8 @@ a:hover {
     cursor: pointer;
 }
 
-/* Styles du menu déroulant pour petits écrans */
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-        margin-left: auto;
-    }
-
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-        background-color: #2d3748f3;
-        padding: 16px;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1000;
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .navbar-links li {
-        padding: 10px 0;
-    }
-}
-
-/* ========================= */
-/* 🧔 SECTION HERO */
-/* ========================= */
-
+/* Section Hero */
 .hero {
-    background: linear-gradient(135deg, var(--bg-color), var(--accent-color));
     padding: 96px 0;
     text-align: center;
     position: relative;
@@ -300,7 +173,6 @@ a:hover {
     left: 0;
     width: 200%;
     height: 200%;
-    background: rgba(255, 255, 255, 0.2);
     transform: rotate(45deg);
     animation: float 3s infinite linear;
 }
@@ -317,48 +189,23 @@ a:hover {
     z-index: 1;
 }
 
-.name-highlight {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
 .profile-img {
     width: 240px;
     height: 240px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid var(--primary-color);
     margin: 32px auto;
-    box-shadow: var(--shadow);
     position: relative;
     z-index: 1;
 }
 
 .btn-projects {
     padding: 12.8px 32px;
-    border: 1px solid var(--primary-color);
-    background: transparent;
-    color: var(--primary-color);
     border-radius: 4.8px;
     transition: all 0.2s ease;
 }
 
-.btn-projects:hover {
-    transform: translateY(-1px);
-    background: rgba(69, 87, 104, 0.1);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
-
-.d-flex.gap-3 {
-    justify-content: flex-end;
-    width: 80%;
-}
-
-/* ========================= */
-/* 📦 SECTIONS GÉNÉRIQUES */
-/* ========================= */
-
+/* Sections génériques */
 .section {
     padding: 64px 0;
 }
@@ -370,24 +217,16 @@ a:hover {
     position: relative;
 }
 
-/* ========================= */
-/* 💼 PROJETS ET COMPÉTENCES */
-/* ========================= */
-
+/* Projets et compétences */
 .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
     padding: 24px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 1;
-    box-shadow: var(--shadow);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .project-image img {
@@ -402,10 +241,8 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* Barre de compétences */
 .skill-bar {
     height: 8px;
-    background: var(--border-color);
     border-radius: 4px;
     margin-top: 8px;
     overflow: hidden;
@@ -413,16 +250,11 @@ a:hover {
 
 .skill-progress {
     height: 100%;
-    background: var(--secondary-color);
-    width: 70%;
     border-radius: 4px;
     transition: width 0.5s ease;
 }
 
-/* ========================= */
-/* 📬 SECTION CONTACT */
-/* ========================= */
-
+/* Section Contact */
 .contact-item {
     display: flex;
     align-items: center;
@@ -430,19 +262,13 @@ a:hover {
 }
 
 .contact-icon {
-    color: var(--secondary-color);
     font-size: 24px;
     margin-right: 16px;
 }
 
 .contact-label {
-    color: var(--label-color);
     font-weight: bold;
     margin-right: 8px;
-}
-
-.contact-value {
-    color: var(--text-color);
 }
 
 .contact-social {
@@ -452,66 +278,39 @@ a:hover {
     margin-top: 24px;
 }
 
-.contact-info {
-    padding: 32px;
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    background: var(--card-bg);
-    box-shadow: var(--shadow);
-    margin-bottom: 32px;
-}
-
 .social-link {
-    color: var(--secondary-color);
     font-size: 24px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--primary-color);
     transform: scale(1.2);
 }
 
 .form-control {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
     padding: 12px;
     border-radius: 8px;
 }
 
 .contact-form .form-control:focus {
     background-color: var(--bg-color);
-    border-color: var(--secondary-color);
-}
-
-.contact-form .form-control::placeholder {
-    color: var(--text-light);
-    opacity: 0.7;
 }
 
 /* Encadré personnalisé */
 .custom-border {
-    border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 20px;
-    background-color: var(--card-bg) !important;
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
     min-height: 300px;
-    box-shadow: var(--shadow);
 }
 
-/* ========================= */
-/* 📅 TIMELINE */
-/* ========================= */
-
+/* Timeline */
 .timeline {
     position: relative;
     padding-left: 24px;
     font-family: var(--font-family);
-    color: var(--text-color);
 }
 
 .timeline::before {
@@ -521,7 +320,6 @@ a:hover {
     bottom: 0;
     left: 8px;
     width: 2px;
-    background-color: var(--secondary-color);
 }
 
 .timeline-item {
@@ -534,39 +332,27 @@ a:hover {
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 4px;
-    color: var(--primary-color);
 }
 
-/* ========================= */
-/* ⚓ PIED DE PAGE */
-/* ========================= */
-
+/* Pied de page */
 footer, .footer-text {
     margin-top: 60px;
     padding: 20px;
     text-align: center;
-    color: var(--secondary-color);
     font-weight: bold;
     font-size: 16px;
 }
 
-/* ========================= */
-/* 📖 STYLES DU TUTORIEL GLPI */
-/* ========================= */
-
+/* Tutoriel GLPI */
 body.tuto-glpi {
-    background-color: var(--bg-color);
     padding: 20px;
-    color: var(--text-color);
 }
 
 body.tuto-glpi h1 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 40px;
-    color: var(--secondary-color);
     text-transform: uppercase;
-    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 10px;
 }
 
@@ -574,8 +360,6 @@ body.tuto-glpi h2 {
     font-size: 1.8rem;
     margin-top: 40px;
     margin-bottom: 20px;
-    color: var(--title-color);
-    border-left: 4px solid var(--secondary-color);
     padding-left: 10px;
 }
 
@@ -583,12 +367,6 @@ body.tuto-glpi h3 {
     font-size: 1.4rem;
     margin-top: 25px;
     margin-bottom: 10px;
-    color: var(--accent-color);
-}
-
-body.tuto-glpi p {
-    color: var(--text-color);
-    margin-bottom: 15px;
 }
 
 body.tuto-glpi ul,
@@ -599,14 +377,10 @@ body.tuto-glpi ol {
 
 body.tuto-glpi ul li {
     list-style-type: "📌 ";
-    color: var(--secondary-color);
     margin-bottom: 8px;
 }
 
 body.tuto-glpi pre {
-    background-color: var(--bg-color);
-    border: 1px solid var(--border-color);
-    color: var(--accent-color);
     font-family: monospace;
     padding: 15px;
     border-radius: 8px;
@@ -615,13 +389,10 @@ body.tuto-glpi pre {
 }
 
 body.tuto-glpi .screenshot {
-    border: 2px dashed var(--secondary-color);
-    background: rgba(0, 0, 0, 0.05);
     padding: 15px;
     margin: 20px 0;
     text-align: center;
     font-style: italic;
-    color: var(--text-light);
     border-radius: 10px;
 }
 
@@ -629,22 +400,15 @@ body.tuto-glpi .screenshot img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 2px solid var(--secondary-color);
 }
 
 body.tuto-glpi .conclusion {
     margin-top: 40px;
     padding: 20px;
-    background: var(--card-bg);
-    border-left: 5px solid var(--secondary-color);
     border-radius: 8px;
-    box-shadow: var(--shadow);
 }
 
-/* ========================= */
-/* 📖 STYLES DU TUTORIEL (Second CSS) */
-/* ========================= */
-
+/* Tutoriel (général) */
 .tuto-container {
     display: flex;
     justify-content: center;
@@ -654,20 +418,13 @@ body.tuto-glpi .conclusion {
 .tuto-content {
     max-width: 900px;
     width: 100%;
-    background: rgba(0, 0, 0, 0);
     padding: 32px;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(218, 165, 0, 0.2);
 }
 
 .sommaire {
-    background: transparent;
     padding: 20px;
-    border-radius: 0;
     margin-bottom: 20px;
-    border-left: 1px solid var(--title-color);
 }
 
 .sommaire li {
@@ -679,55 +436,23 @@ body.tuto-glpi .conclusion {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.05rem;
-    color: var(--text-color);
     text-decoration: none;
-}
-
-.sommaire a:hover {
-    text-decoration: none;
-    color: var(--secondary-color);
 }
 
 .capture {
-    background-color: #0a0a0a;
-    color: #ffffff;
     font-family: 'Courier New', monospace;
     font-size: 14px;
     padding: 18px;
-    border-radius: 0;
     margin: 20px 0;
     white-space: pre-wrap;
     overflow-x: auto;
-    border: none;
-    box-shadow: inset 0 0 0 0.2px #004400;
 }
 
 a.doc-officielle {
     display: inline-block;
     padding: 8px 14px;
-    color: var(--secondary-color);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
     transition: color 0.3s ease;
-    position: relative;
-}
-
-a.doc-officielle:hover {
-    color: var(--text-color);
-}
-
-body[dir="rtl"] {
-    direction: rtl;
-}
-
-body[dir="rtl"] * {
-    text-align: right;
-}
-
-/* Header et language-switcher restent en LTR */
-.header,
-.header * {
-    direction: ltr !important;
-    text-align: left !important;
 }

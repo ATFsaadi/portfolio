@@ -1,29 +1,37 @@
+// Gestion du toggle de thème
 document.addEventListener('DOMContentLoaded', () => {
-    const themeLink = document.getElementById('theme-style'); // Lien CSS thème
-    const themeToggle = document.getElementById('theme-toggle'); // Bouton toggle
-    const themeIcon = themeToggle.querySelector('i'); // Icône soleil/lune
+    const themeLink = document.getElementById('theme-style');
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
 
-    // Thème par défaut : 'light'
+    // Thème par défaut
     const defaultTheme = 'light';
     let savedTheme = localStorage.getItem('theme') || defaultTheme;
-    localStorage.setItem('theme', savedTheme); // Sauvegarde thème
-    applyTheme(savedTheme); // Applique thème au chargement
+    applyTheme(savedTheme);
 
     // Toggle thème au clic
     themeToggle.addEventListener('click', () => {
-        const newTheme = themeLink.getAttribute('href') === 'styles/style.css' ? 'light' : 'dark';
+        const newTheme = savedTheme === 'light' ? 'dark' : 'light';
         localStorage.setItem('theme', newTheme);
         applyTheme(newTheme);
+        savedTheme = newTheme;
     });
 
     // Application du thème
     function applyTheme(theme) {
+        const particleColors = {
+            light: '#4CA8D6', // Bleue pour clair
+            dark: '#D6974C'   // Orangée pour sombre
+        };
         if (theme === 'light') {
-            themeLink.href = 'styles/light.css'; // CSS thème clair
+            themeLink.href = 'styles/sun.css';
             themeIcon.classList.replace('fa-moon', 'fa-sun');
         } else {
-            themeLink.href = 'styles/style.css'; // CSS thème sombre
+            themeLink.href = 'styles/moon.css';
             themeIcon.classList.replace('fa-sun', 'fa-moon');
         }
+        // Déclencher un événement personnalisé pour les particules
+        const event = new CustomEvent('themeChange', { detail: { color: particleColors[theme] } });
+        document.dispatchEvent(event);
     }
 });

@@ -1,3 +1,6 @@
+/* responsive.css - Styles responsifs pour tous les thèmes */
+
+/* Petits écrans (≤ 576px) */
 @media (max-width: 576px) {
     .navbar-links a {
         font-size: 0.9rem;
@@ -12,12 +15,31 @@
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
     }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .profile-img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .project-image img {
+        height: 10rem;
+    }
+
+    .contact-form .form-control {
+        font-size: 0.9rem;
+    }
 }
 
+/* Écrans moyens (≤ 768px) */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
         padding: 1rem;
+        height: auto;
     }
 
     .header-left,
@@ -28,15 +50,53 @@
         margin: 0.5rem 0;
     }
 
-    .navbar-links {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+        color: var(--secondary-color);
     }
 
-    .language-switcher {
-        order: -1; /* Met les langues en premier */
-        margin-bottom: 1rem;
+    #burger-button {
+        top: 15px;
+        left: 15px;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        background-color: var(--card-bg);
+        padding: 16px;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow);
+    }
+
+    .navbar-links.show {
+        display: flex;
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-links li {
+        padding: 10px 0;
+    }
+
+    #navbar {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    #navbar.show {
+        display: block;
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .project-card {
@@ -64,8 +124,26 @@
     .title {
         font-size: 1.8rem;
     }
+
+    .theme-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .options, .debouches {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options .card, .debouches .card {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
+/* Écrans intermédiaires (≤ 992px) */
 @media (max-width: 992px) {
     .container {
         padding: 0 15px;
@@ -80,26 +158,13 @@
         height: 12rem;
         margin-bottom: 2rem;
     }
-}
 
-
-
-
-
-/* Ajout d'une media query pour petits écrans */
-@media (max-width: 768px) {
-    /* Déplace le bouton "changer le thème" au-dessus de l'image et des icônes de contact */
-    .theme-switcher {
-        position: absolute;
-        top: 200%; /* Espace du haut de la page */
-        left: 50%;
-        transform: translateX(-50%); /* Centre horizontalement */
-        z-index: 10; /* S'assure que le bouton soit au-dessus des autres éléments */
+    .custom-border {
+        width: 95%;
     }
 }
 
-
-
+/* Support RTL */
 body.rtl {
     direction: rtl;
     text-align: right;
@@ -109,4 +174,3 @@ body:not(.rtl) {
     direction: ltr;
     text-align: left;
 }
-

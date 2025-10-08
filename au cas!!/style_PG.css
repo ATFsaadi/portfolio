@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #000000;
-    --secondary-color: #DAA500;
-    --title-color: #D6974C;
-    --text-color: #E4E4E4;
+    --bg-color: #212529; /* Fond sombre et texte sombre */
+    --secondary-color: #6c757d; /* Fond des cartes */
+    --title-color: #f8f9fa; /* Texte clair et fond clair */
+    --text-color: #007bff; /* Couleur pour btn-projects */
 }
 
 * {
