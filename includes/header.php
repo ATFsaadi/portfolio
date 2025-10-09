@@ -31,9 +31,9 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
     <header class="header">
         <div class="header-right">
             <a href="index.php" aria-label="Retour à l'accueil">
-                <img src="images/SA.png" alt="Logo Atef Saadi" width="43">
+                <img src="images/LogoAcc" alt="Logo Atef Saadi" width="66">
             </a>
-            <a href="https://www.linkedin.com/in/atef-saadi/" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Atef Saadi">
+            <a href="https://www.linkedin.com/in/atef-saadi-b86970345/" target="_blank" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Atef Saadi">
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/ATFsaadi/" target="_blank" rel="noopener" aria-label="Profil GitHub d'Atef Saadi">

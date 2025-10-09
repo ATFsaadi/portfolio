@@ -4,23 +4,15 @@
 <!-- SECTION VEILLE TECHNOLOGIQUE -->
 <section>
     <div class="container py-5">
-        <h2 class="mb-4">
-            Veille technologique : Edge Computing</h2>
+        <h2 class="mb-4">Veille technologique : Edge Computing</h2>
 
-        <h4>1. Introduction</h4>
-        <p>L’<strong>Edge Computing</strong>
-            consiste à rapprocher la puissance de calcul et le traitement des données de la
-            source où elles sont générées, plutôt que de tout envoyer dans le cloud. Cette
-            technologie devient essentielle avec l’essor de l’IoT, de la 5G et des
-            applications en temps réel.</p>
-
-        <h4>2. Contexte</h4>
+        <h4>1. Contexte</h4>
         <p>Avec la croissance des objets connectés et des capteurs, les volumes de
             données explosent. Transmettre en continu vers le cloud augmente la latence et
             la consommation de bande passante. L’Edge Computing est apparu comme une réponse
             pour améliorer la rapidité et l’efficacité.</p>
 
-        <h4>3. Technologies et exemples</h4>
+        <h4>2. Technologies et exemples</h4>
         <ul>
             <li>
                 <strong>IoT + Edge :</strong>
@@ -34,7 +26,7 @@
                 utilisateurs.</li>
         </ul>
 
-        <h4>4. Cas d’usage</h4>
+        <h4>3. Cas d’usage</h4>
         <ul>
             <li>Véhicules autonomes (décisions en temps réel).</li>
             <li>Industrie 4.0 (maintenance prédictive).</li>
@@ -42,22 +34,22 @@
             <li>Villes intelligentes (gestion trafic, énergie, sécurité).</li>
         </ul>
 
-        <h4>5. Avantages et limites</h4>
+        <h4>4. Avantages et limites</h4>
         <p>
-            <strong>✅ Avantages :</strong>
+            <strong> Avantages :</strong>
             faible latence, réduction de la bande passante, sécurité accrue (données
             traitées localement).<br>
-            <strong>❌ Limites :</strong>
+            <strong> Limites :</strong>
             coûts d’infrastructure, complexité de gestion, sécurité physique des
             équipements.</p>
 
-        <h4>6. Tendances et perspectives</h4>
+        <h4>5. Tendances et perspectives</h4>
         <p>D’après
             <em>Gartner</em>, plus de 75 % des données produites en entreprise seront
             traitées en périphérie d’ici 2025. L’Edge Computing sera un pilier de l’IA, de
             l’IoT et des réseaux 6G.</p>
 
-        <h4>7. Conclusion</h4>
+        <h4>6. Conclusion</h4>
         <p>L’Edge Computing transforme la manière dont les données sont traitées et
             ouvre la voie à de nouveaux services temps réel. Cette tendance complète le
             cloud, sans le remplacer.</p>

@@ -57,6 +57,10 @@ body {
     transform: translateY(-2px);
 }
 
+a {
+    text-decoration: none;
+}
+
 .navbar-links {
     display: flex;
     align-items: center;
@@ -456,3 +460,42 @@ a.doc-officielle {
     font-weight: 600;
     transition: color 0.3s ease;
 }
+
+
+/*capture d'écran*/
+.img-fluid {
+cursor: pointer;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-radius: 8px;
+ border: 2px solid transparent;
+}
+        
+.img-fluid:hover {
+transform: scale(1.02);
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+border-color: #007bff;
+}
+                                   
+.modal-lg .modal-body img {
+max-height: 80vh;
+width: 100%;
+object-fit: contain;
+}
+                                   
+.modal-header {
+background-color: #f8f9fa;
+border-bottom: 1px solid #dee2e6;
+}
+                                   
+figure {
+margin-bottom: 1.5rem;
+}
+                              
+figcaption {
+text-align: center;
+font-style: italic;
+color: #6c757d;
+margin-top: 0.5rem;
+}
+
+      

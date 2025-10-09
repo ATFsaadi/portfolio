@@ -1,7 +1,7 @@
 <?php 
     require_once ("includes/header.php");
 ?>
-
+<center>
 <!-- Section principale -->
 <section id="hero" class="hero">
     <div class="container">
@@ -44,24 +44,10 @@
                         <div class="personal-info mt-4">
                             <div class="info-item">
                                 <i class="fas fa-user-circle me-2"></i>
-                                <span class="info-label" data-i18n="Nom :">Nom :</span>
+                                <span class="info-label" data-i18n="Nom :"></span>
                                 <span class="info-value" data-i18n="Atef Saadi">Atef Saadi</span>
                             </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope me-2"></i>
-                                <span class="info-label" data-i18n="Email :">Email :</span>
-                                <span class="info-value" data-i18n="atef_saadi@outlook.fr">atef_saadi@outlook.fr</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-phone me-2"></i>
-                                <span class="info-label" data-i18n="Téléphone :">Téléphone :</span>
-                                <span class="info-value" data-i18n="06 式 式 84 48">06 式 式 84 48</span>
-                            </div>
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt me-2"></i>
-                                <span class="info-label" data-i18n="Localisation :">Localisation :</span>
-                                <span class="info-value" data-i18n="Colombes (92700)">Colombes (92700)</span>
-                            </div>
+                           
                         </div>
                         <br>
                         <p
@@ -118,29 +104,29 @@
 <!-- Section compétences -->
 <section id="skills" class="section bg-dark custom-border">
     <div class="container">
-        <h2 class="title" data-i18n="Mes Compétences">Mes Compétences</h2>
+        <h2 class="title" data-i18n="Ma boîte à outils">Ma boîte à outils</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="project-card h-100">
                     <div class="skill-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 data-i18n="Développement Web">Développement Web</h3>
+                    <h3 data-i18n="Front & Back">Front & Back</h3>
                     <ul class="skill-list">
                         <li>
-                            <span data-i18n="HTML/CSS">HTML/CSS</span>
+                            <span data-i18n="HTML/CSS – la base solide">HTML/CSS – la base solide</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 90%;"></div>
                             </div>
                         </li>
                         <li>
-                            <span data-i18n="PHP">PHP</span>
+                            <span data-i18n="PHP – logique serveur">PHP – logique serveur</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 85%;"></div>
                             </div>
                         </li>
                         <li>
-                            <span data-i18n="JavaScript">JavaScript</span>
+                            <span data-i18n="JavaScript – l’âme interactive">JavaScript – l’âme interactive</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 80%;"></div>
                             </div>
@@ -153,16 +139,16 @@
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3 data-i18n="Base de Données">Base de Données</h3>
+                    <h3 data-i18n="Données bien rangées">Données bien rangées</h3>
                     <ul class="skill-list">
                         <li>
-                            <span data-i18n="MySQL">MySQL</span>
+                            <span data-i18n="MySQL – fidèle et rapide">MySQL – fidèle et rapide</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 80%;"></div>
                             </div>
                         </li>
                         <li>
-                            <span data-i18n="SQL">SQL</span>
+                            <span data-i18n="SQL – requêtes précises">SQL – requêtes précises</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 75%;"></div>
                             </div>
@@ -173,18 +159,18 @@
             <div class="col-md-4 mb-4">
                 <div class="project-card h-100">
                     <div class="skill-icon">
-                        <i class="fas fa-network-wired"></i>
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 data-i18n="Réseaux & Sécurité">Réseaux & Sécurité</h3>
+                    <h3 data-i18n="Réseau & Sécurité">Réseau & Sécurité</h3>
                     <ul class="skill-list">
                         <li>
-                            <span data-i18n="Cisco">Cisco</span>
+                            <span data-i18n="Cisco – infrastructures fiables">Cisco – infrastructures fiables</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 85%;"></div>
                             </div>
                         </li>
                         <li>
-                            <span data-i18n="VLAN">VLAN</span>
+                            <span data-i18n="VLAN – segmentation intelligente">VLAN – segmentation intelligente</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="--width: 80%;"></div>
                             </div>
@@ -202,17 +188,17 @@
         <div class="row g-4">
             <!-- Carte 1 -->
             <div class="col-lg-4 col-md-6">
-                <a href="#" class="project-card card h-100 text-decoration-none text-dark">
+                <a href="metaforg.php" class="project-card card h-100 text-decoration-none text-dark">
                     <div class="card-body">
                         <div class="project-image">
                             <img
-                                src="images/logo.png"
+                                src="images/MetaForg/LogoMF.png"
                                 alt="Projet Réseau Social"
                                 loading="lazy"
                                 class="card-img-top">
                         </div>
                         <div class="project-content mt-3">
-                            <h3 data-i18n="Réseau Social">Réseau Social</h3>
+                            <h3 data-i18n="Réseau Social">MetaForg</h3>
                             <p
                                 class="project-date badge bg-secondary"
                                 data-i18n="IRIS Ecole, Paris - 04/2025">IRIS Ecole, Paris - 04/2025</p>
@@ -229,17 +215,17 @@
 
             <!-- Carte 2 -->
             <div class="col-lg-4 col-md-6">
-                <a href="#" class="project-card card h-100 text-decoration-none text-dark">
+                <a href="altimmo.php" class="project-card card h-100 text-decoration-none text-dark">
                     <div class="card-body">
                         <div class="project-image">
                             <img
-                                src="images/logo2.png"
+                                src="images/Altimmo/logoAltImmo.png"
                                 alt="Projet Agence Immobilière"
                                 loading="lazy"
                                 class="card-img-top">
                         </div>
                         <div class="project-content mt-3">
-                            <h3 data-i18n="Agence Immobilière">Agence Immobilière</h3>
+                            <h3 data-i18n="Agence Immobilière">AltImmo</h3>
                             <p
                                 class="project-date badge bg-secondary"
                                 data-i18n="IRIS Ecole, Paris - 02/2025">IRIS Ecole, Paris - 02/2025</p>
@@ -262,13 +248,13 @@
                     <div class="card-body">
                         <div class="project-image">
                             <img
-                                src="images/GLPI.png"
+                                src="images/Glpi/LogoGLPI"
                                 alt="Installation et de configuration de GLPI"
                                 loading="lazy"
                                 class="card-img-top">
                         </div>
                         <div class="project-content mt-3">
-                            <h3 data-i18n="Installation GLPI">Installation GLPI</h3>
+                            <h3 data-i18n="Installation GLPI">GLPI</h3>
                             <p
                                 class="project-date badge bg-secondary"
                                 data-i18n="IRIS Ecole, Paris - 10/2024">IRIS Ecole, Paris - 10/2024</p>
@@ -288,6 +274,10 @@
 <section id="tech-watch" class="section custom-border">
     <div class="container">
         <h2 class="title" data-i18n="Veille Technologique">Veille Technologique</h2>
+        <p>La veille technologique est un processus de recherche et d’analyse sur les
+            innovations. Le Low-code et le No-code révolutionnent la manière de développer
+            des applications en permettant aux non-développeurs et aux professionnels de
+            créer des solutions rapidement.</p>
         <div class="row g-4">
             <div class="col-md-6">
                 <div
@@ -462,6 +452,7 @@
         </div>
     </div>
 </section>
+</center>
 <!-- Footer -->
 
 <?php require_once("includes/footer.php")?>

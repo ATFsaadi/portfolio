@@ -4,23 +4,16 @@
 <!-- SECTION VEILLE TECHNOLOGIQUE -->
 <section>
     <div class="container py-5">
-        <h2 class="mb-4">
-            Veille technologique : Le Low-code / No-code</h2>
+        <h2 class="mb-4">Le Low-code / No-code</h2>
 
-        <h4>1. Introduction</h4>
-        <p>La veille technologique est un processus de recherche et d’analyse sur les
-            innovations. Le Low-code et le No-code révolutionnent la manière de développer
-            des applications en permettant aux non-développeurs et aux professionnels de
-            créer des solutions rapidement.</p>
-
-        <h4>2. Historique et contexte</h4>
+        <h4>1. Historique et contexte</h4>
         <p>Le terme
             <strong>Low-code</strong>
             est apparu en 2014 grâce à Forrester Research. Aujourd’hui, avec la pénurie de
             développeurs et la transformation numérique, ces solutions connaissent une
             croissance rapide.</p>
 
-        <h4>3. Technologies et outils</h4>
+        <h4>2. Technologies et outils</h4>
         <ul>
             <li>
                 <strong>No-code :</strong>
@@ -30,7 +23,7 @@
                 OutSystems, Mendix, PowerApps, AppSheet.</li>
         </ul>
 
-        <h4>4. Cas d’usage</h4>
+        <h4>3. Cas d’usage</h4>
         <ul>
             <li>Automatiser des processus métiers en entreprise.</li>
             <li>Prototyper rapidement une idée de start-up.</li>
@@ -38,20 +31,20 @@
             <li>Lancer une app personnelle sans compétences techniques poussées.</li>
         </ul>
 
-        <h4>5. Avantages et limites</h4>
+        <h4>4. Avantages et limites</h4>
         <p>
-            <strong>✅ Avantages :</strong>
+            <strong>Avantages :</strong>
             rapidité, réduction des coûts, accessibilité.
             <br>
-            <strong>❌ Limites :</strong>
+            <strong>Limites :</strong>
             dépendance aux plateformes, sécurité, manque de personnalisation.</p>
 
-        <h4>6. Tendances et perspectives</h4>
+        <h4>5. Tendances et perspectives</h4>
         <p>Le marché du Low/No-code pourrait dépasser
             <strong>65 milliards $ d’ici 2027</strong>. Avec l’IA intégrée, ces outils
             deviendront un pilier de la transformation numérique.</p>
 
-        <h4>7. Conclusion</h4>
+        <h4>6. Conclusion</h4>
         <p>Le Low/No-code n’a pas vocation à remplacer les développeurs mais à compléter
             leurs compétences. Il s’impose comme une solution incontournable pour créer
             rapidement des applications modernes.</p>

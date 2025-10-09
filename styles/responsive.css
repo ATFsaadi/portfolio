@@ -174,3 +174,8 @@ body:not(.rtl) {
     direction: ltr;
     text-align: left;
 }
+  @media (max-width: 768px) {
+            .modal-dialog {
+                margin: 1rem;
+            }
+        } 
