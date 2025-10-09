@@ -278,3 +278,7 @@ a.doc-officielle:hover {
 #theme-toggle i {
     color: var(--secondary-color); /* Assure que l’icône utilise la couleur correcte */
 }
+
+a {
+    text-decoration: none !important;
+}
