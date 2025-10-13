@@ -31,7 +31,7 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
     <header class="header">
         <div class="header-right">
             <a href="index.php" aria-label="Retour à l'accueil">
-                <img src="images/LogoAcc" alt="Logo Atef Saadi" width="66">
+                <img src="images/LogoAcc.png" alt="Logo Atef Saadi" width="66">
             </a>
             <a href="https://www.linkedin.com/in/atef-saadi-b86970345/" target="_blank" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Atef Saadi">
                 <i class="fab fa-linkedin"></i>
@@ -53,10 +53,10 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="navbar-links" id="navbar">
-                <li><a href="#about" data-i18n="À Propos de Moi">À Propos de Moi</a></li>
-                <li><a href="#skills" data-i18n="Mes Compétences">Mes Compétences</a></li>
-                <li><a href="#projects" data-i18n="Mes Projets">Mes Projets</a></li>
-                <li><a href="#contact" data-i18n="Contact">Contact</a></li>
+                <li><a href="index.php#about" data-i18n="À Propos de Moi">À Propos de Moi</a></li>
+                <li><a href="index.php#skills" data-i18n="Mes Compétences">Mes Compétences</a></li>
+                <li><a href="index.php#projects" data-i18n="Mes Projets">Mes Projets</a></li>
+                <li><a href="index.php#contact" data-i18n="Contact">Contact</a></li>
             </ul>
         </nav>
 

@@ -179,3 +179,38 @@ body:not(.rtl) {
                 margin: 1rem;
             }
         } 
+
+@media (max-width: 768px) {
+  #skills .title {
+    font-size: 1.6rem;
+  }
+
+  #skills .skill-icon i {
+    font-size: 1.8rem;
+  }
+
+  #skills h3 {
+    font-size: 1.3rem;
+  }
+
+  #skills .skill-list span {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+    .btn-projects {
+        min-width: 140px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .video-container iframe {
+        max-width: 100%;
+    }
+}

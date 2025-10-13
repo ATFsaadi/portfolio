@@ -1,70 +1,36 @@
-<title data-i18n="BTS SIO - Détails">GLPI</title>
+<title>GLPI</title>
 <?php require_once("includes/header.php"); ?>
 
 <!-- Conteneur principal -->
 <main class="tuto-container">
     <div class="tuto-content">
 
-        <h1 data-lang="title">Tutoriel d’installation et de configuration de GLPI sur Debian 12 (VMware)</h1>
+        <h1>Tutoriel d’installation et de configuration de GLPI sur Debian 12 (VMware)</h1>
 
         <!-- Sommaire fusionné -->
-        <h2 data-lang="sommaireTitle">Sommaire</h2>
+        <h2>Sommaire</h2>
         <ul class="sommaire">
-            <li>
-                <a href="#etape-1" data-lang="sommaireItem1">1. Introduction à GLPI</a>
-            </li>
-            <li>
-                <a href="#etape-2" data-lang="sommaireItem2">2. Prérequis officiels de GLPI</a>
-            </li>
-            <li>
-                <a href="#etape-3" data-lang="sommaireItem3">3. Préparation du serveur Debian 12</a>
-            </li>
-            <li>
-                <a href="#etape-4" data-lang="sommaireItem4">4. Installation du socle LAMP</a>
-            </li>
-            <li>
-                <a href="#etape-5" data-lang="sommaireItem5">5. Configuration sécurisée de MariaDB</a>
-            </li>
-            <li>
-                <a href="#etape-6" data-lang="sommaireItem6">6. Téléchargement et préparation de GLPI</a>
-            </li>
-            <li>
-                <a href="#etape-7" data-lang="sommaireItem7">7. Configuration d’Apache avec VirtualHost</a>
-            </li>
-            <li>
-                <a href="#etape-8" data-lang="sommaireItem8">8. Configuration de PHP-FPM et extensions requises</a>
-            </li>
-            <li>
-                <a href="#etape-9" data-lang="sommaireItem9">9. Installation via navigateur web</a>
-            </li>
-            <li>
-                <a href="#etape-10" data-lang="sommaireItem10">10. Première connexion et sécurité</a>
-            </li>
-            <li>
-                <a href="#etape-11" data-lang="sommaireItem11">11. Bonnes pratiques post-installation</a>
-            </li>
-            <li>
-                <a href="#etape-12" data-lang="sommaireItem12">12. Conclusion</a>
-            </li>
+            <li><a href="#etape-1">1. Introduction à GLPI</a></li>
+            <li><a href="#etape-2">2. Prérequis officiels de GLPI</a></li>
+            <li><a href="#etape-3">3. Préparation du serveur Debian 12</a></li>
+            <li><a href="#etape-4">4. Installation du socle LAMP</a></li>
+            <li><a href="#etape-5">5. Configuration sécurisée de MariaDB</a></li>
+            <li><a href="#etape-6">6. Téléchargement et préparation de GLPI</a></li>
+            <li><a href="#etape-7">7. Configuration d’Apache avec VirtualHost</a></li>
+            <li><a href="#etape-8">8. Configuration de PHP-FPM et extensions requises</a></li>
+            <li><a href="#etape-9">9. Installation via navigateur web</a></li>
+            <li><a href="#etape-10">10. Première connexion et sécurité</a></li>
+            <li><a href="#etape-11">11. Bonnes pratiques post-installation</a></li>
+            <li><a href="#etape-12">12. Conclusion</a></li>
         </ul>
 
         <!-- 1. Introduction -->
-        <h2 id="etape-1" data-lang="etape1Title">1. Introduction à GLPI</h2>
-        <p data-lang="etape1Text1">GLPI (Gestionnaire Libre de Parc Informatique) est un
-            logiciel libre de gestion de parc informatique, offrant une solution complète
-            pour la gestion des équipements (ordinateurs, téléphones, périphériques), le
-            suivi des tickets de support, ainsi que l’administration des contrats, licences
-            et ressources matérielles.</p>
-        <p data-lang="etape1Text2">Depuis sa création en 2003, GLPI s’est imposé comme
-            une solution fiable et largement adoptée. Ce tutoriel vous guide pas à pas dans
-            son installation sur
-            <strong>Debian 12</strong>
-            avec un environnement
-            <strong>LAMP</strong>
-            sous VMware.</p>
+        <h2 id="etape-1">1. Introduction à GLPI</h2>
+        <p>GLPI (Gestionnaire Libre de Parc Informatique) est un logiciel libre de gestion de parc informatique, offrant une solution complète pour la gestion des équipements (ordinateurs, téléphones, périphériques), le suivi des tickets de support, ainsi que l’administration des contrats, licences et ressources matérielles.</p>
+        <p>Depuis sa création en 2003, GLPI s’est imposé comme une solution fiable et largement adoptée. Ce tutoriel vous guide pas à pas dans son installation sur <strong>Debian 12</strong> avec un environnement <strong>LAMP</strong> sous VMware.</p>
 
-        <center>
-            <h3 data-lang="etape1H3">Présentation de GLPI</h3>
+        <div class="video-container">
+            <h3>Présentation de GLPI</h3>
             <iframe
                 width="560"
                 height="315"
@@ -73,462 +39,132 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen="allowfullscreen"></iframe>
-        </center>
+                allowfullscreen></iframe>
+        </div>
 
         <!-- 2. Prérequis -->
-        <h2 id="etape-2" data-lang="etape2Title">2. Pré-requis pour l'installation de GLPI</h2>
-        <p data-lang="etape2Text1">Avant de procéder à l’installation, il est important
-            de vérifier que votre environnement répond aux prérequis nécessaires. GLPI
-            nécessite un serveur web, PHP et une base de données pour fonctionner
-            correctement. Sur un système Linux, cela correspond généralement à une
-            architecture LAMP. GLPI est compatible avec plusieurs serveurs web, notamment :</p>
+        <h2 id="etape-2">2. Pré-requis pour l'installation de GLPI</h2>
+        <p>Avant de procéder à l’installation, il est important de vérifier que votre environnement répond aux prérequis nécessaires. GLPI nécessite un serveur web, PHP et une base de données pour fonctionner correctement. Sur un système Linux, cela correspond généralement à une architecture LAMP. GLPI est compatible avec plusieurs serveurs web, notamment :</p>
         <ul>
-            <li data-lang="etape2List1">Apache2, Nginx, Lighttpd et IIS</li>
+            <li>Apache2, Nginx, Lighttpd et IIS</li>
         </ul>
 
-        <h5 data-lang="etape2H5_1">Versions requises</h5>
+        <h5>Versions requises</h5>
 
-        <h7 data-lang="etape2H7_1">● PHP</h7>
+        <h7>● PHP</h7>
         <ul>
-            <li data-lang="etape2PhpList">Version : 8.2</li>
+            <li>Version : 8.2</li>
         </ul>
 
-        <h7 data-lang="etape2H7_2">● Base de données</h7>
+        <h7>● Base de données</h7>
         <ul>
-            <li data-lang="etape2DbList1">MySQL : version 5.1 minimum</li>
-            <li data-lang="etape2DbList2">MariaDB : version 10.2 minimum</li>
+            <li>MySQL : version 5.1 minimum</li>
+            <li>MariaDB : version 10.2 minimum</li>
         </ul>
 
-        <p data-lang="etape2Text2">Notez également que plusieurs extensions PHP doivent
-            être installées pour assurer le bon fonctionnement de GLPI.</p>
+        <p>Notez également que plusieurs extensions PHP doivent être installées pour assurer le bon fonctionnement de GLPI.</p>
 
-        <p data-lang="etape2Text3">La dernière version disponible à ce jour,
-            <strong>GLPI 10.0.10</strong>, introduit le support de PHP 8.3 (future version
-            stable) et MySQL 8.1, tout en corrigeant de nombreuses vulnérabilités critiques.</p>
+        <p>La dernière version disponible à ce jour, <strong>GLPI 10.0.10</strong>, introduit le support de PHP 8.3 (future version stable) et MySQL 8.1, tout en corrigeant de nombreuses vulnérabilités critiques.</p>
 
-        <p data-lang="etape2Text4">Pour cette démonstration, nous utiliserons une machine sous
-            <strong>Debian 12</strong>, sur laquelle nous installerons
-            <strong>Apache2</strong>,
-            <strong>PHP 8.3</strong>
-            et
-            <strong>MariaDB</strong>.</p>
+        <p>Pour cette démonstration, nous utiliserons une machine sous <strong>Debian 12</strong>, sur laquelle nous installerons <strong>Apache2</strong>, <strong>PHP 8.3</strong> et <strong>MariaDB</strong>.</p>
 
-        <p data-lang="etape2Text5">Pour plus de détails, vous pouvez consulter la
-            <a
-                href="https://glpi-install.readthedocs.io/en/latest/prerequisites.html"
-                target="_blank">documentation officielle des prérequis de GLPI</a>.</p>
+        <p>Pour plus de détails, vous pouvez consulter la <a href="https://glpi-install.readthedocs.io/en/latest/prerequisites.html" target="_blank">documentation officielle des prérequis de GLPI</a>.</p>
 
         <!-- 3. Mise à jour -->
-        <h2 id="etape-3" data-lang="etape3Title">3. Préparation du serveur Debian 12</h2>
-        <p data-lang="etape3Text1">Commençons par l'installation par une mise à jour des
-            paquets sur la machine Debian 12. Pensez également à lui attribuer une adresse
-            IP et à effectuer la configuration du système</p>
+        <h2 id="etape-3">3. Préparation du serveur Debian 12</h2>
+        <p>Commençons par l'installation par une mise à jour des paquets sur la machine Debian 12. Pensez également à lui attribuer une adresse IP et à effectuer la configuration du système.</p>
         <pre>sudo apt update && sudo apt upgrade</pre>
 
         <!-- 4. LAMP -->
-        <h2 id="etape-4" data-lang="etape4Title">4. Installation du socle LAMP</h2>
-        <p data-lang="etape4Text1">La première grande étape consiste à installer les
-            paquets du socle LAMP : Linux Apache2 MariaDB PHP. Sous Debian 12, qui est la
-            dernière version stable de Debian, PHP 8.2 est distribué par défaut dans les
-            dépôts officiels. Commençons par installer ces trois paquets :</p>
+        <h2 id="etape-4">4. Installation du socle LAMP</h2>
+        <p>La première grande étape consiste à installer les paquets du socle LAMP : Linux Apache2 MariaDB PHP. Sous Debian 12, PHP 8.2 est distribué par défaut dans les dépôts officiels. Commençons par installer ces trois paquets :</p>
         <pre>sudo apt install apache2 mariadb-server</pre>
-        <p data-lang="etape4Text2">Puis, nous allons installer toutes les extensions
-            nécessaires au bon fonctionnement de GLPI.</p>
+        <p>Puis, nous allons installer toutes les extensions nécessaires au bon fonctionnement de GLPI.</p>
         <pre>sudo apt-get install php-xml php-common php-json php-mysql php-mbstring php-curl php-gd php-intl php-zip php-bz2 php-imap php-apcu</pre>
-        <p data-lang="etape4Text3">Ces commandes vont permettre de récupérer les
-            versions de ces extensions pour PHP 8.2.</p>
+        <p>Ces commandes vont permettre de récupérer les versions de ces extensions pour PHP 8.2.</p>
         <br>
-        <p data-lang="etape4Text4">
-            Si vous envisagez d'associer GLPI avec un annuaire LDAP comme l'Active
-            Directory, vous devez installer l'extension LDAP de PHP. Sinon, ce n'est pas
-            nécessaire et vous pouvez le faire par la suite, si besoin.</p>
+        <p>Si vous envisagez d'associer GLPI avec un annuaire LDAP comme l'Active Directory, vous devez installer l'extension LDAP de PHP. Sinon, ce n'est pas nécessaire et vous pouvez le faire par la suite, si besoin.</p>
         <pre>sudo apt-get install php-ldap</pre>
-        <p data-lang="etape4Text5">Nous venons d'installer Apache2, MariaDB, PHP et un ensemble d'extensions.</p>
+        <p>Nous venons d'installer Apache2, MariaDB, PHP et un ensemble d'extensions.</p>
+
         <!-- 5. MariaDB -->
-        <h2 id="etape-5" data-lang="etape5Title">5. Configuration sécurisée de MariaDB</h2>
-        <p data-lang="etape5Text1">Nous allons préparer MariaDB pour qu'il puisse
-            héberger la base de données de GLPI. La première action à effectuer, c'est
-            d'exécuter la commande ci-dessous pour effectuer le minimum syndical en matière
-            de sécurisation de MariaDB.</p>
+        <h2 id="etape-5">5. Configuration sécurisée de MariaDB</h2>
+        <p>Nous allons préparer MariaDB pour qu'il puisse héberger la base de données de GLPI. Exécutez la commande suivante :</p>
         <pre>sudo mysql_secure_installation</pre>
-        <p data-lang="etape5Text2">Vous serez invité à changer le mot de passe root,
-            mais aussi à supprimer les utilisateurs anonymes, désactiver l'accès root à
-            distance, etc... Tout est bien expliqué. Voici un exemple sur mon serveur pour
-            vous guider :</p>
-        <pre class="capture">
-                setting the root password or using the unix_socket ensures that nobody 
-can log into the mariadb root user without the proper authorization.
-
-you already have your root account protected, so you can safely answer 'n'.
-
-switch to unix_socket authentication [y/n] n
- ... skipping.
-
-you already have your root account protected, so you can safely answer 'n'.
-
-change the root password? [y/n] y
-new password: 
-re-enter new password: 
-password updated successfully!
-reloading privilege tables..
- ... success!
-
-by default, a mariadb installation has an anonymous user, allowing anyone 
-to log into mariadb without having to have a user account created for 
-them. this is intended only for testing, and to make the installation 
-go a bit smoother. you should remove them before moving into a 
-production environment.
-
-remove anonymous users? [y/n] y
- ... success!
-
-normally, root should only be allowed to connect from 'localhost'. 
-this ensures that someone cannot guess at the root password from the network.
-
-disallow root login remotely? [y/n] y
- ... success!
-
-by default, mariadb comes with a database named 'test' that anyone can 
-access. this is also intended only for testing, and should be removed 
-before moving into a production environment.
-
-remove test database and access to it? [y/n] y
- - dropping test database...
- ... success!
- - removing privileges on test database...
- ... success!
-
-reloading the privilege tables will ensure that all changes made so far 
-will take effect immediately.
-
-reload privilege tables now? [y/n] y
- ... success!
-
-cleaning up...
-
-all done!  if you've completed all of the above steps, your mariadb 
-installation should now be secure.
-
-thanks for using mariadb!</pre>
-                <p data-lang="etape5text3">ensuite, nous allons créer une base de données dédiée pour glpi et celle-ci sera accessible par un utilisateur dédié. hors de question d'utiliser le compte root de mariadb : une base de données = un utilisateur. connectez-vous à votre instance mariadb :</p>
-                <pre>sudo mysql -u root -p</pre>
-        <p data-lang="etape5Text4">Saisissez le mot de passe root de MariaDB, que vous
-            venez de définir à l'étape précédente.</p>
-        <br>
-        <p data-lang="etape5Text5">Puis, nous allons exécuter les requêtes SQL
-            ci-dessous pour créer la base de données "db23_glpi" ainsi que l'utilisateur
-            "glpi_adm" avec le mot de passe "MotDePasseRobuste" (que vous changez, bien
-            sûr). Cet utilisateur aura tous les droits sur cette base de données (et
-            uniquement sur celle-ci).</p>
-        <pre>create database db23_glpi;
+        <p>Ensuite, créez une base et un utilisateur dédiés :</p>
+        <pre>sudo mysql -u root -p
+create database db23_glpi;
 grant all privileges on db23_glpi.* to glpi_adm@localhost identified by "motdepasserobuste";
 flush privileges;
-exit</pre>
-        <p data-lang="etape5Text6">Ce qui donne :</p>
-        <pre class="capture">
-enter password: 
-welcome to the mariadb monitor.  commands end with ; or \g.
-your mariadb connection id is 41
-server version: 10.11.3-mariadb-1 debian 12
-
-copyright (c) 2000, 2018, oracle, mariadb corporation ab and others.
-
-type 'help;' or '\h' for help. type '\c' to clear the current input statement.
-
-mariadb [(none)]> create database db23_glpi;
-query ok, 1 row affected (0.001 sec)
-
-mariadb [(none)]> grant all privileges on db23_glpi.* to glpi_adm@localhost identified by '***';
-query ok, 0 rows affected (0.003 sec)
-
-mariadb [(none)]> flush privileges;
-query ok, 0 rows affected (0.001 sec)
-
-mariadb [(none)]> exit
-bye
-glpi_adm@srv-glpi:~$
+exit;
 </pre>
-        <p data-lang="etape5Text7">Voilà, la base de données prête.</p>
 
         <!-- 6. GLPI -->
-        <h2 id="etape-6" data-lang="etape6Title">6. Téléchargement et préparation de GLPI</h2>
-        <p data-lang="etape6Text1">La prochaine étape consiste à télécharger l'archive
-            ".tgz" qui contient les sources d'installation de GLPI. A partir du GitHub de
-            GLPI, récupérez le lien vers la dernière version. Ici, c'est la version GLPI
-            10.0.10 qui est installée.</p>
+        <h2 id="etape-6">6. Téléchargement et préparation de GLPI</h2>
         <pre>cd /tmp
-wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz</pre>
-        <p data-lang="etape6Text2">Puis, nous allons exécuter la commande ci-dessous
-            pour décompresser l'archive .tgz dans le répertoire "/var/www/", ce qui donnera
-            le chemin d'accès "/var/www/glpi" pour GLPI.</p>
-        <pre>sudo tar -xzvf glpi-10.0.10.tgz -c /var/www/</pre>
-        <p data-lang="etape6Text3">Nous allons définir l'utilisateur "www-data"
-            correspondant à Apache2, en tant que propriétaire sur les fichiers GLPI.</p>
-        <pre>sudo chown www-data /var/www/glpi/ -r</pre>
-        <p data-lang="etape6Text4">Ensuite, nous allons devoir créer plusieurs dossiers
-            et sortir des données de la racine Web (/var/www/glpi) de manière à les stocker
-            dans les nouveaux dossiers que nous allons créer. Ceci va permettre de faire une
-            installation sécurisée de GLPI, qui suit les recommandations de l'éditeur.</p>
-        <h5 data-lang="etape6H5_1">Le répertoire /etc/glpi</h5>
-        <br>
-        <p data-lang="etape6Text5">Commencez par créer le répertoire "/etc/glpi" qui va
-            recevoir les fichiers de configuration de GLPI. Nous donnons des autorisations à
-            www-data sur ce répertoire car il a besoin de pouvoir y accéder.</p>
-        <pre>sudo mkdir /etc/glpi
-sudo chown www-data /etc/glpi/</pre>
-        <p data-lang="etape6Text6">Puis, nous allons déplacer le répertoire "config" de
-            GLPI vers ce nouveau dossier :</p>
-        <pre>sudo mv /var/www/glpi/config /etc/glpi</pre>
-        <h5 data-lang="etape6H5_2">Le répertoire /var/lib/glpi</h5>
-        <br>
-        <p data-lang="etape6Text7">Répétons la même opération avec la création du répertoire "/var/lib/glpi" :</p>
-        <pre>sudo mkdir /var/lib/glpi
-sudo chown www-data /var/lib/glpi/</pre>
-        <p data-lang="etape6Text8">Dans lequel nous déplaçons également le dossier
-            "files" qui contient la majorité des fichiers de GLPI : CSS, plugins, etc.</p>
-        <pre>sudo mv /var/www/glpi/files /var/lib/glpi</pre>
-        <h5 data-lang="etape6H5_3">Le répertoire /var/log/glpi</h5>
-        <br>
-        <p data-lang="etape6Text9">Terminons par la création du répertoire
-            "/var/log/glpi" destiné à stocker les journaux de GLPI. Toujours sur le même
-            principe :</p>
-        <pre>sudo mkdir /var/log/glpi
-sudo chown www-data /var/log/glpi</pre>
-        <p data-lang="etape6Text10">Nous n'avons rien à déplacer dans ce répertoire.</p>
-        <h5 data-lang="etape6H5_4">Créer les fichiers de configuration</h5>
-        <br>
-        <p data-lang="etape6Text11">Nous devons configurer GLPI pour qu'il sache où
-            aller chercher les données. Autrement dit, nous allons déclarer les nouveaux
-            répertoires fraichement créés</p>
-        <p data-lang="etape6Text12">Nous allons créer ce premier fichier :</p>
-        <pre>sudo nano /var/www/glpi/inc/downstream.php</pre>
-        <p data-lang="etape6Text13">Afin d'ajouter le contenu ci-dessous qui indique le
-            chemin vers le répertoire de configuration :</p>
-        <pre> &lt;?php
-define('glpi_config_dir', '/etc/glpi/');
-if (file_exists(glpi_config_dir . '/local_define.php')) {
-    require_once glpi_config_dir . '/local_define.php';
-}
-?&gt;</pre>
-        <p data-lang="etape6Text14">Ensuite, nous allons créer ce second fichier :</p>
-        <pre>sudo nano /etc/glpi/local_define.php</pre>
-        <p data-lang="etape6Text15">Afin d'ajouter le contenu ci-dessous permettant de
-            déclarer deux variables permettant de préciser les chemins vers les répertoires
-            "files" et "log" que l'on a préparé précédemment.</p>
-        <pre>&lt;?php
-define('glpi_var_dir', '/var/lib/glpi/files');
-define('glpi_log_dir', '/var/log/glpi');
-?&gt;</pre>
-        <p data-lang="etape6Text16">Voilà, cette étape est terminée.</p>
+wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz
+sudo tar -xzvf glpi-10.0.10.tgz -C /var/www/
+sudo chown -R www-data:www-data /var/www/glpi/</pre>
 
         <!-- 7. Apache -->
-        <h2 id="etape-7" data-lang="etape7Title">7. Configuration d’Apache avec VirtualHost</h2>
-        <p data-lang="etape7Text1">Passons à la configuration du serveur web Apache2.
-            Nous allons créer un nouveau fichier de configuration qui va permettre de
-            configurer le VirtualHost dédié à GLPI.</p>
+        <h2 id="etape-7">7. Configuration d’Apache avec VirtualHost</h2>
         <pre>sudo nano /etc/apache2/sites-available/glpi.conf</pre>
-        <p data-lang="etape7Text2">Ce qui donne la configuration suivante :</p>
-        <pre class="capture">
-&lt;virtualhost *:80&gt;
-    servername support.it-connect.tech
-
-    documentroot /var/www/glpi/public
-
-    # if you want to place glpi in a subfolder of your site (e.g, your virtual host is set),
-    # you can use an alias directive. if you do this, the documentroot directive must not be used.
-    # alias "/glpi" "/var/www/glpi/public"
-
-    &lt;directory /var/www/glpi/public&gt;
-        require all granted
-
-        rewriteengine on
-
-        # redirect all requests to glpi router, unless file exists.
-        rewritecond %{request_filename} !-f
-        rewriterule ^(.*)$ index.php [qsa,l]
-    &lt;/directory&gt;
-
-    &lt;filesmatch \.php$&gt;
-        sethandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
-    &lt;/filesmatch&gt;
-
-&lt;/virtualhost&gt;
+        <pre>
+&lt;VirtualHost *:80&gt;
+    ServerName support.it-connect.tech
+    DocumentRoot /var/www/glpi/public
+    &lt;Directory /var/www/glpi/public&gt;
+        Require all granted
+        RewriteEngine on
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php [QSA,L]
+    &lt;/Directory&gt;
+    &lt;FilesMatch \.php$&gt;
+        SetHandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
+    &lt;/FilesMatch&gt;
+&lt;/VirtualHost&gt;
 </pre>
-
-        <p data-lang="etape7Text3">Quand la configuration est prête, enregistrez le fichier.</p>
-        <p data-lang="etape7Text4">Puis, nous allons activer ce nouveau site dans Apache2 :</p>
-        <pre>
-sudo a2ensite glpi.local.conf
-            </pre>
-        <p data-lang="etape7Text5">Nous en profitons également pour désactiver le site
-            par défaut car il est inutile :</p>
-        <pre>
-sudo a2dissite 000-default.conf    
-            </pre>
-        <p data-lang="etape7Text6">Nous allons aussi activer le module "rewrite" (pour
-            les règles de réécriture) car on l'a utilisé dans le fichier de configuration du
-            VirtualHost (RewriteCond / RewriteRule).</p>
-        <pre>sudo a2enmod rewrite</pre>
-        <p data-lang="etape7Text7">Il ne reste plus qu'à redémarrer le service Apache2 :</p>
-        <pre>sudo systemctl restart apache2</pre>
 
         <!-- 8. PHP-FPM -->
-        <h2 id="etape-8" data-lang="etape8Title">8. Configuration de PHP-FPM et extensions requises</h2>
-        <p data-lang="etape8Text1">Pour utiliser PHP en tant que moteur de scripts avec
-            Apache2, il y a deux possibilités : utiliser le module PHP pour Apache2
-            (libapache2-mod-php8.2) ou utiliser PHP-FPM.</p>
-        <p data-lang="etape8Text2">Il est recommandé d'utiliser PHP-FPM car il est plus
-            performant et se présente comme un service indépendant. Dans l'autre mode,
-            chaque processus Apache2 exécute son propre moteur de scripts PHP.</p>
-        <p data-lang="etape8Text3">Si vous souhaitez utiliser PHP-FPM, suivez les étapes
-            ci-dessous. Sinon, passez à la suite mais veillez à configurer l'option
-            "session.cookie_httponly" évoquée ci-dessous.</p>
-        <p data-lang="etape8Text4">Nous allons commencer par installer PHP8.2-FPM avec la commande suivante :</p>
-        <pre>sudo apt-get install php8.2-fpm</pre>
-        <p data-lang="etape8Text5">Puis, nous allons activer deux modules dans Apache et
-            la configuration de PHP-FPM, avant de recharger Apache2 :</p>
-        <pre>sudo a2enmod proxy_fcgi setenvif
+        <h2 id="etape-8">8. Configuration de PHP-FPM et extensions requises</h2>
+        <p>Installez PHP-FPM et configurez-le :</p>
+        <pre>sudo apt-get install php8.2-fpm
+sudo a2enmod proxy_fcgi setenvif
 sudo a2enconf php8.2-fpm
 sudo systemctl reload apache2</pre>
-        <p data-lang="etape8Text6">Pour configurer PHP-FPM pour Apache2, nous n'allons
-            pas éditer le fichier "/etc/php/8.2/apache2/php.ini" mais plutôt ce fichier :</p>
-        <pre>sudo nano /etc/php/8.2/fpm/php.ini</pre>
-        <p data-lang="etape8Text7">Dans ce fichier, recherchez l'option
-            "session.cookie_httponly" et indiquez la valeur "on" pour l'activer, afin de
-            protéger les cookies de GLPI.</p>
-        <pre>
-; whether or not to add the httponly flag to the cookie, which makes it
-; inaccessible to browser scripting languages such as javascript.
-; https://php.net/session.cookie-httponly
-session.cookie_httponly = on
-            </pre>
-        <p data-lang="etape8Text8">Enregistrez le fichier quand c'est fait. Par la
-            suite, vous pourriez être amené à effectuer d'autres modifications, notamment
-            pour augmenter la taille des uploads sur GLPI, etc. Pour appliquer les
-            modifications, nous devons redémarrer PHP-FPM :</p>
-        <pre>sudo systemctl restart php8.2-fpm.service</pre>
-        <p data-lang="etape8Text9">Pour finir, nous devons modifier notre VirtualHost
-            pour préciser à Apache2 que PHP-FPM doit être utilisé pour les fichiers PHP :</p>
-        <pre>
-&lt;filesmatch \.php$&gt;
-    sethandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
-&lt;/filesmatch&gt;
-            </pre>
-        <p data-lang="etape8Text10">Voici un exemple :</p>
-        <pre class="capture">
-&lt;virtualhost *:80&gt;
-    servername support.it-connect.tech
-
-    documentroot /var/www/glpi/public
-
-    # if you want to place glpi in a subfolder of your site (e.g, your virtual host is set),
-    # you can use an alias directive. if you do this, the documentroot directive must not be used.
-    # alias "/glpi" "/var/www/glpi/public"
-
-    &lt;directory /var/www/glpi/public&gt;
-        require all granted
-
-        rewriteengine on
-
-        # redirect all requests to glpi router, unless file exists.
-        rewritecond %{request_filename} !-f
-        rewriterule ^(.*)$ index.php [qsa,l]
-    &lt;/directory&gt;
-
-    &lt;filesmatch \.php$&gt;
-        sethandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
-    &lt;/filesmatch&gt;
-
-&lt;/virtualhost&gt;
-</pre>
-
-        <p data-lang="etape8Text11">Quand c'est fait, relancer Apache2 :</p>
-        <pre>sudo systemctl restart apache2</pre>
 
         <!-- 9. Navigateur -->
-        <h2 id="etape-9" data-lang="etape9Title">9. Installation via navigateur web</h2>
-        <p data-lang="etape9Text1">Pour effectuer l'installation de GLPI, Accédez à
-            <code>http://IP_DE_VOTRE_VM</code>
-            et suivez les étapes :</p>
-        <ol>
-            <li data-lang="etape9List1">Choix de la langue</li>
-            <li data-lang="etape9List2">Vérification des prérequis (tous doivent être en vert)</li>
-            <li data-lang="etape9List3">Connexion à la base :
-                <code>glpi_db</code>, utilisateur
-                <code>glpi_user</code>
-            </li>
-            <li data-lang="etape9List4">Création des tables</li>
-            <li data-lang="etape9List5">Fin de l’installation</li>
-        </ol>
-        <p data-lang="etape9Text2">
-            <strong>⚠️ Sécurité :</strong>
-            Supprimez immédiatement le script d’installation :</p>
+        <h2 id="etape-9">9. Installation via navigateur web</h2>
+        <p>Ouvrez <code>http://IP_DE_VOTRE_VM</code> et suivez les étapes d’installation.</p>
+        <p><strong>⚠️ Sécurité :</strong> Supprimez immédiatement le script d’installation :</p>
         <pre>sudo rm /var/www/glpi/install/install.php</pre>
 
         <!-- 10. Première connexion -->
-        <h2 id="etape-10" data-lang="etape10Title">10. Première connexion et sécurité</h2>
-        <p data-lang="etape10Text1">Comptes par défaut :</p>
+        <h2 id="etape-10">10. Première connexion et sécurité</h2>
         <ul>
-            <li data-lang="etape10List1">
-                <strong>Admin</strong>
-                :
-                <code>glpi</code>
-                /
-                <code>glpi</code>
-            </li>
-            <li data-lang="etape10List2">
-                <strong>Technicien</strong>
-                :
-                <code>tech</code>
-                /
-                <code>tech</code>
-            </li>
-            <li data-lang="etape10List3">
-                <strong>Utilisateur normal</strong>
-                :
-                <code>normal</code>
-                /
-                <code>normal</code>
-            </li>
-            <li data-lang="etape10List4">
-                <strong>Post-only</strong>
-                :
-                <code>post-only</code>
-                /
-                <code>postonly</code>
-            </li>
+            <li><strong>Admin :</strong> glpi / glpi</li>
+            <li><strong>Technicien :</strong> tech / tech</li>
+            <li><strong>Utilisateur :</strong> normal / normal</li>
+            <li><strong>Post-only :</strong> post-only / postonly</li>
         </ul>
-        <p data-lang="etape10Text2">
-            Changez **tous les mots de passe** après la première connexion.</p>
+        <p>Changez <strong>tous les mots de passe</strong> après la première connexion.</p>
 
         <!-- 11. Bonnes pratiques -->
-        <h2 id="etape-11" data-lang="etape11Title">11. Bonnes pratiques post-installation</h2>
+        <h2 id="etape-11">11. Bonnes pratiques post-installation</h2>
         <ul>
-            <li data-lang="etape11List1">
-                Activer HTTPS avec Let’s Encrypt</li>
-            <li data-lang="etape11List2">
-                Mettre à jour régulièrement GLPI et PHP</li>
-            <li data-lang="etape11List3">
-                Sauvegarder la base :
-                <code>mysqldump -u root -p glpi_db > /backup/glpi_$(date +%F).sql</code>
-            </li>
-            <li data-lang="etape11List4">
-                Installer des plugins utiles : FusionInventory, LDAP, PDF, etc.</li>
-            <li data-lang="etape11List5">
-                Restreindre l’accès à l’interface d’admin par IP</li>
+            <li>Activer HTTPS avec Let’s Encrypt</li>
+            <li>Mettre à jour régulièrement GLPI et PHP</li>
+            <li>Sauvegarder la base : <code>mysqldump -u root -p glpi_db > /backup/glpi_$(date +%F).sql</code></li>
+            <li>Installer des plugins utiles : FusionInventory, LDAP, PDF, etc.</li>
+            <li>Restreindre l’accès à l’interface d’admin par IP</li>
         </ul>
 
         <!-- 12. Conclusion -->
-        <h2 id="etape-12" data-lang="etape12Title">12. Conclusion</h2>
-        <p data-lang="etape12Text1">Vous disposez maintenant d’une instance sécurisée et
-            fonctionnelle de GLPI sur Debian 12. Ce système vous permet de gérer
-            efficacement votre parc informatique, vos tickets d’assistance et vos
-            ressources.</p>
-        <p data-lang="etape12Text2">Pour aller plus loin : intégration LDAP, monitoring,
-            automatisation des inventaires avec FusionInventory.</p>
+        <h2 id="etape-12">12. Conclusion</h2>
+        <p>Vous disposez maintenant d’une instance sécurisée et fonctionnelle de GLPI sur Debian 12. Ce système vous permet de gérer efficacement votre parc informatique, vos tickets d’assistance et vos ressources.</p>
+        <p>Pour aller plus loin : intégration LDAP, monitoring, automatisation des inventaires avec FusionInventory.</p>
 
     </div>
 </main>
 
-<?php require_once("includes/footer.php")?>
+<?php require_once("includes/footer.php"); ?>
