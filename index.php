@@ -1,31 +1,48 @@
 <?php 
     require_once ("includes/header.php");
 ?>
-<center>
     <!-- Section principale -->
     <section id="hero" class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-text">Bienvenue sur mon Portfolio</h1>
-                    <h1><span class="name-highlight Downloads">Atef Saadi</span></h1>
-                    <h2 class="h4 mb-4"><h2><a href="Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
-</h2>
-
-                    <p class="lead mb-4">Développeur passionné spécialisé en création d'applications web et solutions métiers.</p>
-                    <div class="d-flex gap-3">
-                        <a href="#contact" class="btn btn-projects">Me contacter</a>
-                        <a href="#projects" class="btn btn-projects">Voir mes projets</a>
-                    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="hero-text">Bienvenue sur mon Portfolio</h1>
+                <h1><span class="name-highlight Downloads">Atef Saadi</span></h1>
+                <h2 class="h4 mb-4"><a href="Bts_Sio.php" class="underline">BTS SIO</a> option SLAM</h2>
+                <p class="lead mb-4">Développeur passionné spécialisé en création d'applications web et solutions métiers.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#contact" class="btn btn-projects">Me contacter</a>
+                    <a href="#projects" class="btn btn-projects">Voir mes projets</a>
+                    <button class="btn btn-projects" onclick="openCVModal()">CV</button>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div class="profile-container mt-5 mt-lg-0">
-                        <img src="images/ATEF.jpg" alt="Photo de profil d'Atef Saadi" class="profile-img">
-                    </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="profile-container mt-5 mt-lg-0">
+                    <img src="images/ATEF.jpg" alt="Photo de profil d'Atef Saadi" class="profile-img">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- Modal for CV viewing -->
+<div id="cvModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeCVModal()">&times;</span>
+        <div class="modal-actions mb-3">
+            <a href="pdfs/CV_Atef_Saadi.pdf" class="btn btn-projects" download>
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v2H5v-2z"/>
+                </svg>
+            </a>
+            <button class="btn btn-projects" onclick="printCV()">
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 12v2H8v-4h8v2zm2-10h2c.55 0 1 .45 1 1s-.45 1-1 1h-2v-2z"/>
+                </svg>
+            </button>
+        </div>
+        <iframe src="pdfs/CV_Atef_Saadi.pdf" title="CV d'Atef Saadi" class="cv-iframe"></iframe>
+    </div>
+</div>
     <!-- Section à propos -->
     <section id="about" class="section custom-border">
         <div class="container">
@@ -212,10 +229,10 @@
                 </div>
                 <!-- Carte 5 -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="autreprojet.php" class="project-card card h-100 text-decoration-none text-dark">
+                    <a href="snakGame.php" class="project-card card h-100 text-decoration-none text-dark">
                         <div class="card-body">
                             <div class="project-image">
-                                <img src="images/AutreProjet/logo.png" alt="SnakeGame" loading="lazy" class="card-img-top">
+                                <img src="images/SnakGame/snake-game.webp" alt="SnakeGame" loading="lazy" class="card-img-top">
                             </div>
                             <div class="project-content mt-3">
                                 <h3>SnakeGame</h3>
@@ -298,7 +315,7 @@
                             <ul class="contact-list list-unstyled">
                                 <li class="contact-item mb-3">
                                     <i class="fas fa-phone contact-icon me-3"></i>
-                                    <span><strong>Téléphone :</strong> 06 38 式 84 48</span>
+                                    <span><strong>Téléphone :</strong> 06 38 84 48</span>
                                 </li>
                                 <li class="contact-item mb-3">
                                     <i class="fas fa-envelope contact-icon me-3"></i>
@@ -357,13 +374,34 @@
             </div>
         </div>
     </section>
-</center>
 <script>
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.skill-progress').forEach(bar => {
         const width = bar.style.getPropertyValue('--width');
         bar.style.width = width;
     });
 });
+</script>
+<script>
+    function openCVModal() {
+    document.getElementById('cvModal').style.display = 'flex';
+}
+
+function closeCVModal() {
+    document.getElementById('cvModal').style.display = 'none';
+}
+
+function printCV() {
+    const iframe = document.querySelector('.cv-iframe');
+    iframe.contentWindow.print();
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('cvModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
 </script>
 <?php require_once("includes/footer.php")?>

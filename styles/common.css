@@ -14,7 +14,7 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     padding: 20px;
-    padding-top: 60px; /* Ajout pour compenser la hauteur de l’en-tête fixe (40px + 20px pour espacement) */
+    padding-top: 60px;
     scroll-behavior: smooth;
 }
 
@@ -33,74 +33,53 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 32px !important;
+    padding: 7px 32px;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 40px !important; /* Hauteur fixe */
-    position: fixed; /* Rendre l’en-tête fixe */
-    top: 0; /* Aligner en haut */
-    left: 0; /* Aligner à gauche */
-    z-index: 1000; /* Rester au-dessus des autres éléments */
+    z-index: 1000;
     background-color: var(--bg-color);
     opacity: 0.95;
-    box-shadow: none;
-    transition: box-shadow 0.3s ease; /* Pour un effet d’ombre au défilement */
 }
 
-/* Stabilisation des éléments internes */
-.header-left, .header-right, .language-switcher, .navbar-links {
-    margin: 0 !important; 
-    padding: 0 !important; 
-}
-
-.header-left {
+.header-left, .header-right, .navbar-links, .language-switcher, .theme-switcher {
     display: flex;
     align-items: center;
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px !important; /* Forcer l'espacement */
+    gap: 20px;
+}
+
+.header-right a, .navbar-links a {
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .header-right a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20.8px !important; /* Forcer la taille de police */
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    margin: 0 !important; /* Supprimer toute marge parasite */
+    font-size: 20.8px;
 }
 
 .header-right a img {
-    width: 60px !important; /* Forcer la taille du logo */
+    width: 60px;
     height: auto;
 }
 
-.header-right a:hover {
+.header-right a:hover, .navbar-links a:hover {
     transform: translateY(-2px);
 }
 
-a {
-    text-decoration: none;
-}
-
 .navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 32px !important; /* Forcer l'espacement */
+    gap: 32px;
     list-style: none;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .navbar-links a {
-    font-size: 16px !important; /* Forcer la taille de police */
+    font-size: 16px;
+    padding: 8px 0;
     position: relative;
-    padding: 8px 0 !important;
-    transition: color 0.3s ease;
-    margin: 0 !important; /* Supprimer toute marge parasite */
 }
 
 .navbar-links a::after {
@@ -120,34 +99,22 @@ a {
 }
 
 .language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 10px !important; /* Forcer l'espacement */
-    margin: 0 !important;
+    gap: 10px;
+}
+
+.language-switcher button, .theme-switcher button, #burger-button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .language-switcher button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px !important;
-    display: flex;
-    align-items: center;
-    margin: 0 !important;
-}
-
-.theme-switcher {
-    display: flex;
-    align-items: center;
+    padding: 5px;
 }
 
 .theme-switcher button {
-    font-size: 19.2px !important; /* Forcer la taille de police */
-    background: none;
-    border: none;
-    cursor: pointer;
+    font-size: 19.2px;
     transition: color 0.3s ease;
-    margin: 0 !important;
 }
 
 #theme-toggle i {
@@ -159,8 +126,8 @@ a {
 }
 
 .flag-icon {
-    width: 24px !important; /* Forcer la taille */
-    height: 16px !important;
+    width: 24px;
+    height: 16px;
     border-radius: 2px;
     vertical-align: middle;
     transition: transform 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955);
@@ -176,21 +143,16 @@ a {
     100% { transform: rotateY(0); }
 }
 
-.burger-menu {
-    display: none !important; /* Forcer l'invisibilité par défaut */
-    background: none;
-    border: none;
-    font-size: 20px !important;
+.burger-menu, #burger-button {
+    display: none;
 }
 
 #burger-button {
     position: absolute;
-    top: 10px; /* Ajusté pour mieux s’aligner dans l’en-tête fixe */
+    top: 10px;
     left: 20px;
-    z-index: 1001; /* Légèrement supérieur à l’en-tête pour rester accessible */
-    background: none;
-    border: none;
-    cursor: pointer;
+    z-index: 1001;
+    font-size: 20px;
 }
 
 /* Section Hero */
@@ -210,6 +172,7 @@ a {
     height: 200%;
     transform: rotate(45deg);
     animation: float 3s infinite linear;
+    z-index: 0; /* En dessous des boutons */
 }
 
 @keyframes float {
@@ -238,12 +201,28 @@ a {
     padding: 12.8px 32px;
     border-radius: 4.8px;
     transition: all 0.2s ease;
+    min-width: 180px;
+    display: inline-flex; /* Flex pour centrer texte et icônes */
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    cursor: pointer; /* Curseur main au survol */
+    position: relative; /* Pour z-index */
+    z-index: 5; /* Au-dessus de .hero::before */
+}
+
+.btn-projects .icon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.btn-projects:hover .icon {
+    fill: #007bff; /* Couleur au survol pour les icônes */
 }
 
 /* Sections génériques */
 .section {
     padding: 64px 0;
-    scroll-margin-top: 60px; /* Ajout pour compenser l’en-tête fixe lors du défilement vers les ancres */
+    scroll-margin-top: 60px;
 }
 
 .title {
@@ -254,15 +233,15 @@ a {
 }
 
 /* Projets et compétences */
-.card {
+.card, .news-item {
     padding: 24px;
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    z-index: 1;
 }
 
-.card:hover {
+.card:hover, .news-item:hover {
     transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-image img {
@@ -291,6 +270,13 @@ a {
 }
 
 /* Section Contact */
+#contact {
+    padding: 25px 0;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-top: 2px solid var(--border-color);
+}
+
 .contact-item {
     display: flex;
     align-items: center;
@@ -394,28 +380,24 @@ body.tuto-glpi h1 {
 
 body.tuto-glpi h2 {
     font-size: 1.8rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px;
     padding-left: 10px;
 }
 
 body.tuto-glpi h3 {
     font-size: 1.4rem;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 25px 0 10px;
 }
 
-body.tuto-glpi ul,
-body.tuto-glpi ol {
-    margin-left: 25px;
-    margin-bottom: 20px;
+body.tuto-glpi ul, body.tuto-glpi ol {
+    margin: 0 0 20px 25px;
 }
 
-body.tuto-glpi pre {
+body.tuto-glpi pre, .capture {
     font-family: monospace;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     white-space: pre-wrap;
 }
 
@@ -468,15 +450,6 @@ body.tuto-glpi .conclusion {
     font-weight: 600;
     font-size: 1.05rem;
     text-decoration: none;
-}
-
-.capture {
-    font-family: 'Courier New', monospace;
-    font-size: 14px;
-    padding: 18px;
-    margin: 20px 0;
-    white-space: pre-wrap;
-    overflow-x: auto;
 }
 
 a.doc-officielle {
@@ -541,15 +514,6 @@ figcaption {
     padding: 0;
 }
 
-.btn-projects {
-    padding: 12.8px 32px;
-    border-radius: 4.8px;
-    transition: all 0.2s ease;
-    min-width: 180px;
-    text-align: center;
-    display: inline-block;
-}
-
 .d-flex.gap-3 {
     display: flex;
     gap: 16px;
@@ -584,13 +548,12 @@ figcaption {
     width: 100%;
 }
 
-/* SECTION TEXTE — générique pour différents contenus */
+/* Section texte */
 .section-texte {
     padding: 60px 0;
-    background-color: var(--section-bg, #f9fafb);
+    background-color: var(--section-bg);
 }
 
-/* Titre de la section */
 .section-texte h2 {
     font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
     font-weight: 600;
@@ -598,10 +561,8 @@ figcaption {
     margin-bottom: 40px;
     font-size: 2rem;
     color: var(--text-color, #1a1a1a);
-    position: relative;
 }
 
-/* Ligne décorative sous le titre */
 .section-texte h2::after {
     content: "";
     display: block;
@@ -612,35 +573,32 @@ figcaption {
     border-radius: 2px;
 }
 
-/* Paragraphes stylés */
 .section-texte .paragraphe {
     max-width: 850px;
     margin: 25px auto;
     padding: 24px 32px;
-    background-color: var(--background, #fff);
+    background-color: var(--bg-color);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    box-shadow: var(--shadow);
+    font-family: var(--font-family);
     font-size: 1.05rem;
     line-height: 1.8;
     text-align: justify;
-    color: var(--text-color, #222);
+    color: var(--text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet au survol */
 .section-texte .paragraphe:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 18px #daa40022;
 }
 
-/* Première ligne en légère mise en valeur */
 .section-texte .paragraphe::first-line {
     font-weight: 500;
     letter-spacing: 0.3px;
 }
 
-/* --- Section Actualité --- */
+/* Section actualité */
 .section-actualite {
     background: var(--card-bg);
     padding: 4rem 0;
@@ -648,9 +606,6 @@ figcaption {
 }
 
 .section-actualite .title {
-    text-align: center;
-    color: var(--title-color);
-    margin-bottom: 2.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -664,15 +619,7 @@ figcaption {
 .news-item {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .news-image {
@@ -711,15 +658,7 @@ figcaption {
     line-height: 1.5;
 }
 
-#contact {
-    position: relative;
-    padding: 25px 0;
-    background: transparent !important;
-    backdrop-filter: blur(10px);
-    border-top: 2px solid var(--border-color);
-}
-
-/* --- Bouton Retour en Haut --- */
+/* Bouton Retour en Haut */
 #scrollToTop {
     position: fixed;
     bottom: 20px;
@@ -748,12 +687,10 @@ figcaption {
     transform: translateY(0);
 }
 
-/* Effet futuriste au survol */
 #scrollToTop:hover {
     transform: scale(1.3);
 }
 
-/* Animation lumineuse sur l'icône */
 #scrollToTop i {
     animation: pulseGlow 2s infinite ease-in-out;
 }
@@ -767,30 +704,99 @@ figcaption {
     }
 }
 
+/* Modal styles for CV popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.cv-iframe {
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust for button space */
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--secondary-color);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center; /* Centre les boutons horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    gap: 1rem; /* Espace entre les boutons */
+    margin-bottom: 10px;
+}
+
+.modal-actions .btn-projects {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.modal-actions .btn-projects:hover {
+    background: rgba(218, 165, 0, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
 /* Media query pour la responsivité */
 @media (max-width: 768px) {
     .header {
-        padding: 5px 20px !important; /* Réduire le padding pour mobile */
-        height: 50px !important; /* Hauteur légèrement plus grande pour mobile */
+        padding: 5px 20px;
+        height: 50px;
     }
     body {
-        padding-top: 70px; /* Ajuster le padding du body pour la nouvelle hauteur */
+        padding-top: 70px;
     }
     .navbar-links {
-        display: none; /* Masquer les liens par défaut sur mobile */
+        display: none;
     }
     .navbar-links.active {
-        display: flex; /* Afficher les liens quand le menu burger est actif */
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 50px; /* Positionner sous l’en-tête fixe */
+        top: 50px;
         left: 0;
         width: 100%;
         background-color: var(--bg-color);
         padding: 10px;
-        z-index: 999; /* Assurer que le menu est sous l’en-tête mais au-dessus du contenu */
+        z-index: 999;
     }
-    .burger-menu {
-        display: block !important; /* Afficher le bouton burger sur mobile */
+    .burger-menu, #burger-button {
+        display: block;
+    }
+    .modal-content {
+        width: 90%;
+        height: 90%;
     }
 }
