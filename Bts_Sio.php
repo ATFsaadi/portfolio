@@ -1,7 +1,6 @@
 <title>BTS SIO - Détails</title>
 <?php require_once("includes/header.php"); ?>
 
-<!-- Conteneur principal -->
 <main class="tuto-container">
     <div class="tuto-content">
         <h1>BTS SIO</h1>

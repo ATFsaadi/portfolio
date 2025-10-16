@@ -7,13 +7,14 @@
            
         </div>
     </footer>
-<!-- Scripts -->
+    
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 <script src="javascript/theme.js"></script>
+<script src="javascript/js.js"></script>
 <script src="javascript/langue.js"></script>
 <script src="javascript/script.js"></script>
 </body>

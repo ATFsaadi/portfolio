@@ -9,7 +9,9 @@
                 <div class="col-lg-6">
                     <h1 class="hero-text">Bienvenue sur mon Portfolio</h1>
                     <h1><span class="name-highlight Downloads">Atef Saadi</span></h1>
-                    <h2 class="h4 mb-4">Étudiant en <a href="Bts_Sio.php">BTS SIO</a> option SLAM</h2>
+                    <h2 class="h4 mb-4"><h2><a href="Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
+</h2>
+
                     <p class="lead mb-4">Développeur passionné spécialisé en création d'applications web et solutions métiers.</p>
                     <div class="d-flex gap-3">
                         <a href="#contact" class="btn btn-projects">Me contacter</a>

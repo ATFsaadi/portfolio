@@ -1,7 +1,5 @@
 <?php
-// Démarrer la session pour gérer la langue
 session_start();
-// Définir la langue par défaut à 'fr' si non définie
 $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
 ?>
 
@@ -15,7 +13,6 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
     <meta name="author" content="Atef Saadi">
     <title data-i18n="Atef Saadi - Portfolio BTS SIO">Atef Saadi - Portfolio BTS SIO</title>
     
-    <!-- Préchargement des polices -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -24,57 +21,58 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
     <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
-    <!-- Fond animé avec Particles.js -->
     <div id="particles-js"></div>
-
-    <!-- Header -->
+    
+    <button id="scrollToTop" aria-label="Remonter en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <header class="header">
-        <div class="header-right">
-            <a href="index.php" aria-label="Retour à l'accueil">
-                <img src="images/LogoAcc.png" alt="Logo Atef Saadi" width="66">
-            </a>
-            <a href="https://www.linkedin.com/in/atef-saadi-b86970345/" target="_blank" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Atef Saadi">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/ATFsaadi/" target="_blank" rel="noopener" aria-label="Profil GitHub d'Atef Saadi">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="tel:+33638368448" aria-label="Appeler Atef Saadi">
-                <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:atef_saadi@outlook.fr" aria-label="Envoyer un email à Atef Saadi">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
+    <div class="header-right">
+        <a href="index.php" aria-label="Retour à l'accueil">
+            <img src="images/LogoAcc.png" alt="Logo Atef Saadi" width="60">
+        </a>
+        <a href="https://www.linkedin.com/in/atef-saadi-b86970345/" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Atef Saadi">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/ATFsaadi/" target="_blank" rel="noopener" aria-label="Profil GitHub d'Atef Saadi">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="tel:+33638368448" aria-label="Appeler Atef Saadi">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:atef_saadi@outlook.fr" aria-label="Envoyer un email à Atef Saadi">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
 
-        <!-- Navigation -->
-        <nav class="header-left">
-            <button class="burger-menu" id="burger-button" aria-label="Ouvrir le menu" aria-expanded="false">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="navbar-links" id="navbar">
-                <li><a href="index.php#about" data-i18n="À Propos de Moi">À Propos de Moi</a></li>
-                <li><a href="index.php#skills" data-i18n="Mes Compétences">Mes Compétences</a></li>
-                <li><a href="index.php#projects" data-i18n="Mes Projets">Mes Projets</a></li>
-                <li><a href="index.php#contact" data-i18n="Contact">Contact</a></li>
-            </ul>
-        </nav>
+    <nav class="header-left">
+        <button class="burger-menu" id="burger-button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar-links" id="navbar">
+            <li><a href="index.php#about">Profil</a></li>
+            <li><a href="index.php#skills">Compétences</a></li>
+            <li><a href="index.php#projects">Projets</a></li>
+            <li><a href="index.php#tech-watch">Veille Technologique</a></li>
+            <li><a href="index.php#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <!-- Sélecteur de langue et thème -->
-        <div class="language-switcher">
-            <button onclick="setLanguage('fr')" aria-label="Passer en Français">
-                <i class="flag-icon flag-icon-fr"></i>
+    <div class="language-switcher">
+        <button onclick="setLanguage('fr')" aria-label="Passer en Français">
+            <i class="flag-icon flag-icon-fr"></i>
+        </button>
+        <button onclick="setLanguage('en')" aria-label="Passer en Anglais">
+            <i class="flag-icon flag-icon-gb"></i>
+        </button>
+        <button onclick="setLanguage('ar')" aria-label="Passer en Arabe">
+            <i class="flag-icon flag-icon-dz"></i>
+        </button>
+        <div class="theme-switcher">
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème (clair/sombre)">
+                <i class="fas fa-sun"></i>
             </button>
-            <button onclick="setLanguage('en')" aria-label="Passer en Anglais">
-                <i class="flag-icon flag-icon-gb"></i>
-            </button>
-            <button onclick="setLanguage('ar')" aria-label="Passer en Arabe">
-                <i class="flag-icon flag-icon-dz"></i>
-            </button>
-            <div class="theme-switcher">
-                <button id="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème (clair/sombre)">
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
