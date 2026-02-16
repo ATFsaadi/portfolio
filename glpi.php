@@ -5,7 +5,8 @@
 <main class="tuto-container">
     <div class="tuto-content">
 
-        <h1>Tutoriel d’installation et de configuration de GLPI sur Debian 12 (VMware)</h1>
+        <h4>Tutoriel d’installation et de configuration de GLPI sur Debian 12 (VMware)</h4>
+        <h4>Connexion + gestion d’un ticket (captures)</h4>
 
         <!-- Sommaire fusionné -->
         <h2>Sommaire</h2>
@@ -22,6 +23,14 @@
             <li><a href="#etape-10">10. Première connexion et sécurité</a></li>
             <li><a href="#etape-11">11. Bonnes pratiques post-installation</a></li>
             <li><a href="#etape-12">12. Conclusion</a></li>
+
+            <!-- ✅ AJOUT : Partie 2 -->
+            <li><a href="#partie-2">13. Démonstration : Connexion + gestion d’un ticket (captures)</a></li>
+            <li><a href="#demo-1">13.1 Accès à l’interface GLPI</a></li>
+            <li><a href="#demo-2">13.2 Connexion (utilisateur)</a></li>
+            <li><a href="#demo-3">13.3 Création d’un ticket</a></li>
+            <li><a href="#demo-4">13.4 Traitement / réponse (administrateur)</a></li>
+            <li><a href="#demo-5">13.5 Résolution & clôture</a></li>
         </ul>
 
         <!-- 1. Introduction -->
@@ -164,7 +173,173 @@ sudo systemctl reload apache2</pre>
         <p>Vous disposez maintenant d’une instance sécurisée et fonctionnelle de GLPI sur Debian 12. Ce système vous permet de gérer efficacement votre parc informatique, vos tickets d’assistance et vos ressources.</p>
         <p>Pour aller plus loin : intégration LDAP, monitoring, automatisation des inventaires avec FusionInventory.</p>
 
-    </div>
+
+<!-- ===================================================== -->
+<!-- ✅ 13. PARTIE 2 : DEMO CONNEXION + TICKETS (CAPTURES) -->
+<!-- ===================================================== -->
+<h2 id="partie-2">13. Démonstration : Connexion + gestion d’un ticket (captures)</h2>
+
+<p>
+  Nous avons parcouru le cycle complet de gestion d’un ticket dans GLPI : création par un utilisateur,
+  traitement et réponse par l’administrateur, puis clôture. Cette démonstration illustre la simplicité et la
+  puissance de GLPI pour le support informatique.
+</p>
+
+<!-- 13.1 -->
+<h3 id="demo-1">13.1 Accès à l’interface GLPI</h3>
+<p>Accès à GLPI via le navigateur : <code>http://IP_DE_VOTRE_VM</code></p>
+
+<div class="captures-grid">
+  <figure class="capture">
+    <img src="images/Glpi/1.1.jpeg" alt="Accès à l’interface GLPI">
+    <figcaption>Capture 1 — Accès à l’interface GLPI</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/1.2.png" alt="Page de connexion GLPI">
+    <figcaption>Capture 2 — Page de connexion GLPI</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/1.3.png" alt="Interface GLPI (vue générale)">
+    <figcaption>Capture 3 — Interface GLPI (vue générale)</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/1.4.png" alt="Navigation dans GLPI">
+    <figcaption>Capture 4 — Navigation dans GLPI</figcaption>
+  </figure>
+</div>
+
+<!-- 13.2 -->
+<h3 id="demo-2">13.2 Connexion (Utilisateur)</h3>
+<p>Connexion avec un compte utilisateur (ex : <code>normal / normal</code>), puis affichage du tableau de bord.</p>
+
+<div class="captures-grid">
+  <figure class="capture">
+    <img src="images/Glpi/2.1.png" alt="Tableau de bord utilisateur GLPI">
+    <figcaption>Capture 5 — Tableau de bord utilisateur</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/2.2.gif" alt="Interface après connexion (animation)">
+    <figcaption>Capture 6 — Interface après connexion (animation)</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/2.3.webp" alt="Navigation côté utilisateur">
+    <figcaption>Capture 7 — Navigation côté utilisateur</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/2.4.webp" alt="Vue tickets côté utilisateur">
+    <figcaption>Capture 8 — Vue tickets côté utilisateur</figcaption>
+  </figure>
+</div>
+
+<!-- 13.3 -->
+<h3 id="demo-3">13.3 Création d’un ticket</h3>
+<p>L’utilisateur crée un ticket en décrivant le problème, puis valide la demande.</p>
+
+<div class="captures-grid">
+  <figure class="capture">
+    <img src="images/Glpi/3.1.png" alt="Formulaire de création d’un ticket">
+    <figcaption>Capture 9 — Formulaire de création d’un ticket</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/3.2.jpg" alt="Ticket créé (vue utilisateur)">
+    <figcaption>Capture 10 — Ticket créé (vue utilisateur)</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/3.3.webp" alt="Détails du ticket">
+    <figcaption>Capture 11 — Détails du ticket</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/3.4.png" alt="Suivi / message associé au ticket">
+    <figcaption>Capture 12 — Suivi / message associé au ticket</figcaption>
+  </figure>
+</div>
+
+<!-- 13.4 -->
+<h3 id="demo-4">13.4 Traitement / réponse (Administrateur)</h3>
+<p>L’administrateur consulte le ticket, l’attribue si nécessaire, puis répond à l’utilisateur.</p>
+
+<div class="captures-grid">
+  <figure class="capture">
+    <img src="images/Glpi/4.1.png" alt="Tableau de bord administrateur">
+    <figcaption>Capture 13 — Tableau de bord administrateur</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/4.2.png" alt="Ticket vu côté administrateur">
+    <figcaption>Capture 14 — Ticket vu côté administrateur</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/4.3.png" alt="Traitement / réponse du ticket">
+    <figcaption>Capture 15 — Traitement / réponse du ticket</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/4.4.png" alt="Mise à jour / suivi côté administrateur">
+    <figcaption>Capture 16 — Mise à jour / suivi côté administrateur</figcaption>
+  </figure>
+</div>
+
+<!-- 13.5 -->
+<h3 id="demo-5">13.5 Résolution & clôture</h3>
+<p>Après résolution, le ticket est passé en “résolu”, puis clôturé.</p>
+
+<div class="captures-grid">
+  <figure class="capture">
+    <img src="images/Glpi/5.1.png" alt="Ticket résolu">
+    <figcaption>Capture 17 — Ticket résolu</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/5.2.webp" alt="Suivi après résolution">
+    <figcaption>Capture 18 — Suivi après résolution</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/5.3.webp" alt="Préparation clôture / vérification">
+    <figcaption>Capture 19 — Préparation clôture / vérification</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/5.4.webp" alt="Ticket clôturé">
+    <figcaption>Capture 20 — Ticket clôturé</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/6.1.png" alt="Historique / résumé final">
+    <figcaption>Capture 21 — Historique / résumé final</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/6.2.png" alt="Vue finale côté utilisateur">
+    <figcaption>Capture 22 — Vue finale côté utilisateur</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/6.3.png" alt="Liste des tickets">
+    <figcaption>Capture 23 — Liste des tickets</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/6.4.png" alt="Dernière vérification / confirmation">
+    <figcaption>Capture 24 — Dernière vérification / confirmation</figcaption>
+  </figure>
+
+  <figure class="capture">
+    <img src="images/Glpi/7.1.webp" alt="Récapitulatif">
+    <figcaption>Capture 25 — Récapitulatif</figcaption>
+  </figure>
+</div>
+
 </main>
 
 <?php require_once("includes/footer.php"); ?>

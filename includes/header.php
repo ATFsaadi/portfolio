@@ -53,8 +53,10 @@ $lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'fr';
         <ul class="navbar-links" id="navbar">
             <li><a href="index.php#about">Profil</a></li>
             <li><a href="index.php#skills">Compétences</a></li>
+            <li><a href="index.php#certifications">Certifications</a></li>
             <li><a href="index.php#projects">Projets</a></li>
             <li><a href="index.php#tech-watch">Veille Technologique</a></li>
+            <li><a href="index.php#stages">Stages</a></li>
             <li><a href="index.php#contact">Contact</a></li>
         </ul>
     </nav>

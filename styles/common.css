@@ -475,16 +475,6 @@ a.doc-officielle {
     border-color: #007bff;
 }
 
-.modal-lg .modal-body img {
-    max-height: 80vh;
-    width: 100%;
-    object-fit: contain;
-}
-
-.modal-header {
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-}
 
 figure {
     margin-bottom: 1.5rem;
@@ -704,37 +694,6 @@ figcaption {
     }
 }
 
-/* Modal styles for CV popup */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 800px;
-    height: 80%;
-    position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-}
-
-.cv-iframe {
-    width: 100%;
-    height: calc(100% - 60px); /* Adjust for button space */
-    border: none;
-}
 
 .close-btn {
     position: absolute;
@@ -750,24 +709,7 @@ figcaption {
     color: var(--secondary-color);
 }
 
-.modal-actions {
-    display: flex;
-    justify-content: center; /* Centre les boutons horizontalement */
-    align-items: center; /* Centre verticalement si nécessaire */
-    gap: 1rem; /* Espace entre les boutons */
-    margin-bottom: 10px;
-}
 
-.modal-actions .btn-projects {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.modal-actions .btn-projects:hover {
-    background: rgba(218, 165, 0, 0.1);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
 
 /* Media query pour la responsivité */
 @media (max-width: 768px) {
@@ -799,4 +741,126 @@ figcaption {
         width: 90%;
         height: 90%;
     }
+}
+
+/* Actions dans la modal */
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 12px;
+    flex-wrap: wrap; /* important sur mobile */
+}
+
+.modal-actions .btn-projects {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.modal-actions .btn-projects:hover {
+    background: rgba(218, 165, 0, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Modal (fond + centrage) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0; /* remplace left/top/width/height */
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px;          /* évite que la modal colle aux bords */
+    overflow: auto;         /* si écran très petit */
+}
+
+/* Contenu modal */
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;     /* plus moderne, tu peux remettre 5px si tu veux */
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+
+    /* ✅ Taille améliorée */
+    width: min(1100px, 96vw);
+    height: min(90vh, 900px);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;        /* iframe ne déborde pas */
+}
+
+/* Iframe PDF (CV, synthèse, certificats) */
+.cv-iframe {
+    width: 100%;
+    flex: 1;                 /* prend toute la hauteur restante */
+    border: none;
+    border-radius: 6px;
+}
+
+/* Optionnel : si tu as des images dans modales */
+.modal-lg .modal-body img {
+    max-height: 80vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Header (si utilisé ailleurs) */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* ✅ Responsive mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 98vw;
+        height: 92vh;
+        padding: 14px;
+        border-radius: 10px;
+    }
+}
+.modal-content.modal-xl{
+  width: min(1300px, 98vw);
+  height: 92vh;
+}
+/* ===== GLPI Captures : grille + taille uniforme ===== */
+.captures-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 14px 0 28px;
+}
+
+@media (max-width: 768px){
+  .captures-grid{ grid-template-columns: 1fr; }
+}
+
+.capture{
+  margin: 0;
+  padding: 14px;
+  border-radius: 0px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.capture img{
+  width: 100%;
+  height: 260px;      /* ✅ même taille */
+  object-fit: cover;  /* ✅ recadrage propre */
+}
+
+.capture figcaption{
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  color: var(--text-light);
+  font-size: 0.95rem;
 }
