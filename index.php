@@ -1,5 +1,5 @@
 <?php
-require_once("includes/header.php");
+require_once("vue/components/header.php");
 ?>
 
 <!-- hero -->
@@ -16,7 +16,7 @@ require_once("includes/header.php");
         </h2>
 
         <h3 class="h4 mb-4">
-          <a href="Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
+          <a href="vue/Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
         </h3>
 
         <p class="lead mb-4">
@@ -30,7 +30,7 @@ require_once("includes/header.php");
             Tableau de synthèse
           </button>
 
-          <button type="button" class="btn btn-projects" onclick="openPDFModal('pdfs/CV_Atef_Saadi.pdf', 'CV')">
+          <button type="button" class="btn btn-projects" onclick="openPDFModal('assets/documents/CV_Atef_Saadi.pdf', 'CV')">
             CV
           </button>
 
@@ -42,7 +42,7 @@ require_once("includes/header.php");
       <div class="col-lg-6 text-center">
         <div class="profile-container mt-5 mt-lg-0">
           <img
-            src="images/ATEF.jpg"
+            src="assets/images/ATEF.jpg"
             alt="Photo de profil d'Atef Saadi"
             class="profile-img"
             loading="lazy"
@@ -70,14 +70,14 @@ require_once("includes/header.php");
     <button type="button" class="close-btn" aria-label="Fermer" onclick="closeModal('syntheseModal')">&times;</button>
 
     <div class="modal-actions mb-3">
-      <a href="pdfs/Tableau-de-synthese-Epreuve.xls" class="btn btn-projects" download>
+      <a href="assets/documents/Tableau-de-synthese-Epreuve.xls" class="btn btn-projects" download>
         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v2H5v-2z"/>
         </svg>
         Télécharger (Excel officiel)
       </a>
 
-      <a href="pdfs/Tableau-de-synthese-Epreuve.pdf" class="btn btn-projects" download>
+      <a href="assets/documents/Tableau-de-synthese-Epreuve.pdf" class="btn btn-projects" download>
         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v2H5v-2z"/>
         </svg>
@@ -93,7 +93,7 @@ require_once("includes/header.php");
     </div>
 
     <iframe
-      src="pdfs/Tableau-de-synthese-Epreuve.pdf"
+      src="assets/documents/Tableau-de-synthese-Epreuve.pdf"
       title="Tableau de synthèse BTS SIO SLAM"
       class="cv-iframe"
       loading="lazy"
@@ -309,11 +309,11 @@ require_once("includes/header.php");
         <button
           type="button"
           class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable"
-          onclick="openPDFModal('pdfs/certif/CertifHtmlCss.pdf', 'Certificat HTML/CSS')"
+          onclick="openPDFModal('assets/documents/certif/CertifHtmlCss.pdf', 'Certificat HTML/CSS')"
         >
           <div class="card-body p-0">
             <img
-              src="images/HtmlCss.jpg"
+              src="assets/images/HtmlCss.jpg"
               alt="Certificat HTML5/CSS3"
               class="cert-img"
               loading="lazy"
@@ -330,11 +330,11 @@ require_once("includes/header.php");
         <button
           type="button"
           class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable"
-          onclick="openPDFModal('pdfs/certif/securite.pdf', 'Certificat Cybersécurité')"
+          onclick="openPDFModal('assets/documents/certif/securite.pdf', 'Certificat Cybersécurité')"
         >
           <div class="card-body p-0">
             <img
-              src="images/cyberS.png"
+              src="assets/images/cyberS.png"
               alt="Certificat Cybersécurité"
               class="cert-img"
               loading="lazy"
@@ -400,10 +400,10 @@ require_once("includes/header.php");
     <div class="row g-4">
 
       <div class="col-lg-4 col-md-6">
-        <a href="butterfly.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/butterfly.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/ButterFly/logo-off.png" alt="Projet Butterfly - Site vitrine" loading="lazy" class="card-img-top">
+              <img src="assets/images/ButterFly/logo-off.png" alt="Projet Butterfly - Site vitrine" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>ButterFly</h3>
@@ -420,10 +420,10 @@ require_once("includes/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="snakGame.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/snakGame.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/SnakGame/snake-game.webp" alt="SnakeGame" loading="lazy" class="card-img-top">
+              <img src="assets/images/SnakGame/snake-game.webp" alt="SnakeGame" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>SnakeGame</h3>
@@ -439,10 +439,10 @@ require_once("includes/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="glpi.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/glpi.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/Glpi/LogoGLPI.png" alt="Projet GLPI - Installation et configuration" loading="lazy" class="card-img-top">
+              <img src="assets/images/Glpi/LogoGLPI.png" alt="Projet GLPI - Installation et configuration" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>GLPI</h3>
@@ -458,10 +458,10 @@ require_once("includes/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="metaforg.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/metaforg.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/MetaForg/LogoMF.png" alt="Projet MetaForg - Réseau Social" loading="lazy" class="card-img-top">
+              <img src="assets/images/MetaForg/LogoMF.png" alt="Projet MetaForg - Réseau Social" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>MetaForg</h3>
@@ -478,10 +478,10 @@ require_once("includes/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="altimmo.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/altimmo.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/Altimmo/logoAltImmo.png" alt="Projet AltImmo - Agence Immobilière" loading="lazy" class="card-img-top">
+              <img src="assets/images/Altimmo/logoAltImmo.png" alt="Projet AltImmo - Agence Immobilière" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>AltImmo</h3>
@@ -498,10 +498,10 @@ require_once("includes/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="langages-web.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/langages-web.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="images/langages-web.png" alt="Projet Langages" loading="lazy" class="card-img-top">
+              <img src="assets/images/langages-web.png" alt="Projet Langages" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>Langages du Web</h3>
@@ -532,12 +532,12 @@ require_once("includes/header.php");
         <button
           type="button"
           class="project-card card h-100 w-100 text-start border-0 p-0 is-clickable"
-          onclick="window.location.href='edge-computing.php';"
+          onclick="window.location.href='vue/edge-computing.php';"
           aria-label="Ouvrir la veille Edge Computing"
         >
           <div class="card-body">
             <div class="project-image">
-              <img src="images/bigstock-Edge-Computing.webp" alt="Veille Edge Computing" loading="lazy" class="card-img-top">
+              <img src="assets/images/bigstock-Edge-Computing.webp" alt="Veille Edge Computing" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>Edge Computing</h3>
@@ -550,12 +550,12 @@ require_once("includes/header.php");
         <button
           type="button"
           class="project-card card h-100 w-100 text-start border-0 p-0 is-clickable"
-          onclick="window.location.href='nocode.php';"
+          onclick="window.location.href='vue/nocode.php';"
           aria-label="Ouvrir la veille Low-Code/No-Code"
         >
           <div class="card-body">
             <div class="project-image">
-              <img src="images/low-code-no-code.jpg" alt="Veille Low-Code/No-Code" loading="lazy" class="card-img-top">
+              <img src="assets/images/low-code-no-code.jpg" alt="Veille Low-Code/No-Code" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>Low-Code/No-Code</h3>
@@ -710,4 +710,4 @@ require_once("includes/header.php");
   // garde ton js ici si besoin (openModal, closeModal, openPDFModal, closePDFModal, printIframeInModal, etc.)
 </script>
 
-<?php require_once("includes/footer.php") ?>
+<?php require_once("vue/components/footer.php") ?>

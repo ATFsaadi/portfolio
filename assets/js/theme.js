@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dark: '#D6974C'
         };
         if (theme === 'light') {
-            themeLink.href = 'styles/sun.css';
+            themeLink.href = 'assets/styles/sun.css';
             themeIcon.classList.replace('fa-moon', 'fa-sun');
         } else {
-            themeLink.href = 'styles/moon.css';
+            themeLink.href = 'assets/styles/moon.css';
             themeIcon.classList.replace('fa-sun', 'fa-moon');
         }
         const event = new CustomEvent('themeChange', { detail: { color: particleColors[theme] } });

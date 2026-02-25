@@ -1,5 +1,5 @@
 <title data-i18n="BTS SIO - Détails">MetaForg</title>
-<?php require_once("includes/header.php"); ?>
+<?php require_once(__DIR__ . "/components/header.php");?>
 <div class="container">
     <h1>MetaForge</h1>
 
@@ -104,7 +104,7 @@
     <!-- Image 1 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/singIn.png" alt="Connexion à MetaForge"
+        <img src="assets/images/MetaForg/singIn.png" alt="Connexion à MetaForge"
              data-bs-toggle="modal" data-bs-target="#modal1"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Connexion</figcaption>
@@ -114,7 +114,7 @@
     <!-- Image 2 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/singUp.png" alt="Inscription utilisateur"
+        <img src="assets/images/MetaForg/singUp.png" alt="Inscription utilisateur"
              data-bs-toggle="modal" data-bs-target="#modal2"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Inscription</figcaption>
@@ -124,7 +124,7 @@
     <!-- Image 3 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/mdpOblier.png" alt="Mot de passe oublié"
+        <img src="assets/images/MetaForg/mdpOblier.png" alt="Mot de passe oublié"
              data-bs-toggle="modal" data-bs-target="#modal3"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Mot de passe oublié</figcaption>
@@ -134,7 +134,7 @@
     <!-- Image 4 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/accueil.png" alt="Page d'accueil"
+        <img src="assets/images/MetaForg/accueil.png" alt="Page d'accueil"
              data-bs-toggle="modal" data-bs-target="#modal4"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Page d'accueil</figcaption>
@@ -144,7 +144,7 @@
     <!-- Image 5 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/profileConnecté.png" alt="Profil connecté"
+        <img src="assets/images/MetaForg/profileConnecté.png" alt="Profil connecté"
              data-bs-toggle="modal" data-bs-target="#modal5"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Profil connecté</figcaption>
@@ -154,7 +154,7 @@
     <!-- Image 6 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/prifileAmis.png" alt="Profil d’un ami"
+        <img src="assets/images/MetaForg/prifileAmis.png" alt="Profil d’un ami"
              data-bs-toggle="modal" data-bs-target="#modal6"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Profil d’un ami</figcaption>
@@ -164,7 +164,7 @@
     <!-- Image 7 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/rechercheAmis.png" alt="Recherche d’amis"
+        <img src="assets/images/MetaForg/rechercheAmis.png" alt="Recherche d’amis"
              data-bs-toggle="modal" data-bs-target="#modal7"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Recherche d’amis</figcaption>
@@ -174,7 +174,7 @@
     <!-- Image 8 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/amis.png" alt="Liste d’amis"
+        <img src="assets/images/MetaForg/amis.png" alt="Liste d’amis"
              data-bs-toggle="modal" data-bs-target="#modal8"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Liste d’amis</figcaption>
@@ -184,7 +184,7 @@
     <!-- Image 9 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/notifications.png" alt="Notifications"
+        <img src="assets/images/MetaForg/notifications.png" alt="Notifications"
              data-bs-toggle="modal" data-bs-target="#modal9"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Notifications</figcaption>
@@ -194,7 +194,7 @@
     <!-- Image 10 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/demandesReçues.png" alt="Demandes reçues"
+        <img src="assets/images/MetaForg/demandesReçues.png" alt="Demandes reçues"
              data-bs-toggle="modal" data-bs-target="#modal10"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Demandes reçues</figcaption>
@@ -204,7 +204,7 @@
     <!-- Image 11 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/suggestionsAmis.png" alt="Suggestions d’amis"
+        <img src="assets/images/MetaForg/suggestionsAmis.png" alt="Suggestions d’amis"
              data-bs-toggle="modal" data-bs-target="#modal11"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Suggestions d’amis</figcaption>
@@ -214,7 +214,7 @@
     <!-- Image 12 -->
     <div class="col-md-3 mb-4">
       <figure>
-        <img src="images/MetaForg/jeuxEnligne.png" alt="Jeux en ligne"
+        <img src="assets/images/MetaForg/jeuxEnligne.png" alt="Jeux en ligne"
              data-bs-toggle="modal" data-bs-target="#modal12"
              style="width:100%;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;">
         <figcaption class="text-center mt-2">Jeux en ligne</figcaption>
@@ -229,43 +229,43 @@
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header"><h5 id="modalLabel1">Connexion</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-          <div class="modal-body text-center"><img src="images/MetaForg/singIn.png" class="img-fluid rounded"></div>
+          <div class="modal-body text-center"><img src="assets/images/MetaForg/singIn.png" class="img-fluid rounded"></div>
         </div>
       </div>
     </div>
 
     <!-- Modal 2 -->
-    <div class="modal fade" id="modal2" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Inscription</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/singUp.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal2" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Inscription</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/singUp.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 3 -->
-    <div class="modal fade" id="modal3" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Mot de passe oublié</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/mdpOblier.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal3" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Mot de passe oublié</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/mdpOblier.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 4 -->
-    <div class="modal fade" id="modal4" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Page d'accueil</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/accueil.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal4" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Page d'accueil</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/accueil.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 5 -->
-    <div class="modal fade" id="modal5" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Profil connecté</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/profileConnecté.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal5" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Profil connecté</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/profileConnecté.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 6 -->
-    <div class="modal fade" id="modal6" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Profil d’un ami</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/prifileAmis.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal6" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Profil d’un ami</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/prifileAmis.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 7 -->
-    <div class="modal fade" id="modal7" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Recherche d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/rechercheAmis.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal7" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Recherche d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/rechercheAmis.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 8 -->
-    <div class="modal fade" id="modal8" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Liste d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/amis.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal8" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Liste d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/amis.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 9 -->
-    <div class="modal fade" id="modal9" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Notifications</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/notifications.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal9" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Notifications</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/notifications.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 10 -->
-    <div class="modal fade" id="modal10" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Demandes reçues</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/demandesReçues.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal10" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Demandes reçues</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/demandesReçues.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 11 -->
-    <div class="modal fade" id="modal11" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Suggestions d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/suggestionsAmis.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal11" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Suggestions d’amis</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/suggestionsAmis.png" class="img-fluid rounded"></div></div></div></div>
 
     <!-- Modal 12 -->
-    <div class="modal fade" id="modal12" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Jeux en ligne</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="images/MetaForg/jeuxEnligne.png" class="img-fluid rounded"></div></div></div></div>
+    <div class="modal fade" id="modal12" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5>Jeux en ligne</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body text-center"><img src="assets/images/MetaForg/jeuxEnligne.png" class="img-fluid rounded"></div></div></div></div>
   </div>
 </section>
 
@@ -273,4 +273,4 @@
 
 </section>
 </div>
-<?php require_once("includes/footer.php")?>
+<?php require_once(__DIR__ . "/components/footer.php"); ?>

@@ -1,5 +1,5 @@
 <title data-i18n="BTS SIO - Détails">Langages du Web</title>
-<?php require_once("includes/header.php"); ?>
+<?php require_once(__DIR__ . "/components/header.php");?>
 
 <div class="container">
     <h1>Langages du Web</h1>
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <figure>
-                    <img src="images/LangagesWeb/home.png" alt="Page d'accueil"
+                    <img src="assets/images/LangagesWeb/home.png" alt="Page d'accueil"
                          style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
                     <figcaption class="text-center mt-2">Page d’accueil</figcaption>
                 </figure>
@@ -79,7 +79,7 @@
 
             <div class="col-md-4 mb-4">
                 <figure>
-                    <img src="images/LangagesWeb/html.png" alt="Page HTML"
+                    <img src="assets/images/LangagesWeb/html.png" alt="Page HTML"
                          style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
                     <figcaption class="text-center mt-2">Page HTML</figcaption>
                 </figure>
@@ -87,7 +87,7 @@
 
             <div class="col-md-4 mb-4">
                 <figure>
-                    <img src="images/LangagesWeb/css.png" alt="Page CSS"
+                    <img src="assets/images/LangagesWeb/css.png" alt="Page CSS"
                          style="width:100%;height:200px;object-fit:cover;border-radius:10px;">
                     <figcaption class="text-center mt-2">Page CSS</figcaption>
                 </figure>
@@ -107,4 +107,4 @@
 
 </div>
 
-<?php require_once("includes/footer.php"); ?>
+<?php require_once(__DIR__ . "/components/footer.php"); ?>

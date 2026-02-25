@@ -1,5 +1,5 @@
 <title data-i18n="BTS SIO - Détails">Edge Computing</title>
-<?php require_once("includes/header.php"); ?>
+<?php require_once(__DIR__ . "/components/header.php");?>
 
 <!-- SECTION VEILLE TECHNOLOGIQUE -->
 <section class="section-texte">
@@ -60,7 +60,7 @@ async function loadNews() {
 
         data.items.slice(0, 6).forEach(article => {
             const imgMatch = article.description.match(/<img[^>]+src="([^">]+)"/);
-            const imageUrl = imgMatch ? imgMatch[1] : "images/default-news.jpg";
+            const imageUrl = imgMatch ? imgMatch[1] : "assets/images/default-news.jpg";
 
             const newsItem = document.createElement("article");
             newsItem.className = "news-item";
@@ -83,4 +83,4 @@ async function loadNews() {
 loadNews();
 </script>
 
-<?php require_once("includes/footer.php"); ?>
+<?php require_once(__DIR__ . "/components/footer.php"); ?>

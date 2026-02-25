@@ -1,5 +1,5 @@
 <title>GLPI</title>
-<?php require_once("includes/header.php"); ?>
+<?php require_once(__DIR__ . "/components/header.php");?>
 
 <!-- Conteneur principal -->
 <main class="tuto-container">
@@ -191,22 +191,22 @@ sudo systemctl reload apache2</pre>
 
 <div class="captures-grid">
   <figure class="capture">
-    <img src="images/Glpi/1.1.jpeg" alt="Accès à l’interface GLPI">
+    <img src="assets/images/Glpi/1.1.jpeg" alt="Accès à l’interface GLPI">
     <figcaption>Capture 1 — Accès à l’interface GLPI</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/1.2.png" alt="Page de connexion GLPI">
+    <img src="assets/images/Glpi/1.2.png" alt="Page de connexion GLPI">
     <figcaption>Capture 2 — Page de connexion GLPI</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/1.3.png" alt="Interface GLPI (vue générale)">
+    <img src="assets/images/Glpi/1.3.png" alt="Interface GLPI (vue générale)">
     <figcaption>Capture 3 — Interface GLPI (vue générale)</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/1.4.png" alt="Navigation dans GLPI">
+    <img src="assets/images/Glpi/1.4.png" alt="Navigation dans GLPI">
     <figcaption>Capture 4 — Navigation dans GLPI</figcaption>
   </figure>
 </div>
@@ -217,22 +217,22 @@ sudo systemctl reload apache2</pre>
 
 <div class="captures-grid">
   <figure class="capture">
-    <img src="images/Glpi/2.1.png" alt="Tableau de bord utilisateur GLPI">
+    <img src="assets/images/Glpi/2.1.png" alt="Tableau de bord utilisateur GLPI">
     <figcaption>Capture 5 — Tableau de bord utilisateur</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/2.2.gif" alt="Interface après connexion (animation)">
+    <img src="assets/images/Glpi/2.2.gif" alt="Interface après connexion (animation)">
     <figcaption>Capture 6 — Interface après connexion (animation)</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/2.3.webp" alt="Navigation côté utilisateur">
+    <img src="assets/images/Glpi/2.3.webp" alt="Navigation côté utilisateur">
     <figcaption>Capture 7 — Navigation côté utilisateur</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/2.4.webp" alt="Vue tickets côté utilisateur">
+    <img src="assets/images/Glpi/2.4.webp" alt="Vue tickets côté utilisateur">
     <figcaption>Capture 8 — Vue tickets côté utilisateur</figcaption>
   </figure>
 </div>
@@ -243,22 +243,22 @@ sudo systemctl reload apache2</pre>
 
 <div class="captures-grid">
   <figure class="capture">
-    <img src="images/Glpi/3.1.png" alt="Formulaire de création d’un ticket">
+    <img src="assets/images/Glpi/3.1.png" alt="Formulaire de création d’un ticket">
     <figcaption>Capture 9 — Formulaire de création d’un ticket</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/3.2.jpg" alt="Ticket créé (vue utilisateur)">
+    <img src="assets/images/Glpi/3.2.jpg" alt="Ticket créé (vue utilisateur)">
     <figcaption>Capture 10 — Ticket créé (vue utilisateur)</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/3.3.webp" alt="Détails du ticket">
+    <img src="assets/images/Glpi/3.3.webp" alt="Détails du ticket">
     <figcaption>Capture 11 — Détails du ticket</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/3.4.png" alt="Suivi / message associé au ticket">
+    <img src="assets/images/Glpi/3.4.png" alt="Suivi / message associé au ticket">
     <figcaption>Capture 12 — Suivi / message associé au ticket</figcaption>
   </figure>
 </div>
@@ -269,22 +269,22 @@ sudo systemctl reload apache2</pre>
 
 <div class="captures-grid">
   <figure class="capture">
-    <img src="images/Glpi/4.1.png" alt="Tableau de bord administrateur">
+    <img src="assets/images/Glpi/4.1.png" alt="Tableau de bord administrateur">
     <figcaption>Capture 13 — Tableau de bord administrateur</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/4.2.png" alt="Ticket vu côté administrateur">
+    <img src="assets/images/Glpi/4.2.png" alt="Ticket vu côté administrateur">
     <figcaption>Capture 14 — Ticket vu côté administrateur</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/4.3.png" alt="Traitement / réponse du ticket">
+    <img src="assets/images/Glpi/4.3.png" alt="Traitement / réponse du ticket">
     <figcaption>Capture 15 — Traitement / réponse du ticket</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/4.4.png" alt="Mise à jour / suivi côté administrateur">
+    <img src="assets/images/Glpi/4.4.png" alt="Mise à jour / suivi côté administrateur">
     <figcaption>Capture 16 — Mise à jour / suivi côté administrateur</figcaption>
   </figure>
 </div>
@@ -295,51 +295,51 @@ sudo systemctl reload apache2</pre>
 
 <div class="captures-grid">
   <figure class="capture">
-    <img src="images/Glpi/5.1.png" alt="Ticket résolu">
+    <img src="assets/images/Glpi/5.1.png" alt="Ticket résolu">
     <figcaption>Capture 17 — Ticket résolu</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/5.2.webp" alt="Suivi après résolution">
+    <img src="assets/images/Glpi/5.2.webp" alt="Suivi après résolution">
     <figcaption>Capture 18 — Suivi après résolution</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/5.3.webp" alt="Préparation clôture / vérification">
+    <img src="assets/images/Glpi/5.3.webp" alt="Préparation clôture / vérification">
     <figcaption>Capture 19 — Préparation clôture / vérification</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/5.4.webp" alt="Ticket clôturé">
+    <img src="assets/images/Glpi/5.4.webp" alt="Ticket clôturé">
     <figcaption>Capture 20 — Ticket clôturé</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/6.1.png" alt="Historique / résumé final">
+    <img src="assets/images/Glpi/6.1.png" alt="Historique / résumé final">
     <figcaption>Capture 21 — Historique / résumé final</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/6.2.png" alt="Vue finale côté utilisateur">
+    <img src="assets/images/Glpi/6.2.png" alt="Vue finale côté utilisateur">
     <figcaption>Capture 22 — Vue finale côté utilisateur</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/6.3.png" alt="Liste des tickets">
+    <img src="assets/images/Glpi/6.3.png" alt="Liste des tickets">
     <figcaption>Capture 23 — Liste des tickets</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/6.4.png" alt="Dernière vérification / confirmation">
+    <img src="assets/images/Glpi/6.4.png" alt="Dernière vérification / confirmation">
     <figcaption>Capture 24 — Dernière vérification / confirmation</figcaption>
   </figure>
 
   <figure class="capture">
-    <img src="images/Glpi/7.1.webp" alt="Récapitulatif">
+    <img src="assets/images/Glpi/7.1.webp" alt="Récapitulatif">
     <figcaption>Capture 25 — Récapitulatif</figcaption>
   </figure>
 </div>
 
 </main>
 
-<?php require_once("includes/footer.php"); ?>
+<?php require_once(__DIR__ . "/components/footer.php"); ?>

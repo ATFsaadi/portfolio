@@ -1,5 +1,5 @@
 <title data-i18n="BTS SIO - Détails">LOW CODE/NO CODE</title>
-<?php require_once("includes/header.php"); ?>
+<?php require_once(__DIR__ . "/components/header.php");?>
 
 <!-- SECTION VEILLE TECHNOLOGIQUE -->
 <section class="section-texte">
@@ -43,7 +43,7 @@
       
       <!-- Exemple d’actualité -->
       <article class="news-item">
-        <img src="images/lowcode-news1.jpg" alt="Illustration du low-code" class="news-image">
+        <img src="assets/images/lowcode-news1.jpg" alt="Illustration du low-code" class="news-image">
         <div class="news-content">
           <h3 class="news-title">Microsoft PowerApps accélère sa croissance</h3>
           <p>La plateforme PowerApps continue d'évoluer avec de nouvelles fonctionnalités basées sur l'IA pour simplifier la création d'applications sans code.</p>
@@ -52,7 +52,7 @@
 
       <!-- Une autre actualité -->
       <article class="news-item">
-        <img src="images/webflow-update.jpg" alt="Webflow mise à jour" class="news-image">
+        <img src="assets/images/webflow-update.jpg" alt="Webflow mise à jour" class="news-image">
         <div class="news-content">
           <h3 class="news-title">Webflow intègre une IA de génération de design</h3>
           <p>Le constructeur de sites Web low-code Webflow a ajouté un générateur de sections automatisé propulsé par l’IA.</p>
@@ -81,7 +81,7 @@ async function loadNews() {
         data.items.slice(0, 6).forEach(article => {
             // ✅ Extraction de l'image depuis la description (souvent contenue en HTML)
             const imgMatch = article.description.match(/<img[^>]+src="([^">]+)"/);
-            const imageUrl = imgMatch ? imgMatch[1] : "images/default-news.jpg"; // image par défaut
+            const imageUrl = imgMatch ? imgMatch[1] : "assets/images/default-news.jpg"; // image par défaut
 
             // ✅ Création de la carte actualité
             const newsItem = document.createElement("article");
@@ -104,6 +104,4 @@ async function loadNews() {
 
 loadNews();
 </script>
-
-
-<?php require_once("includes/footer.php")?>
+<?php require_once(__DIR__ . "/components/footer.php"); ?>
