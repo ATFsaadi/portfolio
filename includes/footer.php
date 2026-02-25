@@ -14,6 +14,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 <script src="javascript/theme.js"></script>
+<script src="javascript/modals.js"></script>
 <script src="javascript/js.js"></script>
 <script src="javascript/langue.js"></script>
 <script src="javascript/script.js"></script>

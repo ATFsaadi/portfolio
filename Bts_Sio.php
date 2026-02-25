@@ -54,17 +54,19 @@
         </div>
 
         <!-- 3. Examens -->
-        <h2 id="exams">3. Examens</h2>
-        <ul>
-            <li>E1 - Culture générale et expression</li>
-            <li>E2 - Expression et communication en anglais</li>
-            <li>E3 - Mathématiques pour l’informatique</li>
-            <li>E4 - Culture économique, juridique et managériale</li>
-            <li>E5 - Support et mise à disposition de services informatiques</li>
-            <li>E6 - Administration des systèmes et réseaux (SISR)</li>
-            <li>E6 - Conception et développement d’applications (SLAM)</li>
-            <li>E7 - Cybersécurité des services informatiques</li>
-        </ul>
+     <h2 id="exams">3. Examens</h2>
+        <div class="card p-3">
+            <ul>
+                <li>E1 - Culture générale et expression</li>
+                <li>E2 - Expression et communication en anglais</li>
+                <li>E3 - Mathématiques pour l’informatique</li>
+                <li>E4 - Culture économique, juridique et managériale</li>
+                <li>E5 - Support et mise à disposition de services informatiques</li>
+                <li>E6 - Administration des systèmes et réseaux (SISR)</li>
+                <li>E6 - Conception et développement d’applications (SLAM)</li>
+                <li>E7 - Cybersécurité des services informatiques</li>
+            </ul>
+        </div>
 
         <!-- 4. Les débouchés -->
         <h2 id="career">4. Les débouchés</h2>
