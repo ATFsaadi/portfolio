@@ -5,7 +5,7 @@
 
   <div class="footer-links">
     <a href="index.php" class="back-to-top" aria-label="Retour en haut">
-      <img src="assets/images/SA.png" width="100" alt="">
+      <img src="assets/icones/LogoFoo" width="100" alt="Logo Atef Saadi">
     </a>
   </div>
 </footer>
