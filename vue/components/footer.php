@@ -1,6 +1,6 @@
 <footer class="text-center py-4">
   <p class="footer-text" data-i18n="© 2024 Atef Saadi - Tous droits réservés">
-    © <?= date('Y'); ?> Atef Saadi - Tous droits réservés
+    <h6>© <?= date('Y'); ?>Atef Saadi - Tous droits réservés</h6>
   </p>
 
   <div class="footer-links">

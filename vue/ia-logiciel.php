@@ -211,110 +211,144 @@ $articles = [
       </div>
     </section>
 
-    <section class="mt-5">
-  <div class="card border-0 shadow-sm rounded-4">
-    <div class="card-body p-4">
+  <section id="sources-ia" class="section custom-border">
+    <div class="container">
       <h2 class="title">Sources et veille continue</h2>
+      <p class="mb-4 text-center">
+        Cette section présente les principales sources que j’utilise pour assurer une veille
+        technologique continue autour du développement logiciel, de l’intelligence artificielle
+        et des outils numériques.
+      </p>
 
-      <div class="row g-3 mt-1">
+      <div class="row justify-content-center">
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://github.blog/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" class="img-fluid" width="50" height="50">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">GitHub Blog</h6>
-                  <p class="text-muted small mb-0">Actualités et nouveautés autour de GitHub.</p>
-                </div>
+        <!-- GitHub -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://github.blog/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/github-blog.png"
+                alt="GitHub Blog"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Actualités et nouveautés autour de GitHub.</p>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://openai.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img
-                    src="https://openai.com/favicon.ico"
-                    alt="OpenAI"
-                    class="img-fluid"
-                    width="50"
-                    height="50"
-                    onerror="this.src='https://www.google.com/s2/favicons?sz=128&domain_url=openai.com'">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">OpenAI</h6>
-                  <p class="text-muted small mb-0">Informations et publications sur l’intelligence artificielle.</p>
-                </div>
+        <!-- OpenAI -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://openai.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/openai.png"
+                alt="OpenAI"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Informations et publications sur l’intelligence artificielle.</p>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://developers.googleblog.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" class="img-fluid" width="50" height="50">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">Google Developers Blog</h6>
-                  <p class="text-muted small mb-0">Articles techniques et nouveautés pour développeurs.</p>
-                </div>
+        <!-- Google Developers Blog -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://developers.googleblog.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/google-blog.png"
+                alt="Google Developers Blog"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Articles techniques et nouveautés pour développeurs.</p>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://www.anthropic.com/engineering" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img src="https://cdn.simpleicons.org/anthropic/191919" alt="Anthropic" class="img-fluid" width="50" height="50">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">Anthropic Engineering</h6>
-                  <p class="text-muted small mb-0">Réflexions et travaux sur les agents IA et l’ingénierie.</p>
-                </div>
+        <!-- Anthropic -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://www.anthropic.com/engineering"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/anthropic.png"
+                alt="Anthropic Engineering"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Réflexions et travaux sur les agents IA et l’ingénierie.</p>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://feedly.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img src="https://cdn.simpleicons.org/feedly/2BB24C" alt="Feedly" class="img-fluid" width="50" height="50">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">Feedly</h6>
-                  <p class="text-muted small mb-0">Outil de veille pour centraliser les flux RSS.</p>
-                </div>
+        <!-- Feedly -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://feedly.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/feedly.png"
+                alt="Feedly"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Outil de veille pour centraliser les flux RSS.</p>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-md-6 col-lg-4">
-          <a href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-            <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
-              <div class="card-body d-flex flex-column p-3">
-                <div class="mb-3">
-                  <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google Alerts" class="img-fluid" width="50" height="50">
-                </div>
-                <div class="mt-auto">
-                  <h6 class="mb-2">Google Alerts</h6>
-                  <p class="text-muted small mb-0">Alertes automatiques pour suivre les nouveautés du domaine.</p>
-                </div>
+        <!-- Google Alerts -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a
+            href="https://www.google.com/alerts"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+          >
+            <div class="card-body p-0">
+              <img
+                src="assets/images/veilleTechno/IALogiciel/google.png"
+                alt="Google Alerts"
+                loading="lazy"
+                style="width: 100%; height: 180px; object-fit: contain; display: block;"
+              >
+              <div class="p-2">
+                <p class="mb-0">Alertes automatiques pour suivre les nouveautés du domaine.</p>
               </div>
             </div>
           </a>
@@ -322,14 +356,13 @@ $articles = [
 
       </div>
 
-      <p class="text-muted small mb-0 lh-sm text-center mt-4">
+      <p class="text-muted small text-center mt-4">
         Ma veille est organisée avec Feedly pour centraliser les flux RSS
         et avec Google Alerts pour suivre les nouveautés liées à l’IA
         appliquée au développement logiciel.
       </p>
     </div>
-  </div>
-</section>
+  </section>
 
   </div>
 </main>

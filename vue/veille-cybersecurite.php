@@ -212,123 +212,133 @@ $articles = [
       </div>
     </section>
 
-    <section class="mt-5">
-      <div class="card border-0 shadow-sm rounded-4">
-        <div class="card-body p-4">
-          <h2 class="title">Sources et veille continue</h2>
-
-          <div class="row g-3 mt-1">
-
-            <!-- GitHub -->
-            <div class="col-md-6 col-lg-4">
-              <a href="https://github.blog/security/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                  <div style="height:140px;" class="bg-white">
-                    <img src="assets/images/veilleTechno/cybersecurite/github-security.png"
-                         class="w-100 h-100 object-fit-contain p-3"
-                         alt="GitHub Security Blog">
-                  </div>
-
-                  <div class="card-body text-center d-flex flex-column justify-content-center">
-                    <h6 class="mb-2">GitHub Security Blog</h6>
-                    <p class="text-muted small mb-0">
-                      Actualités et nouveautés autour de la sécurité du code.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- PortSwigger -->
-            <div class="col-md-6 col-lg-4">
-              <a href="https://portswigger.net/research" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                  <div style="height:140px;" class="bg-white">
-                    <img src="assets/images/veilleTechno/cybersecurite/PortSwigger-Research.jpg"
-                         class="w-100 h-100 object-fit-contain p-3"
-                         alt="PortSwigger Research">
-                  </div>
-
-                  <div class="card-body text-center d-flex flex-column justify-content-center">
-                    <h6 class="mb-2">PortSwigger Research</h6>
-                    <p class="text-muted small mb-0">
-                      Recherches et analyses avancées autour des vulnérabilités web.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- OWASP -->
-            <div class="col-md-6 col-lg-4">
-              <a href="https://owasp.org/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                  <div style="height:140px;" class="bg-white">
-                    <img src="assets/images/veilleTechno/cybersecurite/OWASP.jpg"
-                         class="w-100 h-100 object-fit-contain p-3"
-                         alt="OWASP">
-                  </div>
-
-                  <div class="card-body text-center d-flex flex-column justify-content-center">
-                    <h6 class="mb-2">OWASP</h6>
-                    <p class="text-muted small mb-0">
-                      Référence majeure pour les bonnes pratiques et les risques applicatifs.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Feedly -->
-            <div class="col-md-6 col-lg-4">
-              <a href="https://feedly.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                  <div style="height:140px;" class="bg-white">
-                    <img src="assets/images/veilleTechno/cybersecurite/feedly.png"
-                         class="w-100 h-100 object-fit-contain p-3"
-                         alt="Feedly">
-                  </div>
-
-                  <div class="card-body text-center d-flex flex-column justify-content-center">
-                    <h6 class="mb-2">Feedly</h6>
-                    <p class="text-muted small mb-0">
-                      Outil de veille permettant de centraliser les flux RSS spécialisés.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- Google Alerts -->
-<div class="col-md-6 col-lg-4">
-  <a href="https://www.google.com/alerts" target="_blank" class="text-decoration-none">
-    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-
-      <div style="height:140px;" class="bg-white">
-        <img src="assets/images/veilleTechno/cybersecurite/google-alerts.jpg"
-             class="w-100 h-100 object-fit-cover"
-             alt="Google Alerts">
-      </div>
-
-      <div class="card-body text-center d-flex flex-column justify-content-center">
-        <h6 class="mb-2">Google Alerts</h6>
-        <p class="text-muted small mb-0">
-          Alertes automatiques pour suivre les nouveautés du domaine.
+    <section id="sources" class="section custom-border">
+      <div class="container">
+        <h2 class="title">Sources et veille continue</h2>
+        <p class="mb-4 text-center">
+          Cette section présente les principales sources que j’utilise pour assurer une veille continue
+          en cybersécurité. Elles me permettent de suivre l’actualité, les nouvelles vulnérabilités,
+          ainsi que les bonnes pratiques liées à la sécurité web.
         </p>
-      </div>
 
-    </div>
-  </a>
-</div>
+        <div class="row justify-content-center">
 
+          <!-- GitHub -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              href="https://github.blog/security/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+            >
+              <div class="card-body p-0">
+                <img
+                  src="assets/images/veilleTechno/cybersecurite/github-security.png"
+                  alt="GitHub Security Blog"
+                  loading="lazy"
+                  style="width: 100%; height: 180px; object-fit: contain; display: block;"
+                >
+                <div class="p-2">
+                  <p class="mb-0">Actualités et nouveautés autour de la sécurité du code.</p>
+                </div>
+              </div>
+            </a>
           </div>
 
-          <p class="text-muted small text-center mt-4">
-            Ma veille est organisée avec Feedly pour centraliser les flux RSS
-            et avec Google Alerts pour suivre les nouveautés liées à la sécurité web
-            à partir de mots-clés ciblés.
-          </p>
+          <!-- PortSwigger -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              href="https://portswigger.net/research"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+            >
+              <div class="card-body p-0">
+                <img
+                  src="assets/images/veilleTechno/cybersecurite/portswigger.png"
+                  alt="PortSwigger Research"
+                  loading="lazy"
+                  style="width: 100%; height: 180px; object-fit: contain; display: block;"
+                >
+                <div class="p-2">
+                  <p class="mb-0">Recherches et analyses avancées autour des vulnérabilités web.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- OWASP -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              href="https://owasp.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+            >
+              <div class="card-body p-0">
+                <img
+                  src="assets/images/veilleTechno/cybersecurite/OWASP.png"
+                  alt="OWASP"
+                  loading="lazy"
+                  style="width: 100%; height: 180px; object-fit: contain; display: block;"
+                >
+                <div class="p-2">
+                  <p class="mb-0">Référence majeure pour les bonnes pratiques et les risques applicatifs.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Feedly -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              href="https://feedly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+            >
+              <div class="card-body p-0">
+                <img
+                  src="assets/images/veilleTechno/cybersecurite/feedly.png"
+                  alt="Feedly"
+                  loading="lazy"
+                  style="width: 100%; height: 180px; object-fit: contain; display: block;"
+                >
+                <div class="p-2">
+                  <p class="mb-0">Outil de veille permettant de centraliser les flux RSS spécialisés.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Google Alerts -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <a
+              href="https://www.google.com/alerts"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="about-card card h-100 text-center w-100 border-0 p-0 overflow-hidden is-clickable text-decoration-none text-dark d-block"
+            >
+              <div class="card-body p-0">
+                <img
+                  src="assets/images/veilleTechno/cybersecurite/google.png"
+                  alt="Google Alerts"
+                  loading="lazy"
+                  style="width: 100%; height: 180px; object-fit: contain; display: block;"
+                >
+                <div class="p-2">
+                  <p class="mb-0">Alertes automatiques pour suivre les nouveautés du domaine.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
+
+        <p class="text-muted small text-center mt-4">
+          Ma veille est organisée avec Feedly pour centraliser les flux RSS et avec Google Alerts
+          pour suivre les nouveautés liées à la sécurité web à partir de mots-clés ciblés.
+        </p>
       </div>
     </section>
 

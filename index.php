@@ -9,34 +9,34 @@ require_once("vue/components/header.php");
 
       <!-- Hero : texte -->
       <div class="col-lg-6">
-        <h1 class="hero-text">Bienvenue sur mon portfolio</h1>
+  <h1 class="hero-text">Bienvenue sur mon portfolio</h1>
 
-        <h2 class="h1 mb-2">
-          <span class="name-highlight downloads">Atef Saadi</span>
-        </h2>
+  <h2 class="h1 mb-2">
+    <span class="name-highlight downloads">Atef Saadi</span>
+  </h2>
 
-        <h3 class="h4 mb-4">
-          <a href="vue/Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
-        </h3>
+  <h3 class="h4 mb-4">
+    <a href="vue/Bts_Sio.php" class="underline">BTS SIO</a> option SLAM
+  </h3>
 
-        <p class="lead mb-4">
-          Étudiant en BTS SIO option SLAM, je me spécialise dans le développement d’applications web et de solutions métiers.
-        </p>
+  <p class="lead mb-4">
+    Étudiant en BTS SIO option SLAM, je me spécialise dans le développement d’applications web et de solutions métiers.
+  </p>
 
-        <div class="d-flex gap-3 flex-wrap">
-          <a href="#projects" class="btn btn-projects">Voir mes projets</a>
+  <div class="row g-3">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-projects w-100" onclick="openModal('syntheseModal')">
+        Tableau de synthèse
+      </button>
+    </div>
 
-          <button type="button" class="btn btn-projects" onclick="openModal('syntheseModal')">
-            Tableau de synthèse
-          </button>
-
-          <button type="button" class="btn btn-projects" onclick="openPDFModal('assets/documents/CV_Atef_Saadi.pdf', 'CV')">
-            CV
-          </button>
-
-          <a href="#contact" class="btn btn-projects">Me contacter</a>
-        </div>
-      </div>
+    <div class="col-md-6">
+      <button type="button" class="btn btn-projects w-100" onclick="openPDFModal('assets/documents/CV_Atef_Saadi.pdf', 'CV')">
+        CV
+      </button>
+    </div>
+  </div>
+</div>
 
       <!-- Hero : image -->
       <div class="col-lg-6 text-center">
@@ -136,7 +136,7 @@ require_once("vue/components/header.php");
                 <h4 class="h6 mb-0"><strong>Baccalauréat en mathématiques – option génie des procédés</strong></h4>
                 <span class="text-muted">(2008)</span>
               </div>
-              <p class="mb-1">Lycée Chrif Lerguet, Algérie</p>
+              <a href="https://lycee-chrif-lerguet.dz/" target="_blank" rel="noopener noreferrer">Lycée Chrif Lerguet, Algérie</a>
               <p class="mb-0">
                 Acquisition de bases solides en mathématiques, en physique et en chimie appliquée,
                 constituant une préparation aux études supérieures techniques et industrielles.
