@@ -1,0 +1,9 @@
+cd c:\wamp64\www\projet-ecole\portfolio
+git init
+git config user.name "ATFsaadi"
+git config user.email "votre-email@example.com"
+git remote add origin https://github.com/ATFsaadi/portfolio.git
+git checkout -b release-13
+git add .
+git commit -m "Release 13"
+git push -u origin release-13

@@ -1,0 +1,582 @@
+/* responsive.css */
+
+/* =========================
+   Large screens
+   ========================= */
+@media (max-width: 1200px) {
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .header-right {
+    gap: 14px;
+  }
+
+  .custom-border {
+    width: 94%;
+  }
+}
+
+/* =========================
+   Tablet / small desktop
+   ========================= */
+@media (max-width: 992px) {
+  body {
+    padding: 16px;
+    padding-top: 76px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .hero {
+    padding: 72px 0;
+  }
+
+  .hero-text {
+    font-size: 34px;
+  }
+
+  .profile-img {
+    width: 210px;
+    height: 210px;
+  }
+
+  .btn-projects {
+    min-width: 160px;
+    padding: 11px 22px;
+  }
+
+  .custom-border {
+    width: 96%;
+    padding: 18px;
+    margin: 28px auto;
+  }
+
+  .project-image img {
+    height: 220px;
+  }
+
+  .cert-img {
+    height: 200px;
+  }
+
+  #projects .project-content p:not(.project-date),
+  #skills .card-body p,
+  #tech-watch .project-content p,
+  #certifications .card p {
+    min-height: auto;
+  }
+
+  #projects .project-content h3,
+  #tech-watch .project-content h3,
+  #skills h3 {
+    min-height: auto;
+  }
+
+  .options,
+  .debouches {
+    flex-direction: column;
+  }
+
+  .options .card,
+  .debouches .card {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Mobile navigation
+   ========================= */
+@media (max-width: 900px) {
+  .header {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  .header-left {
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-right {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 10px;
+  }
+
+  .language-switcher {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .burger-menu,
+  #burger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #burger-button {
+    position: static;
+    font-size: 20px;
+    padding: 6px;
+  }
+
+  /* Mobile : masque logo + téléphone + mail */
+  .header-right a[href="index.php"],
+  .header-right a[href^="tel:"],
+  .header-right a[href^="mailto:"] {
+    display: none;
+  }
+
+  /* Garde uniquement LinkedIn + GitHub */
+  .header-right a {
+    font-size: 18px;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 12px 18px;
+    background: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-140%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  .navbar-links.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links a {
+    display: block;
+    width: 100%;
+    padding: 12px 4px;
+    font-size: 15px;
+  }
+
+  .navbar-links a::after {
+    display: none;
+  }
+}
+
+/* =========================
+   Tablets
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    padding: 14px;
+    padding-top: 72px;
+  }
+
+  .section {
+    padding: 48px 0;
+    scroll-margin-top: 72px;
+  }
+
+  .title {
+    font-size: 23px;
+    margin-bottom: 24px;
+  }
+
+  /* Hero : photo en premier */
+  #hero .row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  #hero .row > .col-lg-6:first-child {
+    order: 2;
+  }
+
+  #hero .row > .col-lg-6.text-center {
+    order: 1;
+  }
+
+  .hero {
+    padding: 52px 0;
+    text-align: center;
+  }
+
+  .hero-text {
+    font-size: 30px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero h3 {
+    font-size: 1.2rem;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    margin: 10px auto 20px;
+  }
+
+  /* Boutons hero : 2 par ligne */
+  #hero .d-flex.gap-3.flex-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px !important;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  #hero .btn-projects {
+    min-width: 0;
+    width: 100%;
+    max-width: none;
+    padding: 9px 12px;
+    font-size: 0.9rem;
+  }
+
+  .card,
+  .news-item {
+    padding: 18px;
+  }
+
+  .custom-border {
+    width: 100%;
+    padding: 16px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .project-image img {
+    height: 200px;
+  }
+
+  .cert-img {
+    height: 180px;
+  }
+
+  #contact {
+    padding: 24px 0;
+  }
+
+  .contact-item {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    font-size: 20px;
+  }
+
+  .contact-social {
+    gap: 14px;
+    margin-top: 18px;
+  }
+
+  .contact-social a {
+    font-size: 22px;
+  }
+
+  .modal-actions {
+    align-items: stretch;
+  }
+
+  .modal-actions .btn-projects {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .custom-modal {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .custom-modal-content {
+    width: 100%;
+    height: calc(100dvh - 20px);
+    padding: 16px;
+  }
+
+  .tuto-content {
+    padding: 22px;
+  }
+
+  body.tuto-glpi h1 {
+    font-size: 2rem;
+  }
+
+  body.tuto-glpi h2 {
+    font-size: 1.5rem;
+  }
+
+  body.tuto-glpi h3 {
+    font-size: 1.2rem;
+  }
+
+  .section-texte .paragraphe {
+    padding: 18px 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .news-grid {
+    gap: 1.2rem;
+  }
+
+  .news-image {
+    height: 170px;
+  }
+
+  .captures-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capture img {
+    height: auto;
+    max-height: 300px;
+  }
+}
+
+/* =========================
+   Small mobile
+   ========================= */
+@media (max-width: 576px) {
+  body {
+    padding: 12px;
+    padding-top: 68px;
+  }
+
+  .header {
+    height: 54px;
+    padding: 0 12px;
+  }
+
+  .header-right {
+    gap: 10px;
+    margin-left: 8px;
+  }
+
+  .header-right a {
+    font-size: 16px;
+  }
+
+  .language-switcher {
+    gap: 6px;
+    margin-left: auto;
+  }
+
+  .flag-icon {
+    width: 20px;
+    height: 14px;
+  }
+
+  .theme-switcher button {
+    font-size: 17px;
+  }
+
+  .navbar-links {
+    top: 54px;
+    padding: 10px 14px;
+  }
+
+  .section {
+    padding: 40px 0;
+    scroll-margin-top: 68px;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+
+  .title::after {
+    width: 52px;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-text {
+    font-size: 25px;
+  }
+
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero h3 {
+    font-size: 1.05rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card,
+  .news-item {
+    padding: 16px;
+  }
+
+  .custom-border {
+    padding: 14px;
+    margin: 16px auto;
+    min-height: auto;
+  }
+
+  .project-image img {
+    height: 180px;
+  }
+
+  .cert-img {
+    height: 170px;
+  }
+
+  #skills h3,
+  #projects .project-content h3,
+  #tech-watch .project-content h3,
+  #stages h3,
+  #certifications .card h3 {
+    font-size: 1.08rem;
+  }
+
+  #projects .project-content,
+  #tech-watch .project-content {
+    margin-top: 12px !important;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .contact-item {
+    font-size: 0.96rem;
+  }
+
+  .contact-social a {
+    font-size: 21px;
+  }
+
+  .section-texte h2 {
+    font-size: 1.6rem;
+  }
+
+  .section-texte .paragraphe {
+    padding: 16px;
+    font-size: 0.97rem;
+  }
+
+  .sommaire {
+    padding: 16px;
+  }
+
+  .sommaire li {
+    margin-bottom: 8px;
+  }
+
+  .sommaire a {
+    font-size: 0.98rem;
+  }
+
+  .tuto-content {
+    padding: 18px;
+  }
+
+  .news-image {
+    height: 160px;
+  }
+
+  #scrollToTop {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+/* =========================
+   Very small screens
+   ========================= */
+@media (max-width: 400px) {
+  .hero-text {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 145px;
+    height: 145px;
+  }
+
+  /* Passe les boutons hero sur 1 colonne si écran trop petit */
+  #hero .d-flex.gap-3.flex-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  #hero .btn-projects {
+    max-width: 100%;
+    font-size: 0.88rem;
+  }
+
+  .project-image img,
+  .cert-img {
+    height: 155px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .language-switcher {
+    gap: 4px;
+  }
+}
+.burger-logo {
+  width: 36px;
+  height: auto;
+  cursor: pointer;
+}
