@@ -25,14 +25,6 @@ require_once(__DIR__ . "/components/header.php");
         la consultation des annonces et de mettre en valeur les informations importantes
         pour les visiteurs.
       </p>
-      <figure class="text-center">
-        <img
-          src="assets/images/Altimmo/logoAltImmo.png"
-          alt="Logo du projet AltImmo"
-          class="img-fluid rounded"
-          loading="lazy"
-        >
-      </figure>
     </section>
 
     <section id="contexte">
@@ -150,10 +142,10 @@ require_once(__DIR__ . "/components/header.php");
 
         <div class="col-md-3 mb-4">
           <figure class="capture-figure">
-            <img src="assets/images/Altimmo/categories.png" alt="Catégories AltImmo"
+            <img src="assets/images/Altimmo/messagrie.png" alt="Message AltImmo"
                  data-bs-toggle="modal" data-bs-target="#modal8"
                  class="img-fluid rounded capture-img">
-            <figcaption>Catégories</figcaption>
+            <figcaption>Messagerie</figcaption>
           </figure>
         </div>
 
@@ -263,11 +255,11 @@ require_once(__DIR__ . "/components/header.php");
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Catégories</h5>
+            <h5 class="modal-title">Messagerie</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
           </div>
           <div class="modal-body text-center">
-            <img src="assets/images/Altimmo/categories.png" class="img-fluid rounded" alt="Catégories AltImmo">
+            <img src="assets/images/Altimmo/messagrie.png" class="img-fluid rounded" alt="Messagerie AltImmo">
           </div>
         </div>
       </div>

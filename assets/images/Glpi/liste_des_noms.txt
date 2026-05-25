@@ -1,0 +1,17 @@
+glpi-connexion.png
+glpi-menu-navigation.gif
+glpi-liste-parc.gif
+glpi-fiche-ordinateur.png
+glpi-recherche-parc.gif
+glpi-tri-parc.gif
+glpi-tableau-bord-tickets.gif
+glpi-liste-tickets.gif
+glpi-detail-ticket.png
+glpi-acteurs-ticket.gif
+glpi-suivi-validation-ticket.gif
+glpi-informations-ticket.gif
+glpi-menu-utilisateur.gif
+glpi-affichage-mobile.png
+glpi-theme-noir.png
+glpi-theme-sombre.png
+glpi-theme-sombre-liste.png

@@ -25,14 +25,6 @@ require_once(__DIR__ . "/components/header.php");
         et JavaScript. Chaque langage disposait d’une page dédiée afin d’expliquer
         son rôle, son utilité et sa place dans la création d’un site.
       </p>
-      <figure class="text-center">
-        <img
-          src="assets/images/langages-web.png"
-          alt="Illustration du projet Langages du Web"
-          class="img-fluid rounded"
-          loading="lazy"
-        >
-      </figure>
     </section>
 
     <section id="contraintes">

@@ -195,12 +195,12 @@ require_once("vue/components/header.php");
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="about-card card h-100">
           <div class="card-body">
-            <h3>Développement Java</h3>
-            <p>Programmation orientée objet et structuration d’applications.</p>
+            <h3>Développement Java et Android</h3>
+            <p>Programmation orientée objet, applications desktop et initiation au développement mobile.</p>
             <ul class="skill-list">
               <li><strong>Java</strong> : création de classes, objets et méthodes</li>
+              <li><strong>Android</strong> : création d’interfaces mobiles simples et gestion de formulaires</li>
               <li><strong>POO</strong> : héritage, encapsulation et polymorphisme</li>
-              <li><strong>Logique algorithmique</strong> : traitements, conditions et validations</li>
             </ul>
           </div>
         </div>
@@ -316,20 +316,20 @@ require_once("vue/components/header.php");
     <h2 class="title">Projets réalisés</h2>
     <p class="mb-4 text-center">
       Cette section présente les différents projets que j’ai réalisés au cours de ma formation.
-      Ils illustrent mes compétences en développement web, en programmation, en gestion de bases
-      de données et en administration d’environnements applicatifs.
+      Ils illustrent mes compétences en développement web, mobile, e-commerce, en programmation,
+      en gestion de bases de données et en administration d’environnements applicatifs.
     </p>
 
     <div class="row g-4">
 
       <div class="col-lg-4 col-md-6">
-        <a href="vue/butterfly.php" class="project-card card h-100 text-decoration-none text-dark">
+        <a href="vue/butterfly-php.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="assets/images/ButterFly/logo-off.png" alt="Projet Butterfly - Site vitrine" loading="lazy" class="card-img-top">
+              <img src="assets/images/ButterFly/logo-off.png" alt="Projet Butterfly - Site vitrine" loading="lazy" class="card-img-top project-logo-img">
             </div>
             <div class="project-content mt-3">
-              <h3>ButterFly</h3>
+              <h3>ButterFly - PHP</h3>
               <p class="project-date badge bg-secondary">IRIS École, Paris - 10/2025</p>
               <p>Création d’un site vitrine avec PHP et Bootstrap.</p>
               <div class="project-tech">
@@ -343,10 +343,91 @@ require_once("vue/components/header.php");
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <a href="vue/snakGame.php" class="project-card card h-100 text-decoration-none text-dark">
+  <a href="vue/butterfly-java.php" class="project-card card h-100 text-decoration-none text-dark">
+    <div class="card-body">
+      <div class="project-image">
+        <img src="assets/images/ButterFly/logo-off.png" alt="Projet ButterFly - Client lourd Java" loading="lazy" class="card-img-top project-logo-img">
+      </div>
+      <div class="project-content mt-3">
+        <h3>ButterFly - JAVA</h3>
+        <p class="project-date badge bg-secondary">IRIS École, Paris - 05/2026</p>
+        <p>Création d’une application d’administration en Java Swing avec MySQL.</p>
+        <div class="project-tech">
+          <span class="badge bg-dark">Java</span>
+          <span class="badge bg-dark">Swing</span>
+          <span class="badge bg-dark">MySQL</span>
+          <span class="badge bg-dark">POO</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+      <div class="col-lg-4 col-md-6">
+  <a href="vue/devlearn.php" class="project-card card h-100 text-decoration-none text-dark">
+    <div class="card-body">
+      <div class="project-image">
+        <img src="assets/images/DevLearn/DevLearn.png" alt="Projet Dev Learn - Site WordPress" loading="lazy" class="card-img-top project-logo-img">
+      </div>
+      <div class="project-content mt-3">
+        <h3>Dev Learn</h3>
+        <p class="project-date badge bg-secondary">IRIS École, Paris - 10/2025</p>
+        <p>Création et personnalisation d’un site WordPress dédié à la scolarité et aux cours.</p>
+        <div class="project-tech">
+          <span class="badge bg-dark">WordPress</span>
+          <span class="badge bg-dark">CMS</span>
+          <span class="badge bg-dark">Web</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="vue/shopify.php" class="project-card card h-100 text-decoration-none text-dark">
+          <div class="card-body">
+            <div class="project-image project-icon-card project-icon-shopify" aria-hidden="true">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="project-content mt-3">
+              <h3>Shopify</h3>
+              <p class="project-date badge bg-secondary">IRIS École, Paris - 11/2025</p>
+              <p>Création d’un site de vente en ligne avec catalogue produits et pages produit.</p>
+              <div class="project-tech">
+                <span class="badge bg-dark">Shopify</span>
+                <span class="badge bg-dark">E-commerce</span>
+                <span class="badge bg-dark">CMS</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="vue/android.php" class="project-card card h-100 text-decoration-none text-dark">
+          <div class="card-body">
+            <div class="project-image project-icon-card project-icon-android" aria-hidden="true">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="project-content mt-3">
+              <h3>Android</h3>
+              <p class="project-date badge bg-secondary">IRIS École, Paris - 11/2025</p>
+              <p>Application mobile d’enquête de satisfaction avec formulaire et écran de résultats.</p>
+              <div class="project-tech">
+                <span class="badge bg-dark">Android</span>
+                <span class="badge bg-dark">Java</span>
+                <span class="badge bg-dark">Mobile</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="vue/snakeGame.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="assets/images/SnakGame/snake-game.webp" alt="Projet SnakeGame" loading="lazy" class="card-img-top">
+              <img src="assets/images/SnakeGame/snake-game.webp" alt="Projet SnakeGame" loading="lazy" class="card-img-top">
             </div>
             <div class="project-content mt-3">
               <h3>SnakeGame</h3>
@@ -365,7 +446,7 @@ require_once("vue/components/header.php");
         <a href="vue/glpi.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="assets/images/Glpi/LogoGLPI.png" alt="Projet GLPI - Installation et configuration" loading="lazy" class="card-img-top">
+              <img src="assets/images/Glpi/LogoGLPI.png" alt="Projet GLPI - Installation et configuration" loading="lazy" class="card-img-top project-logo-img">
             </div>
             <div class="project-content mt-3">
               <h3>GLPI</h3>
@@ -384,7 +465,7 @@ require_once("vue/components/header.php");
         <a href="vue/metaforg.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="assets/images/MetaForg/LogoMF.png" alt="Projet MetaForg - Réseau social" loading="lazy" class="card-img-top">
+              <img src="assets/images/MetaForg/LogoMF.png" alt="Projet MetaForg - Réseau social" loading="lazy" class="card-img-top project-logo-img">
             </div>
             <div class="project-content mt-3">
               <h3>MetaForg</h3>
@@ -404,7 +485,7 @@ require_once("vue/components/header.php");
         <a href="vue/altimmo.php" class="project-card card h-100 text-decoration-none text-dark">
           <div class="card-body">
             <div class="project-image">
-              <img src="assets/images/Altimmo/logoAltImmo.png" alt="Projet AltImmo - Agence immobilière" loading="lazy" class="card-img-top">
+              <img src="assets/images/Altimmo/logoAltImmo.png" alt="Projet AltImmo - Agence immobilière" loading="lazy" class="card-img-top project-logo-img">
             </div>
             <div class="project-content mt-3">
               <h3>AltImmo</h3>
@@ -448,7 +529,7 @@ require_once("vue/components/header.php");
   <div class="container">
     <h2 class="title">Stages en entreprise</h2>
     <p class="text-center mb-3">
-      Cette section présente les périodes de stage réalisées ou prévues dans le cadre de ma formation
+      Cette section présente les périodes de stage réalisées dans le cadre de ma formation
       en BTS SIO option SLAM. Elles me permettent de relier les compétences acquises en cours à des
       situations professionnelles concrètes.
     </p>
@@ -486,15 +567,15 @@ require_once("vue/components/header.php");
         <button
           type="button"
           class="about-card card h-100 w-100 text-start border-0 is-clickable"
-          onclick="openPDFModal('assets/documents/stages/Attestation-dec-2026.pdf', 'Document du stage 2')"
-          aria-label="Ouvrir le document du stage 2"
+          onclick="openPDFModal('assets/documents/stages/Attestation-dec-2025.pdf', 'Attestation de stage 2')"
+          aria-label="Ouvrir l’attestation du stage 2"
           data-i18n="[aria-label]aria.stage2Doc"
         >
           <div class="card-body">
-            <h3>Stage 2 — Tanios Consulting (prévu)</h3>
-            <p class="text-muted">Saint-Denis • 17/11/2026 - 19/12/2026</p>
+            <h3>Stage 2 — Tanios Consulting</h3>
+            <p class="text-muted">Saint-Denis • 17/11/2025 - 19/12/2025</p>
             <p>
-              Ce second stage, prévu du 17 novembre 2026 au 19 décembre 2026, aura pour objectif de poursuivre
+              Ce second stage, réalisé du 17 novembre 2025 au 19 décembre 2025, m’a permis de poursuivre
               mon immersion en entreprise, de renforcer mes compétences techniques et d’approfondir ma compréhension
               des missions liées au développement et au suivi applicatif.
             </p>
@@ -667,7 +748,7 @@ require_once("vue/components/header.php");
     <button type="button" class="close-btn" aria-label="Fermer" onclick="closeModal('syntheseModal')">&times;</button>
 
     <div class="modal-actions mb-3">
-      <a href="assets/documents/Tableau-de-synthese-Epreuve.xls" class="btn btn-projects" download>
+      <a href="assets/documents/Tableau-de-synthese-Epreuve.xlsx" class="btn btn-projects" download>
         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 4h14v2H5v-2z"/>
         </svg>

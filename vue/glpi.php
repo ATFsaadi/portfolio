@@ -28,7 +28,7 @@ require_once(__DIR__ . "/components/header.php");
       <li><a href="vue/glpi.php#etape-11">11. Bonnes pratiques post-installation</a></li>
       <li><a href="vue/glpi.php#etape-12">12. Conclusion</a></li>
       <li><a href="vue/glpi.php#partie-2">13. Aperçu de l’interface GLPI</a></li>
-    </ul>
+</ul>
 
     <!-- 1. Introduction -->
     <h2 id="etape-1">1. Introduction à GLPI</h2>
@@ -242,86 +242,97 @@ sudo systemctl reload apache2</pre>
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-login.png"
-           data-title="Écran de connexion GLPI">
-          <img src="assets/images/Glpi/glpi-login.png" alt="Écran de connexion GLPI">
+           data-img="assets/images/Glpi/glpi-connexion.png"
+           data-title="Connexion à GLPI">
+          <img src="assets/images/Glpi/glpi-connexion.png" alt="Connexion à GLPI">
         </a>
-        <figcaption>Écran de connexion GLPI</figcaption>
+        <figcaption>Connexion à GLPI</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-interface.png"
-           data-title="Interface principale GLPI">
-          <img src="assets/images/Glpi/glpi-interface.png" alt="Interface principale GLPI">
+           data-img="assets/images/Glpi/glpi-menu-navigation.gif"
+           data-title="Navigation dans l’interface">
+          <img src="assets/images/Glpi/glpi-menu-navigation.gif" alt="Navigation dans l’interface">
         </a>
-        <figcaption>Interface principale GLPI</figcaption>
+        <figcaption>Navigation dans l’interface</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-menu.png"
-           data-title="Menu vertical de GLPI">
-          <img src="assets/images/Glpi/glpi-menu.gif" alt="Menu vertical de GLPI">
+           data-img="assets/images/Glpi/glpi-liste-parc.gif"
+           data-title="Liste du parc informatique">
+          <img src="assets/images/Glpi/glpi-liste-parc.gif" alt="Liste du parc informatique">
         </a>
-        <figcaption>Menu vertical de GLPI</figcaption>
+        <figcaption>Liste du parc informatique</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-parc.png"
-           data-title="Gestion du parc informatique">
-          <img src="assets/images/Glpi/glpi-parc.png" alt="Gestion du parc informatique">
+           data-img="assets/images/Glpi/glpi-fiche-ordinateur.png"
+           data-title="Fiche d’un ordinateur">
+          <img src="assets/images/Glpi/glpi-fiche-ordinateur.png" alt="Fiche d’un ordinateur">
         </a>
-        <figcaption>Gestion du parc informatique</figcaption>
+        <figcaption>Fiche d’un ordinateur</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-recherche.png"
-           data-title="Recherche et filtres dans GLPI">
-          <img src="assets/images/Glpi/glpi-recherche.png" alt="Recherche et filtres dans GLPI">
+           data-img="assets/images/Glpi/glpi-recherche-parc.gif"
+           data-title="Recherche et filtres">
+          <img src="assets/images/Glpi/glpi-recherche-parc.gif" alt="Recherche et filtres">
         </a>
-        <figcaption>Recherche et filtres dans GLPI</figcaption>
+        <figcaption>Recherche et filtres</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-tri.png"
-           data-title="Tri des éléments dans GLPI">
-          <img src="assets/images/Glpi/glpi-tri.png" alt="Tri des éléments dans GLPI">
+           data-img="assets/images/Glpi/glpi-tri-parc.gif"
+           data-title="Tri des résultats">
+          <img src="assets/images/Glpi/glpi-tri-parc.gif" alt="Tri des résultats">
         </a>
-        <figcaption>Tri des éléments dans GLPI</figcaption>
+        <figcaption>Tri des résultats</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-ticket.png"
-           data-title="Gestion des tickets">
-          <img src="assets/images/Glpi/glpi-ticket.png" alt="Gestion des tickets">
+           data-img="assets/images/Glpi/glpi-tableau-bord-tickets.gif"
+           data-title="Tableau de bord des tickets">
+          <img src="assets/images/Glpi/glpi-tableau-bord-tickets.gif" alt="Tableau de bord des tickets">
         </a>
-        <figcaption>Gestion des tickets</figcaption>
+        <figcaption>Tableau de bord des tickets</figcaption>
       </figure>
 
       <figure class="capture">
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-ticket-detail.png"
+           data-img="assets/images/Glpi/glpi-liste-tickets.gif"
+           data-title="Liste des tickets">
+          <img src="assets/images/Glpi/glpi-liste-tickets.gif" alt="Liste des tickets">
+        </a>
+        <figcaption>Liste des tickets</figcaption>
+      </figure>
+
+      <figure class="capture">
+        <a href="#"
+           data-bs-toggle="modal"
+           data-bs-target="#captureModal"
+           data-img="assets/images/Glpi/glpi-detail-ticket.png"
            data-title="Détail d’un ticket">
-          <img src="assets/images/Glpi/glpi-ticket-detail.png" alt="Détail d’un ticket">
+          <img src="assets/images/Glpi/glpi-detail-ticket.png" alt="Détail d’un ticket">
         </a>
         <figcaption>Détail d’un ticket</figcaption>
       </figure>
@@ -330,9 +341,9 @@ sudo systemctl reload apache2</pre>
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-ticket-acteurs.png"
+           data-img="assets/images/Glpi/glpi-acteurs-ticket.gif"
            data-title="Acteurs du ticket">
-          <img src="assets/images/Glpi/glpi-ticket-acteurs.png" alt="Acteurs du ticket">
+          <img src="assets/images/Glpi/glpi-acteurs-ticket.gif" alt="Acteurs du ticket">
         </a>
         <figcaption>Acteurs du ticket</figcaption>
       </figure>
@@ -341,46 +352,56 @@ sudo systemctl reload apache2</pre>
         <a href="#"
            data-bs-toggle="modal"
            data-bs-target="#captureModal"
-           data-img="assets/images/Glpi/glpi-ticket-taches.png"
-           data-title="Suivi des tâches du ticket">
-          <img src="assets/images/Glpi/glpi-ticket-taches.png" alt="Suivi des tâches du ticket">
+           data-img="assets/images/Glpi/glpi-suivi-validation-ticket.gif"
+           data-title="Suivi et validation du ticket">
+          <img src="assets/images/Glpi/glpi-suivi-validation-ticket.gif" alt="Suivi et validation du ticket">
         </a>
-        <figcaption>Suivi des tâches du ticket</figcaption>
+        <figcaption>Suivi et validation du ticket</figcaption>
+      </figure>
+
+      <figure class="capture">
+        <a href="#"
+           data-bs-toggle="modal"
+           data-bs-target="#captureModal"
+           data-img="assets/images/Glpi/glpi-informations-ticket.gif"
+           data-title="Informations du ticket">
+          <img src="assets/images/Glpi/glpi-informations-ticket.gif" alt="Informations du ticket">
+        </a>
+        <figcaption>Informations du ticket</figcaption>
       </figure>
     </div>
 
-    <!-- Popup Bootstrap pour afficher les captures en grand -->
-    <div class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="captureModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content bg-dark">
-          <div class="modal-header border-0">
-            <h5 class="modal-title text-white" id="captureModalLabel">Capture GLPI</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
-          </div>
-          <div class="modal-body text-center">
-            <img id="captureModalImg" src="" alt="Capture GLPI" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      const captureModal = document.getElementById('captureModal');
-
-      if (captureModal) {
-        captureModal.addEventListener('show.bs.modal', function (event) {
-          const link = event.relatedTarget;
-          const imageSrc = link.getAttribute('data-img');
-          const imageTitle = link.getAttribute('data-title');
-          const imageAlt = link.querySelector('img').getAttribute('alt');
-
-          document.getElementById('captureModalImg').src = imageSrc;
-          document.getElementById('captureModalImg').alt = imageAlt;
-          document.getElementById('captureModalLabel').textContent = imageTitle;
-        });
-      }
-    </script>
   </div>
 </main>
+
+<!-- Popup Bootstrap pour les captures -->
+<div class="modal fade" id="captureModal" tabindex="-1" aria-labelledby="captureModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="captureModalLabel">Capture GLPI</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="captureModalImg" alt="Capture GLPI" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const captureModal = document.getElementById('captureModal');
+
+  if (captureModal) {
+    captureModal.addEventListener('show.bs.modal', function (event) {
+      const link = event.relatedTarget;
+      const imageSrc = link.getAttribute('data-img');
+      const imageTitle = link.getAttribute('data-title');
+
+      document.getElementById('captureModalImg').src = imageSrc;
+      document.getElementById('captureModalLabel').textContent = imageTitle;
+    });
+  }
+</script>
 
 <?php require_once(__DIR__ . "/components/footer.php"); ?>
